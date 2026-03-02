@@ -1,0 +1,59 @@
+manifest_version: "2.0.0"
+project: project-ml-fuel-distribution-company
+repository: project-ml-fuel-distribution-company
+last_updated_at: "2026-03-02"
+owner: Project Author
+llm_reference:
+  provider: OpenAI
+  model: "GPT-5.3 Codex Extra-high"
+
+documents:
+  - file: src/prompts/1_prompt.md
+    scope: "contexto inicial, viabilidad y gobernanza"
+    prompt_ids:
+      - P01_CONTEXT_SETUP
+      - P02_FEASIBILITY
+      - P03_PRIVACY_RELEASE
+      - P04_DAY01_ROADMAP
+
+  - file: src/prompts/2_prompt_etl_execution.md
+    scope: "decisiones ETL y datasets públicos"
+    prompt_ids:
+      - P05_ETL_ARCHITECTURE
+      - P06_ETL_DATASETS
+      - P07_ETL_PUBLICATION_POLICY
+
+  - file: src/prompts/3_prompt_ml_execution.md
+    scope: "modelado, evaluación y producto"
+    prompt_ids:
+      - P08_DAY01_BASELINE
+      - P09_DAY02_FEATURE_ENG
+      - P10_DAY03_MODEL_SELECTION
+      - P11_DAY04_TUNING
+      - P12_INFERENCE_APP
+
+public_artifacts:
+  source_code:
+    - app.py
+    - scripts/train_public_model.py
+    - src/ml/functions.py
+    - src/ml/recommend_supplier.py
+  notebooks:
+    - notebooks/01_ml_knn.ipynb
+    - notebooks/02_ml_feature_eng.ipynb
+    - notebooks/03_ml_ensemble.ipynb
+    - notebooks/04_ml_hyperparameter_tunning.ipynb
+  data:
+    - data/synthetic/dataset_modelo_proveedor_v1_synthetic.csv
+    - data/synthetic/dataset_modelo_proveedor_v2_candidates_synthetic.csv
+    - data/synthetic/inference_input_example_synthetic.csv
+  docs:
+    - README.md
+    - docs/privacy_checklist.md
+    - docs/public_publish_manifest.json
+
+traceability_policy:
+  include_only_executed_prompts: true
+  include_only_public_artifacts: true
+  exclude_private_paths: true
+  remove_unused_variants: true

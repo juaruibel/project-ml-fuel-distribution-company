@@ -1,0 +1,129 @@
+{
+  "timestamp_utc": "2026-03-02T08:03:05.577037+00:00",
+  "mode": "public_minimal_manual_cleanup",
+  "seed": 42,
+  "replace_public_repo": true,
+  "files": [
+    {
+      "path": ".gitignore",
+      "sha256": "a61d7dc1bf518e940df14442e0e368f8b17666d1041e261bf97f9fbc0883f2eb"
+    },
+    {
+      "path": ".python-version",
+      "sha256": "49a506dd32096b010d75205acf3430c9ae6c40351888129499e5a5e487126c93"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "c120afcbcf2fc97b868bfe6ad3ff4de460f3fe347fec3cdcc43d995fd95babcc"
+    },
+    {
+      "path": "README.md",
+      "sha256": "263cdb4e65bf4a09e13724e225bf964dbb1d5644f78729b004555aba49ee9069"
+    },
+    {
+      "path": "__pycache__/app.cpython-314.pyc",
+      "sha256": "6336e63197a507f17306a6029c0bb28ac5a215ae9917d60ec96a4f92e3184cc0"
+    },
+    {
+      "path": "app.py",
+      "sha256": "1bfc365e025069198bf469f36507152c66c45de81ef3c3588f71ab3734ac44fa"
+    },
+    {
+      "path": "data/synthetic/dataset_modelo_proveedor_v1_synthetic.csv",
+      "sha256": "ff26c590b8997f864a8742a7f46e517e3bbbd788af5724f7aaacd19bc7487e0d"
+    },
+    {
+      "path": "data/synthetic/dataset_modelo_proveedor_v2_candidates_synthetic.csv",
+      "sha256": "99dccfc27057b975d06b24550fc511aa28e1359d15e9c10ba8ca87a8bffa7d12"
+    },
+    {
+      "path": "data/synthetic/inference_input_example_synthetic.csv",
+      "sha256": "ba3f0e729c726d4381cd9d636d226dffd2bbb2d25f0c8b1f6cbaff9296fc87bd"
+    },
+    {
+      "path": "docs/privacy_checklist.md",
+      "sha256": "971a75a4d8dbcdc2b25db572cf58daa5e1c9110fabf9becf1d397cb589d82751"
+    },
+    {
+      "path": "docs/public_publish_manifest.json",
+      "sha256": "a28ab27958f1c88f8b14607ab432107068b32300013395b615d232be31971102"
+    },
+    {
+      "path": "notebooks/01_ml_knn.ipynb",
+      "sha256": "38556fe2db065f5ef088e97f515cbed281cc4d95a6052483fdb63c45fdc7bae3"
+    },
+    {
+      "path": "notebooks/02_ml_feature_eng.ipynb",
+      "sha256": "9039ca49f71b3e65ab8efb0b1d01d5943261a644cc2f11c6c56953799d1cc9e3"
+    },
+    {
+      "path": "notebooks/03_ml_ensemble.ipynb",
+      "sha256": "59e58c7d66a3905afadcade33e73b560b2109bd665077a97b9f11e2f15119883"
+    },
+    {
+      "path": "notebooks/04_ml_hyperparameter_tunning.ipynb",
+      "sha256": "3aa561f402a16ad97ba61b03ad8e4163c07fade1ddecd2c9680b21f93be46f73"
+    },
+    {
+      "path": "requirements-dev.txt",
+      "sha256": "397e753c5eb4c08759b6fa3f3db2ee531023c89d011c281d15b46ae6e98439c2"
+    },
+    {
+      "path": "requirements.txt",
+      "sha256": "5407293ec2d2f9385f59891b308d48f16e2a57ec18e76121e7c2ad137c43a9ab"
+    },
+    {
+      "path": "scripts/__pycache__/train_public_model.cpython-314.pyc",
+      "sha256": "38a445f33bf9693714da10f1abecdce9fd3628eefed1a2827323fb1fef06f8e2"
+    },
+    {
+      "path": "scripts/train_public_model.py",
+      "sha256": "7bb5c073d5c879a37fa7f58f2c69dc253860c3ae7235647168055e2e4eb7bfb3"
+    },
+    {
+      "path": "src/ml/__pycache__/functions.cpython-311.pyc",
+      "sha256": "dddddac25d23998765781a7e9a7fac5d2bd5545a3e76769f3ac81d7fe203053d"
+    },
+    {
+      "path": "src/ml/__pycache__/functions.cpython-314.pyc",
+      "sha256": "be732246ef66cb5ab48f35bb44e43f28147422d6680549ebf9101fe96d7c4a99"
+    },
+    {
+      "path": "src/ml/__pycache__/recommend_supplier.cpython-311.pyc",
+      "sha256": "4623dea90c72ab30baf6292e948d4d5975cf0e328f9934a0cc71a03d6c3f5af6"
+    },
+    {
+      "path": "src/ml/__pycache__/recommend_supplier.cpython-314.pyc",
+      "sha256": "54f5cfbc10e8c93356304b7bfbf62fc56cdc114054516420d3f40e8bdbc06b65"
+    },
+    {
+      "path": "src/ml/functions.py",
+      "sha256": "1d43544caeb683a3ec0ce524a32bffe4f21a28de180cbf3e0486bdc61a7f5f41"
+    },
+    {
+      "path": "src/ml/recommend_supplier.py",
+      "sha256": "ba73c45de168326fa904e9ad032ab8e0480b93160be5cd1d5dc017c702383f61"
+    },
+    {
+      "path": "src/prompts/1_prompt.md",
+      "sha256": "afaeea8aa06bed6355f7313caa8bf8f90226d12dc6b2d15ef3131eb59ffb0c59"
+    },
+    {
+      "path": "src/prompts/2_prompt_etl_execution.md",
+      "sha256": "724c345cad5a9354fb672b5797fae9ade46ea4170f78b3e8783364b3207268d9"
+    },
+    {
+      "path": "src/prompts/3_prompt_ml_execution.md",
+      "sha256": "8278101c1b8a5fbff8778a53fbbca19204d3da4fa60ca6d2f58c407206872160"
+    },
+    {
+      "path": "src/prompts/README.md",
+      "sha256": "1d7e9382ee5deb419d6653bdf38f66ccf3ace4d73e88bffa70498f5444da2e85"
+    },
+    {
+      "path": "src/prompts/prompt_artifact_manifest.yaml",
+      "sha256": "b3222958709ae237094498666771f3342b3dd338b051b6540d1c3a003224924b"
+    }
+  ],
+  "sensitive_hits": []
+}
