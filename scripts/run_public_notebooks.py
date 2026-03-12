@@ -11,6 +11,8 @@ from pathlib import Path
 import nbformat
 from nbconvert.preprocessors import ExecutePreprocessor
 
+from rebuild_public_datasets import ensure_public_derived_datasets
+
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 NOTEBOOKS_DIR = PROJECT_ROOT / "notebooks"
 SUMMARY_PATH = PROJECT_ROOT / "artifacts" / "public" / "notebooks" / "notebook_execution_summary.json"
@@ -67,6 +69,7 @@ def sanitize_notebook_outputs(notebook: nbformat.NotebookNode) -> bool:
 
 def main() -> None:
     SUMMARY_PATH.parent.mkdir(parents=True, exist_ok=True)
+    ensure_public_derived_datasets(force=False)
     records = []
     failures = []
 

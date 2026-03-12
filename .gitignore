@@ -25,5 +25,13 @@ test-results/
 artifacts/public/sql/*.db
 artifacts/public/sql/*.db-shm
 artifacts/public/sql/*.db-wal
+data/public/support/ofertas_typed.csv
+data/public/dataset_modelo_proveedor_v3_context.csv
+data/public/day041/*.csv
+!data/public/day041/.gitkeep
+data/public/day042/*.csv
+!data/public/day042/.gitkeep
+data/public/day043/*.csv
+!data/public/day043/.gitkeep
 data/public/inference_outputs/**
 !data/public/inference_outputs/.gitkeep

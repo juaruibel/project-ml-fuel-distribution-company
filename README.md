@@ -76,7 +76,8 @@ What is preserved:
 
 - the real project structure;
 - the real notebooks;
-- model-ready public datasets;
+- the base public datasets and support layers needed to rebuild the heavier derived marts;
+- compressed public support files when the uncompressed staging would be too heavy for Git;
 - public model retraining;
 - explainability and policy analysis;
 - reproducible public audit artifacts.
@@ -91,9 +92,30 @@ What is removed or excluded:
 
 Why the repo contains `data/public`, `models/public`, and `artifacts/public`:
 
-- `data/public` holds the pseudonymized model-ready datasets used by notebooks and training.
+- `data/public` holds the pseudonymized base datasets plus the public support layers required to rebuild the heavier derived marts.
 - `models/public` holds public models retrained from those public datasets.
 - `artifacts/public` holds the auditable outputs needed to validate the public repo, including metric parity, notebook execution, and publication manifest files.
+
+### Why some large CSVs are intentionally not versioned
+
+The first public push proved that GitHub would accept the repository as-is, but it also showed that several derived mart CSVs were unnecessarily heavy for a portfolio-first repo. Those files are now treated as rebuildable local cache instead of tracked source.
+
+What stays in Git:
+
+- the base operational datasets needed for public retraining;
+- the public support tables required to rebuild the derived marts;
+- the executed notebooks, public models, and audit artifacts.
+
+What is rebuilt locally on demand:
+
+- `data/public/dataset_modelo_proveedor_v3_context.csv`
+- `data/public/day041/*.csv`
+- `data/public/day042/*.csv`
+- `data/public/day043/*.csv`
+
+This keeps the repo lighter to clone and review while preserving a defensible path to full reproduction.
+
+One example is `data/public/support/ofertas_typed_full.csv.gz`: the compressed artifact is versioned, while `scripts/rebuild_public_datasets.py` materializes the local `data/public/support/ofertas_typed.csv` cache only when needed.
 
 ## Validation status
 
@@ -138,6 +160,7 @@ Highlights:
 
 - `notebooks/`: the 21 real notebooks of the project, sanitized and executable.
 - `src/etl`, `src/ml`, `src/sql`, `src/prompts`: the public code and traceability layer.
+- `scripts/rebuild_public_datasets.py`: rebuilds the large derived marts that are intentionally omitted from Git.
 - `scripts/train_public_models.py`: retrains the public baseline and champion.
 - `scripts/run_public_notebooks.py`: executes and sanitizes notebook outputs.
 - `scripts/audit_public_repo.py`: runs the strict publication audit.
@@ -149,11 +172,19 @@ python3.11 -m venv .venv
 source .venv/bin/activate
 python -m pip install --upgrade pip
 pip install -r requirements.txt
+python scripts/rebuild_public_datasets.py
 python scripts/train_public_models.py
 python scripts/run_public_notebooks.py
 python scripts/audit_public_repo.py --strict
 streamlit run app.py
 ```
+
+Recommended order:
+
+1. `python scripts/rebuild_public_datasets.py`
+2. `python scripts/train_public_models.py`
+3. `python scripts/run_public_notebooks.py`
+4. `python scripts/audit_public_repo.py --strict`
 
 ## What to review first
 

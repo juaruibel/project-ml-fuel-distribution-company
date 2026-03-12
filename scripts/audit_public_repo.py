@@ -6,6 +6,7 @@ import argparse
 import hashlib
 import json
 import re
+import subprocess
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -50,6 +51,7 @@ TEXT_SUFFIXES = {".md", ".txt", ".py", ".json", ".yaml", ".yml", ".csv", ".ipynb
 INLINE_CONTENT_SCAN_LIMIT_BYTES = 5_000_000
 CONTENT_SCAN_EXCLUDES = {
     "artifacts/public/token_scan_config.json",
+    "artifacts/public/public_audit_summary.json",
 }
 CONTENT_SCAN_SKIP_LARGE_BYTES = 5_000_000
 FULL_SHA256_LIMIT_BYTES = 25_000_000
@@ -84,6 +86,45 @@ def fingerprint_file(path: Path) -> tuple[str, str]:
             digest.update(handle.read(FINGERPRINT_CHUNK_BYTES))
     digest.update(str(size).encode("utf-8"))
     return digest.hexdigest(), "head_tail_1mb_plus_size"
+
+
+def git_ls_files(paths: list[str]) -> list[Path]:
+    command = ["git", "ls-files", "--cached", "--others", "--exclude-standard", "--", *paths]
+    try:
+        completed = subprocess.run(
+            command,
+            cwd=PROJECT_ROOT,
+            check=True,
+            capture_output=True,
+            text=True,
+        )
+    except subprocess.CalledProcessError:
+        collected: list[Path] = []
+        for root in paths:
+            path = PROJECT_ROOT / root
+            if not path.exists():
+                continue
+            iterator = [path] if path.is_file() else [candidate for candidate in path.rglob("*") if candidate.is_file()]
+            collected.extend(iterator)
+        return sorted(collected)
+
+    files = []
+    for line in completed.stdout.splitlines():
+        relative = line.strip()
+        if not relative:
+            continue
+        candidate = PROJECT_ROOT / relative
+        if candidate.is_file():
+            files.append(candidate)
+    return sorted(files)
+
+
+def iter_managed_repo_files() -> list[Path]:
+    return git_ls_files(MANAGED_ROOTS)
+
+
+def path_exists_in_repo(path: str) -> bool:
+    return bool(git_ls_files([path]))
 
 
 def build_regex(token: str) -> re.Pattern:
@@ -125,55 +166,45 @@ def scan_sensitive_tokens() -> list[dict]:
     patterns = [build_regex(token) for token in payload["tokens"]]
     combined = build_combined_regex(patterns)
     hits = []
-    for root in MANAGED_ROOTS:
-        path = PROJECT_ROOT / root
-        if not path.exists():
+    for file_path in iter_managed_repo_files():
+        relative_path = str(file_path.relative_to(PROJECT_ROOT))
+        matched_path = find_matching_patterns(relative_path, patterns, combined)
+        if matched_path:
+            hits.append(
+                {
+                    "file": relative_path,
+                    "scope": "path",
+                    "patterns": matched_path,
+                }
+            )
+        if file_path.suffix.lower() not in TEXT_SUFFIXES:
             continue
-        iterator = [path] if path.is_file() else [p for p in path.rglob("*") if p.is_file()]
-        for file_path in iterator:
-            relative_path = str(file_path.relative_to(PROJECT_ROOT))
-            matched_path = find_matching_patterns(relative_path, patterns, combined)
-            if matched_path:
-                hits.append(
-                    {
-                        "file": relative_path,
-                        "scope": "path",
-                        "patterns": matched_path,
-                    }
-                )
-            if file_path.suffix.lower() not in TEXT_SUFFIXES:
-                continue
-            if relative_path in CONTENT_SCAN_EXCLUDES:
-                continue
-            matched = scan_file_content(file_path, patterns, combined)
-            if matched:
-                hits.append(
-                    {
-                        "file": relative_path,
-                        "scope": "content",
-                        "patterns": matched,
-                    }
-                )
+        if relative_path in CONTENT_SCAN_EXCLUDES:
+            continue
+        matched = scan_file_content(file_path, patterns, combined)
+        if matched:
+            hits.append(
+                {
+                    "file": relative_path,
+                    "scope": "content",
+                    "patterns": matched,
+                }
+            )
     return hits
 
 
 def build_manifest() -> list[dict]:
     records = []
-    for root in MANAGED_ROOTS:
-        path = PROJECT_ROOT / root
-        if not path.exists():
-            continue
-        iterator = [path] if path.is_file() else [p for p in path.rglob("*") if p.is_file()]
-        for file_path in sorted(iterator):
-            fingerprint, hash_mode = fingerprint_file(file_path)
-            records.append(
-                {
-                    "path": str(file_path.relative_to(PROJECT_ROOT)),
-                    "size_bytes": file_path.stat().st_size,
-                    "sha256": fingerprint,
-                    "hash_mode": hash_mode,
-                }
-            )
+    for file_path in iter_managed_repo_files():
+        fingerprint, hash_mode = fingerprint_file(file_path)
+        records.append(
+            {
+                "path": str(file_path.relative_to(PROJECT_ROOT)),
+                "size_bytes": file_path.stat().st_size,
+                "sha256": fingerprint,
+                "hash_mode": hash_mode,
+            }
+        )
     MANIFEST_PATH.write_text(json.dumps(records, indent=2, ensure_ascii=False), encoding="utf-8")
     return records
 
@@ -182,11 +213,11 @@ def main() -> None:
     args = parse_args()
     ARTIFACTS_DIR.mkdir(parents=True, exist_ok=True)
 
-    disallowed_existing = [path for path in DISALLOWED_PATHS if (PROJECT_ROOT / path).exists()]
+    disallowed_existing = [path for path in DISALLOWED_PATHS if path_exists_in_repo(path)]
     forbidden_extensions = sorted(
         str(path.relative_to(PROJECT_ROOT))
-        for path in PROJECT_ROOT.rglob("*")
-        if path.is_file() and path.suffix.lower() in {".xlsx", ".xls", ".pdf"}
+        for path in iter_managed_repo_files()
+        if path.suffix.lower() in {".xlsx", ".xls", ".pdf"}
     )
     notebooks = sorted((PROJECT_ROOT / "notebooks").glob("*.ipynb"))
     notebook_summary = json.loads(NOTEBOOK_SUMMARY_PATH.read_text(encoding="utf-8"))

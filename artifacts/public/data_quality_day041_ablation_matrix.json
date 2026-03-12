@@ -1,14 +1,14 @@
 {
   "status": "ok",
-  "run_id": "20260306T_day04_rerun_day041_build",
-  "generated_ts_utc": "2026-03-06T12:24:33.765861+00:00",
+  "run_id": "public_rebuild_day041",
+  "generated_ts_utc": "2026-03-12T19:49:34.621702+00:00",
   "cutoff_date": "2028-02-21",
   "min_coverage": 0.8,
-  "input_v2_dataset": "data/public/dataset_modelo_proveedor_v2_candidates.csv",
-  "input_ofertas_typed": "data/public/support/ofertas_typed.csv",
-  "input_transport_signals": "data/public/support/ofertas_transport_signals.csv",
-  "input_transport_report": "artifacts/public/transport_parser_day041.json",
-  "output_dir": "data/public/day041",
+  "input_v2_dataset": "./data/public/dataset_modelo_proveedor_v2_candidates.csv",
+  "input_ofertas_typed": "./data/public/support/ofertas_typed.csv",
+  "input_transport_signals": "./data/public/support/ofertas_transport_signals.csv",
+  "input_transport_report": "./artifacts/public/transport_parser_day041.json",
+  "output_dir": "./data/public/day041",
   "variants": {
     "source_quality": {
       "variant_name": "source_quality",
@@ -43,7 +43,7 @@
           "coverage_test": 1.0
         }
       },
-      "dataset_path": "data/public/day041/dataset_modelo_v2_source_quality.csv",
+      "dataset_path": "./data/public/day041/dataset_modelo_v2_source_quality.csv",
       "status": "built"
     },
     "dispersion": {
@@ -84,7 +84,7 @@
           "coverage_test": 1.0
         }
       },
-      "dataset_path": "data/public/day041/dataset_modelo_v2_dispersion.csv",
+      "dataset_path": "./data/public/day041/dataset_modelo_v2_dispersion.csv",
       "status": "built"
     },
     "competition": {
@@ -145,7 +145,7 @@
           "coverage_test": 1.0
         }
       },
-      "dataset_path": "data/public/day041/dataset_modelo_v2_competition.csv",
+      "dataset_path": "./data/public/day041/dataset_modelo_v2_competition.csv",
       "status": "built"
     },
     "transport_only": {
@@ -1849,7 +1849,7 @@
         "v41_transport_gap_vs_min_event_missing_flag",
         "v41_transport_ratio_vs_min_event_missing_flag"
       ],
-      "dataset_path": "data/public/day041/dataset_modelo_v2_transport_only.csv",
+      "dataset_path": "./data/public/day041/dataset_modelo_v2_transport_only.csv",
       "status": "built"
     }
   },

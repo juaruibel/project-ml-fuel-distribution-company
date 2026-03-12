@@ -1,14 +1,14 @@
 {
   "status": "ok",
-  "run_id": "20260306T_day04_rerun_v3a",
-  "generated_ts_utc": "2026-03-06T12:22:58.661461+00:00",
+  "run_id": "public_rebuild_v3",
+  "generated_ts_utc": "2026-03-12T19:49:05.791780+00:00",
   "cutoff_date": "2028-02-21",
   "min_coverage": 0.8,
-  "input_v2_dataset": "data/public/dataset_modelo_proveedor_v2_candidates.csv",
-  "input_ofertas_typed": "data/public/support/ofertas_typed.csv",
-  "input_raw_matrix": "data/public/support/ofertas_raw_matrix_cells.csv",
-  "output_dataset": "data/public/dataset_modelo_proveedor_v3_context.csv",
-  "output_data_dictionary": "artifacts/public/data_dictionary_v3_context.md",
+  "input_v2_dataset": "./data/public/dataset_modelo_proveedor_v2_candidates.csv",
+  "input_ofertas_typed": "./data/public/support/ofertas_typed.csv",
+  "input_raw_matrix": "./data/public/support/ofertas_raw_matrix_cells.csv",
+  "output_dataset": "./data/public/dataset_modelo_proveedor_v3_context.csv",
+  "output_data_dictionary": "./artifacts/public/data_dictionary_v3_context.md",
   "rows_output": 155946,
   "events_output": 15404,
   "rows_vs_v2_match": 1,
@@ -176,84 +176,13 @@
       "leakage_risk": "unknown_until_parser",
       "coverage_train": 0.0,
       "coverage_test": 0.0,
-      "decision": "candidate_parser_extension"
+      "decision": "exclude_missing_raw_matrix"
     }
   ],
   "transport_audit": {
-    "source_path": "data/public/support/ofertas_raw_matrix_cells.csv",
-    "keyword_hits": 3413,
-    "sample_hits": [
-      {
-        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2015 COMPARATIVA DE PRECIOS/2015 -10 OCTUBRE/Comparativa de precios 13-10-2015.xls",
-        "sheet_name": "Tabla",
-        "row_idx": "21",
-        "col_idx": "2",
-        "cell_value": "MENOR COSTE (CON TRANSPORTE)"
-      },
-      {
-        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2015 COMPARATIVA DE PRECIOS/2015 -10 OCTUBRE/Comparativa de precios 14-10-2015.xls",
-        "sheet_name": "Tabla",
-        "row_idx": "21",
-        "col_idx": "2",
-        "cell_value": "MENOR COSTE (CON TRANSPORTE)"
-      },
-      {
-        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2015 COMPARATIVA DE PRECIOS/2015 -10 OCTUBRE/Comparativa de precios 15-10-2015.xls",
-        "sheet_name": "Tabla",
-        "row_idx": "21",
-        "col_idx": "2",
-        "cell_value": "MENOR COSTE (CON TRANSPORTE)"
-      },
-      {
-        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2015 COMPARATIVA DE PRECIOS/2015 -10 OCTUBRE/Comparativa de precios 16-10-2015.xls",
-        "sheet_name": "Tabla",
-        "row_idx": "21",
-        "col_idx": "2",
-        "cell_value": "MENOR COSTE (CON TRANSPORTE)"
-      },
-      {
-        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2015 COMPARATIVA DE PRECIOS/2015 -10 OCTUBRE/Comparativa de precios 19-10-2015.xls",
-        "sheet_name": "Tabla",
-        "row_idx": "21",
-        "col_idx": "2",
-        "cell_value": "MENOR COSTE (CON TRANSPORTE)"
-      },
-      {
-        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2015 COMPARATIVA DE PRECIOS/2015 -10 OCTUBRE/Comparativa de precios 20-10-2015.xls",
-        "sheet_name": "Tabla",
-        "row_idx": "21",
-        "col_idx": "2",
-        "cell_value": "MENOR COSTE (CON TRANSPORTE)"
-      },
-      {
-        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2015 COMPARATIVA DE PRECIOS/2015 -10 OCTUBRE/Comparativa de precios 21-10-2015.xlsx",
-        "sheet_name": "Tabla",
-        "row_idx": "21",
-        "col_idx": "2",
-        "cell_value": "MENOR COSTE (CON TRANSPORTE)"
-      },
-      {
-        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2015 COMPARATIVA DE PRECIOS/2015 -10 OCTUBRE/Comparativa de precios 22-10-2015.xlsx",
-        "sheet_name": "Tabla",
-        "row_idx": "21",
-        "col_idx": "2",
-        "cell_value": "MENOR COSTE (CON TRANSPORTE)"
-      },
-      {
-        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2015 COMPARATIVA DE PRECIOS/2015 -10 OCTUBRE/Comparativa de precios 23-10-2015.xlsx",
-        "sheet_name": "Tabla",
-        "row_idx": "21",
-        "col_idx": "2",
-        "cell_value": "MENOR COSTE (CON TRANSPORTE)"
-      },
-      {
-        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2015 COMPARATIVA DE PRECIOS/2015 -10 OCTUBRE/Comparativa de precios 26-10-2015.xlsx",
-        "sheet_name": "Tabla",
-        "row_idx": "21",
-        "col_idx": "2",
-        "cell_value": "MENOR COSTE (CON TRANSPORTE)"
-      }
-    ],
-    "decision": "candidate_parser_extension"
+    "source_path": "./data/public/support/ofertas_raw_matrix_cells.csv",
+    "keyword_hits": 0,
+    "sample_hits": [],
+    "decision": "exclude_missing_raw_matrix"
   }
 }

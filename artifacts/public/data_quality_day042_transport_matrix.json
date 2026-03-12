@@ -1,14 +1,14 @@
 {
   "status": "ok",
-  "run_id": "20260306T_day04_rerun_day042_build",
-  "generated_ts_utc": "2026-03-06T12:27:28.265000+00:00",
+  "run_id": "public_rebuild_day042",
+  "generated_ts_utc": "2026-03-12T19:50:28.516810+00:00",
   "cutoff_date": "2028-02-21",
   "min_coverage": 0.8,
-  "input_v2_dataset": "data/public/dataset_modelo_proveedor_v2_candidates.csv",
-  "input_ofertas_typed": "data/public/support/ofertas_typed.csv",
-  "input_transport_rebuilt": "data/public/support/ofertas_transport_signals_day042.csv",
-  "input_missingness_report": "artifacts/public/transport_missingness_day042.json",
-  "output_dir": "data/public/day042",
+  "input_v2_dataset": "./data/public/dataset_modelo_proveedor_v2_candidates.csv",
+  "input_ofertas_typed": "./data/public/support/ofertas_typed.csv",
+  "input_transport_rebuilt": "./data/public/support/ofertas_transport_signals_day042.csv",
+  "input_missingness_report": "./artifacts/public/transport_missingness_day042.json",
+  "output_dir": "./data/public/day042",
   "variants": {
     "transport_rebuilt_only": {
       "variant_name": "transport_rebuilt_only",
@@ -119,7 +119,7 @@
           "coverage_test": 1.0
         }
       },
-      "dataset_path": "data/public/day042/dataset_modelo_v2_transport_rebuilt_only.csv",
+      "dataset_path": "./data/public/day042/dataset_modelo_v2_transport_rebuilt_only.csv",
       "status": "built"
     },
     "dispersion_plus_transport_rebuilt": {
@@ -256,7 +256,7 @@
           "coverage_test": 1.0
         }
       },
-      "dataset_path": "data/public/day042/dataset_modelo_v2_dispersion_plus_transport_rebuilt.csv",
+      "dataset_path": "./data/public/day042/dataset_modelo_v2_dispersion_plus_transport_rebuilt.csv",
       "status": "built"
     }
   },

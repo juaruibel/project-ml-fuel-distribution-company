@@ -11,6 +11,8 @@ import pandas as pd
 from lightgbm import LGBMClassifier
 from sklearn.base import clone
 
+from rebuild_public_datasets import ensure_public_derived_datasets
+
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 if str(PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(PROJECT_ROOT))
@@ -202,6 +204,13 @@ def _train_public_champion(contract: dict) -> dict:
 def main() -> None:
     contract = _load_contract()
     (ARTIFACTS_DIR / "models").mkdir(parents=True, exist_ok=True)
+    ensure_public_derived_datasets(
+        paths=[
+            contract["training"]["baseline"]["dataset_path"],
+            contract["training"]["champion_pure"]["dataset_path"],
+        ],
+        force=False,
+    )
 
     baseline = _train_public_baseline(contract)
     champion = _train_public_champion(contract)
