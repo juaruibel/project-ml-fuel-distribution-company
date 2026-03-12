@@ -1,0 +1,24 @@
+{
+  "run_id": "20260306T_day05_1_smoke_v2_lgbm_bal",
+  "day_id": "Day 05.1",
+  "cutoff_date": "2028-02-21",
+  "canonical_variants_total": 1,
+  "datasets": [
+    "V2"
+  ],
+  "model_families": [
+    "LIGHTGBM"
+  ],
+  "defendible_variants": [],
+  "almost_gate_variants": [
+    "V2_LIGHTGBM_CLASS_WEIGHT_BALANCED_v1"
+  ],
+  "best_balanced_variant": "V2_LIGHTGBM_CLASS_WEIGHT_BALANCED_v1",
+  "close_decision": "decide_followup_iteration_without_policy",
+  "policy_summary": {
+    "run_id": "20260306T_day05_1_smoke_v2_lgbm_bal",
+    "executed": false,
+    "reason": "no_defendible_variant",
+    "best_final_pure_variant": "V2_LIGHTGBM_CLASS_WEIGHT_BALANCED_v1"
+  }
+}

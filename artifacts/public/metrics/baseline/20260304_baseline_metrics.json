@@ -1,0 +1,12 @@
+{
+  "accuracy": 0.9095050834452331,
+  "balanced_accuracy": 0.8614631928825947,
+  "f1_pos": 0.6898931799506984,
+  "top1_hit": 0.7721230535510825,
+  "top2_hit": 0.8628940372199012,
+  "coverage": 1.0,
+  "test_events": 2633,
+  "cutoff_date": "2028-02-21",
+  "dataset_name": "dataset_modelo_proveedor_v2_candidates.csv",
+  "notes": "Baseline Day 02 metric contract for registry initialization."
+}

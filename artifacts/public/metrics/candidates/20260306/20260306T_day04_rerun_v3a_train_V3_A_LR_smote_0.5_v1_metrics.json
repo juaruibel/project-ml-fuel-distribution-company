@@ -1,0 +1,66 @@
+{
+  "run_id": "20260306T_day04_rerun_v3a_train",
+  "ts_utc": "2026-03-06T12:23:46.325865+00:00",
+  "day_id": "Day 04",
+  "scope": "model_retrain",
+  "eval_scope": "day02_test_like",
+  "cutoff_applied": "2028-02-21",
+  "model_variant": "V3_A_LR_smote_0.5_v1",
+  "metrics": {
+    "accuracy": 0.8908018415499712,
+    "balanced_accuracy": 0.8536842451527682,
+    "f1_pos": 0.6502841345415451,
+    "top1_hit": 0.7390808963159894,
+    "top2_hit": 0.8518799848082036,
+    "coverage": 1.0,
+    "test_events": 2633
+  },
+  "feature_contract": {
+    "feature_columns_num": [
+      "coste_min_dia_proveedor",
+      "rank_coste_dia_producto",
+      "terminales_cubiertos",
+      "observaciones_oferta",
+      "candidatos_evento_count",
+      "coste_min_evento",
+      "coste_max_evento",
+      "spread_coste_evento",
+      "delta_vs_min_evento",
+      "ratio_vs_min_evento",
+      "litros_evento",
+      "dia_semana",
+      "mes",
+      "fin_mes",
+      "v3_selected_source_calculos_share",
+      "v3_cost_source_calculos_share",
+      "v3_reconciliation_conflict_share",
+      "v3_reconciliation_single_source_share",
+      "v3_cost_mean_terminal",
+      "v3_cost_std_terminal",
+      "v3_cost_range_terminal",
+      "v3_cost_cv_terminal",
+      "v3_share_terminales_min_cost",
+      "v3_coste_segundo_evento",
+      "v3_gap_min_vs_second_evento",
+      "v3_delta_vs_second_evento",
+      "v3_ratio_vs_second_evento",
+      "v3_rank_pct_evento",
+      "v3_coste_mean_evento",
+      "v3_delta_vs_mean_evento",
+      "v3_candidatos_min_coste_count",
+      "v3_is_unique_min_coste_evento"
+    ],
+    "feature_columns_cat": [
+      "proveedor_candidato",
+      "producto_canonico",
+      "terminal_compra"
+    ]
+  },
+  "sources": {
+    "dataset_csv": "./data/public/dataset_modelo_proveedor_v3_context.csv",
+    "baseline_model_path": "./models/public/baseline/model.pkl",
+    "baseline_metadata_path": "./models/public/baseline/metadata.json",
+    "model_path": "./models/candidates/day04_v3_a_lr_smote_0_5_v1/20260306T_day04_rerun_v3a_train/model.pkl",
+    "metadata_path": "./models/candidates/day04_v3_a_lr_smote_0_5_v1/20260306T_day04_rerun_v3a_train/metadata.json"
+  }
+}

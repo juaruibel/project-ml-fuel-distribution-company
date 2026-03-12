@@ -1,0 +1,115 @@
+{
+  "run_id": "20260310T093320Z",
+  "ts_utc": "2026-03-10T09:43:35.276481+00:00",
+  "day_id": "Day 05.4",
+  "cutoff_date": "2028-02-21",
+  "prompt_ref": "src/prompts/daily/20260310_day05_4_run01_prompt.md",
+  "notebook_ref": "notebooks/20_day05_4_fallback_flags_and_local_policies.ipynb",
+  "decision": "promote_day054_policy_candidate",
+  "winning_policy": {
+    "run_id": "20260310T093320Z",
+    "policy_variant": "day054_go_b_dominant_fallback_to_baseline_v1",
+    "family": "go_b_dominant",
+    "target_metric": "top2_hit",
+    "target_metric_awarded": "top2_hit",
+    "promotion_eligible": true,
+    "fallback_source": "baseline",
+    "events": 2633,
+    "selected_events": 420,
+    "selected_share": 0.15951386251424232,
+    "top1_hit": 0.8002278769464489,
+    "top2_hit": 0.8815039878465628,
+    "coverage": 1.0,
+    "coherence_before": 0.9972602739726028,
+    "coherence_after": 0.9972602739726028,
+    "coherence_delta": 0.0,
+    "overrides_count": 0,
+    "overrides_improved": 0,
+    "overrides_harmed": 0,
+    "overrides_neutral": 2633,
+    "delta_top1_vs_champion": 0.0,
+    "delta_top2_vs_champion": 0.0,
+    "delta_top1_vs_operational": 0.010254462590201352,
+    "delta_top2_vs_operational": 0.023167489555639853,
+    "delta_top1_vs_baseline": 0.035700721610330444,
+    "delta_top2_vs_baseline": 0.023167489555639853,
+    "gate_pass": true,
+    "decision_label": "promotable",
+    "material_improvement_ok": true,
+    "non_target_ok_vs_operational": true,
+    "coverage_ok_vs_operational": true,
+    "coverage_ok_vs_champion": true,
+    "top2_ok_vs_champion": true,
+    "coherence_ok": true,
+    "overrides_harmed_ok": true,
+    "selected_source_counts": {
+      "pure_champion": 2213,
+      "baseline": 420
+    }
+  },
+  "current_operational_policy_variant": "V2_TRANSPORT_ONLY_LR_smote_0.5_WITH_DETERMINISTIC_LAYER_PRODUCT_002_FOLLOW_PRODUCT_003_SUPPLIER_009_v1",
+  "champion_pure_variant": "V2_TRANSPORT_ONLY_LIGHTGBM_CLASS_WEIGHT_BALANCED_v1",
+  "baseline_variant": "LR_smote_0.5",
+  "source_row_metrics": {
+    "baseline": {
+      "accuracy": 0.8874448494149242,
+      "balanced_accuracy": 0.8650843671482551,
+      "f1_pos": 0.6520385470719051
+    },
+    "champion_pure": {
+      "accuracy": 0.942643391521197,
+      "balanced_accuracy": 0.8825388085921828,
+      "f1_pos": 0.7793357933579336
+    },
+    "operational_policy_reference": {
+      "accuracy": 0.9396700556301554,
+      "balanced_accuracy": 0.8182926606316819,
+      "f1_pos": 0.7330220713073005
+    }
+  },
+  "policy_trials_path": "./artifacts/public/metrics/day05_4/20260310T093320Z_policy_trials.csv",
+  "policy_audit_paths": {
+    "day054_go_c_fallback_to_baseline_v1": {
+      "detail": "./artifacts/public/postinferencia/audits/20260310/day054_comparable_holdout_detalle_day054_go_c_fallback_to_baseline_v1_20260310T093320Z.csv",
+      "resumen_evento": "./artifacts/public/postinferencia/audits/20260310/day054_comparable_holdout_resumen_evento_day054_go_c_fallback_to_baseline_v1_20260310T093320Z.csv",
+      "resumen_albaran": "./artifacts/public/postinferencia/audits/20260310/day054_comparable_holdout_resumen_albaran_day054_go_c_fallback_to_baseline_v1_20260310T093320Z.csv",
+      "summary": "./artifacts/public/postinferencia/audits/20260310/day054_comparable_holdout_summary_day054_go_c_fallback_to_baseline_v1_20260310T093320Z.json"
+    },
+    "day054_go_b_dominant_flag_only_v1": {
+      "detail": "./artifacts/public/postinferencia/audits/20260310/day054_comparable_holdout_detalle_day054_go_b_dominant_flag_only_v1_20260310T093320Z.csv",
+      "resumen_evento": "./artifacts/public/postinferencia/audits/20260310/day054_comparable_holdout_resumen_evento_day054_go_b_dominant_flag_only_v1_20260310T093320Z.csv",
+      "resumen_albaran": "./artifacts/public/postinferencia/audits/20260310/day054_comparable_holdout_resumen_albaran_day054_go_b_dominant_flag_only_v1_20260310T093320Z.csv",
+      "summary": "./artifacts/public/postinferencia/audits/20260310/day054_comparable_holdout_summary_day054_go_b_dominant_flag_only_v1_20260310T093320Z.json"
+    },
+    "day054_go_b_dominant_fallback_to_baseline_v1": {
+      "detail": "./artifacts/public/postinferencia/audits/20260310/day054_comparable_holdout_detalle_day054_go_b_dominant_fallback_to_baseline_v1_20260310T093320Z.csv",
+      "resumen_evento": "./artifacts/public/postinferencia/audits/20260310/day054_comparable_holdout_resumen_evento_day054_go_b_dominant_fallback_to_baseline_v1_20260310T093320Z.csv",
+      "resumen_albaran": "./artifacts/public/postinferencia/audits/20260310/day054_comparable_holdout_resumen_albaran_day054_go_b_dominant_fallback_to_baseline_v1_20260310T093320Z.csv",
+      "summary": "./artifacts/public/postinferencia/audits/20260310/day054_comparable_holdout_summary_day054_go_b_dominant_fallback_to_baseline_v1_20260310T093320Z.json"
+    },
+    "day054_go_b_dominant_fallback_to_baseline_with_policy_v1": {
+      "detail": "./artifacts/public/postinferencia/audits/20260310/day054_comparable_holdout_detalle_day054_go_b_dominant_fallback_to_baseline_with_policy_v1_20260310T093320Z.csv",
+      "resumen_evento": "./artifacts/public/postinferencia/audits/20260310/day054_comparable_holdout_resumen_evento_day054_go_b_dominant_fallback_to_baseline_with_policy_v1_20260310T093320Z.csv",
+      "resumen_albaran": "./artifacts/public/postinferencia/audits/20260310/day054_comparable_holdout_resumen_albaran_day054_go_b_dominant_fallback_to_baseline_with_policy_v1_20260310T093320Z.csv",
+      "summary": "./artifacts/public/postinferencia/audits/20260310/day054_comparable_holdout_summary_day054_go_b_dominant_fallback_to_baseline_with_policy_v1_20260310T093320Z.json"
+    },
+    "day054_composite_go_c_plus_go_b_to_baseline_v1": {
+      "detail": "./artifacts/public/postinferencia/audits/20260310/day054_comparable_holdout_detalle_day054_composite_go_c_plus_go_b_to_baseline_v1_20260310T093320Z.csv",
+      "resumen_evento": "./artifacts/public/postinferencia/audits/20260310/day054_comparable_holdout_resumen_evento_day054_composite_go_c_plus_go_b_to_baseline_v1_20260310T093320Z.csv",
+      "resumen_albaran": "./artifacts/public/postinferencia/audits/20260310/day054_comparable_holdout_resumen_albaran_day054_composite_go_c_plus_go_b_to_baseline_v1_20260310T093320Z.csv",
+      "summary": "./artifacts/public/postinferencia/audits/20260310/day054_comparable_holdout_summary_day054_composite_go_c_plus_go_b_to_baseline_v1_20260310T093320Z.json"
+    },
+    "day054_composite_go_c_plus_go_b_to_baseline_with_policy_v1": {
+      "detail": "./artifacts/public/postinferencia/audits/20260310/day054_comparable_holdout_detalle_day054_composite_go_c_plus_go_b_to_baseline_with_policy_v1_20260310T093320Z.csv",
+      "resumen_evento": "./artifacts/public/postinferencia/audits/20260310/day054_comparable_holdout_resumen_evento_day054_composite_go_c_plus_go_b_to_baseline_with_policy_v1_20260310T093320Z.csv",
+      "resumen_albaran": "./artifacts/public/postinferencia/audits/20260310/day054_comparable_holdout_resumen_albaran_day054_composite_go_c_plus_go_b_to_baseline_with_policy_v1_20260310T093320Z.csv",
+      "summary": "./artifacts/public/postinferencia/audits/20260310/day054_comparable_holdout_summary_day054_composite_go_c_plus_go_b_to_baseline_with_policy_v1_20260310T093320Z.json"
+    },
+    "day054_go_b_residual_contextual_selector_research_v1": {
+      "detail": "./artifacts/public/postinferencia/audits/20260310/day054_comparable_holdout_detalle_day054_go_b_residual_contextual_selector_research_v1_20260310T093320Z.csv",
+      "resumen_evento": "./artifacts/public/postinferencia/audits/20260310/day054_comparable_holdout_resumen_evento_day054_go_b_residual_contextual_selector_research_v1_20260310T093320Z.csv",
+      "resumen_albaran": "./artifacts/public/postinferencia/audits/20260310/day054_comparable_holdout_resumen_albaran_day054_go_b_residual_contextual_selector_research_v1_20260310T093320Z.csv",
+      "summary": "./artifacts/public/postinferencia/audits/20260310/day054_comparable_holdout_summary_day054_go_b_residual_contextual_selector_research_v1_20260310T093320Z.json"
+    }
+  }
+}

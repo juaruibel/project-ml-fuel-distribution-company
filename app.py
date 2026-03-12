@@ -1,191 +1,138 @@
 from __future__ import annotations
 
-from pathlib import Path
+import json
 import sys
+from pathlib import Path
 
-import matplotlib.pyplot as plt
 import pandas as pd
-import seaborn as sns
 import streamlit as st
-from sklearn.dummy import DummyClassifier
-from sklearn.neighbors import KNeighborsClassifier
-from sklearn.pipeline import Pipeline
-from sklearn.preprocessing import StandardScaler
 
 PROJECT_ROOT = Path(__file__).resolve().parent
 if str(PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(PROJECT_ROOT))
 
-from src.ml import functions as fc
-from src.ml import recommend_supplier as rs
+from src.ml.product.recommend_supplier import load_model_bundle, run_inference_dataframe, save_inference_output
 
-DATA_DIR = PROJECT_ROOT / "data" / "synthetic"
-V1_PATH = DATA_DIR / "dataset_modelo_proveedor_v1_synthetic.csv"
-V2_PATH = DATA_DIR / "dataset_modelo_proveedor_v2_candidates_synthetic.csv"
-EXAMPLE_INPUT_PATH = DATA_DIR / "inference_input_example_synthetic.csv"
-MODEL_PATH = PROJECT_ROOT / "models" / "public_champion" / "model.pkl"
-METADATA_PATH = PROJECT_ROOT / "models" / "public_champion" / "metadata.json"
+st.set_page_config(page_title="Recommend Supplier · Public Portfolio", page_icon="⛽", layout="wide")
+
+ARTIFACTS_DIR = PROJECT_ROOT / "artifacts" / "public"
+DATA_DIR = PROJECT_ROOT / "data" / "public"
+EXAMPLE_PATH = DATA_DIR / "inference_inputs" / "example_real_day_2024-05-28.csv"
+TRAINING_SUMMARY_PATH = ARTIFACTS_DIR / "models" / "public_training_summary.json"
+NOTEBOOK_SUMMARY_PATH = ARTIFACTS_DIR / "notebooks" / "notebook_execution_summary.json"
 OUTPUT_DIR = DATA_DIR / "inference_outputs"
 
-st.set_page_config(page_title="Recommend Supplier · Public Demo", page_icon="⛽", layout="wide")
 
 @st.cache_data(show_spinner=False)
-def load_csv(path: Path) -> pd.DataFrame:
-    if not path.exists():
-        raise FileNotFoundError(path)
-    return pd.read_csv(path)
+def load_json(path: Path) -> dict:
+    return json.loads(path.read_text(encoding="utf-8"))
 
-@st.cache_resource(show_spinner=False)
-def load_model_bundle():
-    return rs.load_model_bundle(MODEL_PATH, METADATA_PATH)
 
-def section_intro() -> None:
-    st.title("Recommend Supplier · Public Demo")
+@st.cache_data(show_spinner=False)
+def load_example() -> pd.DataFrame:
+    return pd.read_csv(EXAMPLE_PATH)
+
+
+def model_paths() -> tuple[Path, Path]:
+    model_dir = PROJECT_ROOT / "models" / "public" / "champion_pure"
+    return model_dir / "model.pkl", model_dir / "metadata.json"
+
+
+def render_overview() -> None:
+    st.title("Recommend Supplier · Public Portfolio")
     st.markdown(
-        "- Public demo with synthetic data only.\n"
-        "- No ETL code and no real business data included.\n"
-        "- Model is trained locally after clone (`python scripts/train_public_model.py`)."
+        "- Repositorio público pseudonimizado y auditado.\n"
+        "- Incluye los 21 notebooks, `src` relevante, training público de baseline y champion, y artefactos auditables.\n"
+        "- No contiene `raw`, `staging`, `curated`, `reports`, `docs` ni ficheros Office/PDF."
     )
 
-def section_nb01() -> None:
-    st.header("Notebook 01 · KNN baseline")
-    frame = load_csv(V1_PATH).copy()
-    frame["fecha_compra"] = pd.to_datetime(frame["fecha_compra"], errors="coerce")
-    frame = frame.dropna(subset=["fecha_compra", "proveedor_elegido"]).sort_values("fecha_compra")
+    training = load_json(TRAINING_SUMMARY_PATH)
+    notebooks = load_json(NOTEBOOK_SUMMARY_PATH)
+    left, right = st.columns(2)
+    left.metric("Model parity", training["status"])
+    right.metric("Notebook execution", notebooks["status"])
 
-    split_idx = int(len(frame) * 0.8)
-    train = frame.iloc[:split_idx].copy()
-    test = frame.iloc[split_idx:].copy()
-    providers = train["proveedor_elegido"].value_counts().head(10).index
-    train_ratio = train["proveedor_elegido"].value_counts(normalize=True).reindex(providers).fillna(0)
-    test_ratio = test["proveedor_elegido"].value_counts(normalize=True).reindex(providers).fillna(0)
-    dist_df = pd.DataFrame({"proveedor": providers, "train_ratio": train_ratio.values, "test_ratio": test_ratio.values})
+    rows = []
+    for model_payload in training["models"]:
+        row = {"role": model_payload["role"], "variant": model_payload["model_variant"]}
+        row.update(model_payload["metrics"])
+        rows.append(row)
+    st.dataframe(pd.DataFrame(rows), hide_index=True, use_container_width=True)
 
-    melted = dist_df.melt(id_vars="proveedor", var_name="split", value_name="ratio")
-    fig, ax = plt.subplots(figsize=(10, 4))
-    sns.barplot(data=melted, x="proveedor", y="ratio", hue="split", ax=ax)
-    ax.tick_params(axis="x", rotation=45)
-    fig.tight_layout()
-    st.pyplot(fig)
 
-    df_model = fc.df_model_knn(frame)
-    X_train, X_test, y_train, y_test = fc.split_temporal(df_model)
-    dummy = DummyClassifier(strategy="most_frequent")
-    dummy.fit(X_train, y_train)
-    knn = Pipeline([("scaler", StandardScaler()), ("knn", KNeighborsClassifier(n_neighbors=5))])
-    knn.fit(X_train, y_train)
-    metrics = pd.DataFrame(
+def render_notebooks() -> None:
+    st.header("Notebook inventory")
+    notebook_paths = sorted((PROJECT_ROOT / "notebooks").glob("*.ipynb"))
+    catalog = pd.DataFrame(
         [
-            {"metric": "Dummy accuracy", "value": float(dummy.score(X_test, y_test))},
-            {"metric": "KNN accuracy", "value": float(knn.score(X_test, y_test))},
+            {
+                "notebook": path.name,
+                "relative_path": str(path.relative_to(PROJECT_ROOT)),
+            }
+            for path in notebook_paths
         ]
     )
-    st.dataframe(metrics, hide_index=True, use_container_width=True)
+    st.dataframe(catalog, hide_index=True, use_container_width=True)
 
-def section_nb02() -> None:
-    st.header("Notebook 02 · Feature engineering dataset")
-    frame = load_csv(V2_PATH)
-    c1, c2, c3 = st.columns(3)
-    c1.metric("Rows", f"{len(frame):,}")
-    c2.metric("Events", f"{frame['event_id'].nunique():,}")
-    c3.metric("Positive class", f"{frame['target_elegido'].mean():.2%}")
 
-    left, right = st.columns(2)
-    with left:
-        target_counts = frame["target_elegido"].astype(int).value_counts(normalize=True).rename_axis("target").reset_index(name="ratio")
-        fig, ax = plt.subplots(figsize=(6, 4))
-        sns.barplot(data=target_counts, x="target", y="ratio", ax=ax)
-        fig.tight_layout()
-        st.pyplot(fig)
-
-    with right:
-        per_event = frame.groupby("event_id")["proveedor_candidato"].nunique().rename("candidatos")
-        freq = per_event.value_counts().sort_index()
-        plot_df = freq.rename_axis("n_candidatos").reset_index(name="n_eventos")
-        plot_df["pct_acum"] = plot_df["n_eventos"].cumsum() / plot_df["n_eventos"].sum()
-        fig, ax = plt.subplots(figsize=(7, 4))
-        sns.barplot(data=plot_df, x="n_candidatos", y="n_eventos", color="#4C78A8", ax=ax)
-        ax2 = ax.twinx()
-        ax2.plot(plot_df["n_candidatos"], plot_df["pct_acum"], color="#F58518", marker="o")
-        ax2.set_ylim(0, 1)
-        fig.tight_layout()
-        st.pyplot(fig)
-
-def section_product() -> None:
-    st.header("Interactive product demo")
-    st.caption("Upload a CSV or load the synthetic example. Ranking is generated by event.")
-
-    if not MODEL_PATH.exists() or not METADATA_PATH.exists():
-        st.warning("Model not found. Train it first:\n\n`python scripts/train_public_model.py`")
-        return
-
-    if "input_df" not in st.session_state:
-        st.session_state.input_df = None
+def render_inference() -> None:
+    st.header("Inference demo")
+    if "public_input_df" not in st.session_state:
+        st.session_state.public_input_df = None
 
     col1, col2 = st.columns([1, 2])
     with col1:
-        if st.button("Load synthetic example"):
-            st.session_state.input_df = load_csv(EXAMPLE_INPUT_PATH)
+        if st.button("Load public example", type="primary"):
+            st.session_state.public_input_df = load_example()
     with col2:
         uploaded = st.file_uploader("Upload CSV", type=["csv"])
         if uploaded is not None:
-            st.session_state.input_df = pd.read_csv(uploaded)
+            st.session_state.public_input_df = pd.read_csv(uploaded)
 
-    if st.session_state.input_df is None:
+    if st.session_state.public_input_df is None:
+        st.info("Load the public example or upload a CSV with the public contract.")
         return
 
-    st.session_state.input_df = st.data_editor(st.session_state.input_df, num_rows="dynamic", use_container_width=True)
+    edited = st.data_editor(st.session_state.public_input_df, num_rows="dynamic", use_container_width=True)
     top_k = st.slider("Top-k", min_value=1, max_value=3, value=2)
-    if not st.button("Run inference", type="primary"):
-        return
 
-    model, _, expected_feature_columns = load_model_bundle()
-    result = rs.run_inference_dataframe(
-        input_df=st.session_state.input_df,
-        model=model,
-        expected_feature_columns=expected_feature_columns,
-        event_col="event_id",
-        top_k=top_k,
-    )
-    output_path = rs.save_inference_output(result, OUTPUT_DIR, prefix="public_reco")
-    st.success(f"Inference output saved to: {output_path}")
-
-    visible_cols = [col for col in ["event_id", "proveedor_candidato", "score_model", "rank_event_score", "is_top1", "is_topk", "target_elegido"] if col in result.columns]
-    st.dataframe(result[visible_cols], use_container_width=True)
-
-    if "target_elegido" in result.columns:
-        y_true = result["target_elegido"].astype(int)
-        y_pred = result["pred_label"].astype(int)
-        row_metrics = fc.compute_row_metrics(y_true, y_pred)
-        eval_frame = result[["event_id", "score_model", "target_elegido"]].copy()
-        top1 = fc.topk_hit_by_event(eval_frame, score_col="score_model", k=1)
-        top2 = fc.topk_hit_by_event(eval_frame, score_col="score_model", k=2)
-        metrics_df = pd.DataFrame(
-            [
-                {"metric": "accuracy", "value": row_metrics["accuracy"]},
-                {"metric": "balanced_accuracy", "value": row_metrics["balanced_accuracy"]},
-                {"metric": "f1_pos", "value": row_metrics["f1_pos"]},
-                {"metric": "top1_hit", "value": top1},
-                {"metric": "top2_hit", "value": top2},
-            ]
+    if st.button("Run public inference"):
+        model_path, metadata_path = model_paths()
+        model, metadata, expected_feature_columns = load_model_bundle(model_path, metadata_path)
+        result = run_inference_dataframe(
+            input_df=edited,
+            model=model,
+            expected_feature_columns=expected_feature_columns,
+            event_col="event_id",
+            top_k=top_k,
         )
-        st.dataframe(metrics_df, hide_index=True, use_container_width=True)
+        output_path = save_inference_output(result, OUTPUT_DIR, prefix="public_reco")
+        st.success(f"Saved output to {output_path.relative_to(PROJECT_ROOT)}")
+        visible_cols = [
+            column
+            for column in [
+                "event_id",
+                "proveedor_candidato",
+                "score_model",
+                "rank_event_score",
+                "is_top1",
+                "is_topk",
+                "target_elegido",
+            ]
+            if column in result.columns
+        ]
+        st.dataframe(result[visible_cols], use_container_width=True)
+        st.caption(f"Model: {metadata.get('model_name', 'public_champion_pure')}")
+
 
 section = st.sidebar.radio(
-    "Sections",
-    [
-        "Introduction",
-        "Notebook 01 · KNN baseline",
-        "Notebook 02 · Feature engineering",
-        "Interactive product",
-    ],
+    "Section",
+    ["Overview", "Notebook inventory", "Inference demo"],
 )
 
-if section == "Introduction":
-    section_intro()
-elif section == "Notebook 01 · KNN baseline":
-    section_nb01()
-elif section == "Notebook 02 · Feature engineering":
-    section_nb02()
+if section == "Overview":
+    render_overview()
+elif section == "Notebook inventory":
+    render_notebooks()
 else:
-    section_product()
+    render_inference()

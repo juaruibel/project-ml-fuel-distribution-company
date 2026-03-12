@@ -1,0 +1,9 @@
+{
+  "run_id": "20260306T_day05_1_smoke_v2_lgbm_bal",
+  "defendible_variants": [],
+  "almost_gate_variants": [
+    "V2_LIGHTGBM_CLASS_WEIGHT_BALANCED_v1"
+  ],
+  "best_balanced_variant": "V2_LIGHTGBM_CLASS_WEIGHT_BALANCED_v1",
+  "close_decision": "decide_followup_iteration_without_policy"
+}

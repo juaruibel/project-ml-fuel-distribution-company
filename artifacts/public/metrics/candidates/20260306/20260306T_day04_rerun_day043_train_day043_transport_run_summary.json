@@ -1,0 +1,37 @@
+{
+  "status": "ok",
+  "run_id": "20260306T_day04_rerun_day043_train",
+  "ts_utc": "2026-03-06T12:29:11.690461+00:00",
+  "day_id": "Day 04.3",
+  "gate": {
+    "coverage_gate_pass": true,
+    "leakage_gate_pass": true,
+    "structural_gate_pass": true,
+    "training_allowed": true,
+    "coverage_train_final": 0.8971753001613691,
+    "coverage_test_final": 0.9936217149434107,
+    "failure_reasons": []
+  },
+  "baseline_metrics": {
+    "top2_hit": 0.858336,
+    "balanced_accuracy": 0.865084,
+    "top1_hit": 0.764527
+  },
+  "trained_variants": [
+    "V2_TRANSPORT_CARRY30D_ONLY_LR_smote_0.5_v1",
+    "V2_DISPERSION_PLUS_TRANSPORT_CARRY30D_LR_smote_0.5_v1"
+  ],
+  "policy_variant": "V2_TRANSPORT_CARRY30D_ONLY_LR_smote_0.5_WITH_DETERMINISTIC_LAYER_PRODUCT_002_FOLLOW_PRODUCT_003_SUPPLIER_009_v1",
+  "best_pure_variant": "V2_TRANSPORT_CARRY30D_ONLY_LR_smote_0.5_v1",
+  "best_pure_metrics": {
+    "accuracy": 0.8908018415499712,
+    "balanced_accuracy": 0.8640812741513677,
+    "f1_pos": 0.6570266606416629,
+    "top1_hit": 0.7656665400683631,
+    "top2_hit": 0.8625142423091531,
+    "coverage": 1.0,
+    "test_events": 2633
+  },
+  "transport_only_dataset": "data/public/day043/dataset_modelo_v2_transport_carry30d_only.csv",
+  "transport_plus_dispersion_dataset": "data/public/day043/dataset_modelo_v2_dispersion_plus_transport_carry30d.csv"
+}

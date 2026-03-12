@@ -1,0 +1,43 @@
+{
+  "run_id": "20260306T_day04_rerun_v3a_train",
+  "ts_utc": "2026-03-06T12:23:46.325865+00:00",
+  "day_id": "Day 04",
+  "scope": "after_policy",
+  "eval_scope": "day02_test_like",
+  "cutoff_applied": "2028-02-21",
+  "policy": "PRODUCT_002_follow_PRODUCT_003_SUPPLIER_009",
+  "model_variant": "V3_A_WITH_DETERMINISTIC_LAYER_PRODUCT_002_FOLLOW_PRODUCT_003_SUPPLIER_009_v1",
+  "metrics": {
+    "accuracy": 0.8908018415499712,
+    "balanced_accuracy": 0.8536842451527682,
+    "f1_pos": 0.6502841345415451,
+    "top1_hit": 0.7671857197113559,
+    "top2_hit": 0.8556779339156856,
+    "coverage": 1.0,
+    "test_events": 2633,
+    "top1_hit_before": 0.7417394606912268,
+    "top2_hit_before": 0.8518799848082036,
+    "top1_hit_after": 0.7671857197113559,
+    "top2_hit_after": 0.8556779339156856,
+    "pair_groups_PRODUCT_002_PRODUCT_003": 365,
+    "coherence_before": 0.821917808219178,
+    "coherence_after": 0.9726027397260274,
+    "coherence_delta": 0.15068493150684936,
+    "overrides_count": 74,
+    "overrides_improved": 70,
+    "overrides_harmed": 3,
+    "overrides_neutral": 2560,
+    "coverage_before": 1.0,
+    "coverage_after": 1.0
+  },
+  "sources": {
+    "dataset_csv": "./data/public/dataset_modelo_proveedor_v3_context.csv",
+    "model_path": "./models/candidates/day04_v3_a_lr_smote_0_5_v1/20260306T_day04_rerun_v3a_train/model.pkl",
+    "metadata_path": "./models/candidates/day04_v3_a_lr_smote_0_5_v1/20260306T_day04_rerun_v3a_train/metadata.json",
+    "scored_input_csv": "./artifacts/public/postinferencia/audits/20260306/day04_v3a_scored_input_20260306T_day04_rerun_v3a_train.csv",
+    "detail_csv": "./artifacts/public/postinferencia/audits/20260306/day04_v3a_scored_input_20260306T_day04_rerun_v3a_train_detalle_assist_PRODUCT_002_follow_PRODUCT_003_SUPPLIER_009_20260306T_day04_rerun_v3a_train.csv",
+    "resumen_evento_csv": "./artifacts/public/postinferencia/audits/20260306/day04_v3a_scored_input_20260306T_day04_rerun_v3a_train_resumen_evento_assist_PRODUCT_002_follow_PRODUCT_003_SUPPLIER_009_20260306T_day04_rerun_v3a_train.csv",
+    "resumen_albaran_csv": "./artifacts/public/postinferencia/audits/20260306/day04_v3a_scored_input_20260306T_day04_rerun_v3a_train_resumen_albaran_assist_PRODUCT_002_follow_PRODUCT_003_SUPPLIER_009_20260306T_day04_rerun_v3a_train.csv",
+    "summary_json": "./artifacts/public/postinferencia/audits/20260306/day04_v3a_scored_input_20260306T_day04_rerun_v3a_train_summary_assist_PRODUCT_002_follow_PRODUCT_003_SUPPLIER_009_20260306T_day04_rerun_v3a_train.json"
+  }
+}

@@ -1,0 +1,11 @@
+rule_id,active,fecha_inicio,fecha_fin,producto_canonico,terminal_canonico,proveedor_canonico,motivo
+R001,1,2020-01-01,2034-12-31,PRODUCT_002,TERMINAL_001,SUPPLIER_003,shadow_min_v1_historico_0_wins_eventos_ge_1926
+R002,1,2020-01-01,2034-12-31,PRODUCT_002,TERMINAL_001,SUPPLIER_020,shadow_min_v1_historico_0_wins_eventos_ge_3851
+R003,1,2020-01-01,2034-12-31,PRODUCT_002,TERMINAL_001,SUPPLIER_035,shadow_min_v1_historico_0_wins_eventos_ge_1950
+R004,1,2020-01-01,2034-12-31,PRODUCT_002,TERMINAL_001,SUPPLIER_058,shadow_min_v1_historico_0_wins_eventos_ge_2116
+R005,1,2020-01-01,2034-12-31,PRODUCT_003,TERMINAL_001,SUPPLIER_003,shadow_min_v1_historico_0_wins_eventos_ge_3074
+R006,1,2020-01-01,2034-12-31,PRODUCT_003,TERMINAL_001,SUPPLIER_004,shadow_min_v1_historico_0_wins_eventos_ge_2262
+R007,1,2020-01-01,2034-12-31,PRODUCT_003,TERMINAL_001,SUPPLIER_020,shadow_min_v1_historico_0_wins_eventos_ge_6651
+R008,1,2020-01-01,2034-12-31,PRODUCT_003,TERMINAL_001,SUPPLIER_035,shadow_min_v1_historico_0_wins_eventos_ge_3175
+R009,1,2020-01-01,2034-12-31,PRODUCT_003,TERMINAL_001,SUPPLIER_058,shadow_min_v1_historico_0_wins_eventos_ge_3476
+R000,0,2020-01-01,2034-12-31,*,*,DUMMY,Plantilla de ejemplo desactivada

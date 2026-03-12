@@ -1,0 +1,32 @@
+{
+  "version": "1.0",
+  "raw_root": "data/raw/SUPPLIER_DAILY_COMPARISON",
+  "sources": {
+    "ofertas": {
+      "enabled": true,
+      "globs": [
+        "20?? COMPARATIVA DE PRECIOS/**/*.xlsx",
+        "20?? COMPARATIVA DE PRECIOS/**/*.xls"
+      ],
+      "exclude_name_prefixes": [
+        "~$"
+      ]
+    },
+    "compras": {
+      "primary": {
+        "enabled": true,
+        "kind": "xls",
+        "path": "data/raw/SUPPLIER_DAILY_COMPARISON/compras totales.xls",
+        "target_staging": "data/public/support/compras_raw_xls.csv"
+      },
+      "historical": [
+        {
+          "enabled": false,
+          "kind": "pdf",
+          "path": "data/raw/SUPPLIER_DAILY_COMPARISON/Compras.pdf",
+          "mode": "keep_raw_only"
+        }
+      ]
+    }
+  }
+}

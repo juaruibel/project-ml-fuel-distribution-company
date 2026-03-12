@@ -1,0 +1,30 @@
+{
+  "version": "1.0",
+  "preferred_sheet_names": [
+    "Tabla"
+  ],
+  "fallback_enabled": false,
+  "product_tokens": [
+    "PRODUCT_006",
+    "PRODUCT_001",
+    "PRODUCT_002",
+    "PRODUCT_003",
+    "PRODUCT_005",
+    "PRODUCT_004",
+    "AGROMAX"
+  ],
+  "terminal_regex": "^(C\\.L\\.H\\.|CÓRDOBA|CORDOBA|SEVILLA|HUELVA|ROTA|SAN ROQUE|MÁLAGA|MALAGA)",
+  "invalid_cost_tokens": [
+    "999999",
+    "999999.0",
+    "",
+    "-",
+    "nan"
+  ],
+  "anchors": {
+    "min_cost_row_token": "MENOR COSTE (CON TRANSPORTE)",
+    "provider_row_token": "EMPRESA",
+    "terminal_section_token": "MENOR COSTE SEGÚN CENTRO DE CARGA"
+  },
+  "date_anchor_token": "FECHA"
+}

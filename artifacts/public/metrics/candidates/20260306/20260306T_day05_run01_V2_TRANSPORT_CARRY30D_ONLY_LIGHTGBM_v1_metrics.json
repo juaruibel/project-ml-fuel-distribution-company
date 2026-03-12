@@ -1,0 +1,26 @@
+{
+  "run_id": "20260306T_day05_run01",
+  "ts_utc": "2026-03-06T15:13:10.268174+00:00",
+  "day_id": "Day 05",
+  "scope": "model_retrain",
+  "eval_scope": "day02_test_like",
+  "cutoff_applied": "2028-02-21",
+  "model_variant": "V2_TRANSPORT_CARRY30D_ONLY_LIGHTGBM_v1",
+  "dataset_alias": "V2_TRANSPORT_CARRY30D_ONLY",
+  "model_family": "LIGHTGBM",
+  "variant_stage": "phase1",
+  "metrics": {
+    "accuracy": 0.9229330519854211,
+    "balanced_accuracy": 0.7484444699878532,
+    "f1_pos": 0.6279231303542486,
+    "top1_hit": 0.7474363843524496,
+    "top2_hit": 0.8830231674895557,
+    "coverage": 1.0,
+    "test_events": 2633
+  },
+  "sources": {
+    "dataset_csv": "./data/public/day043/dataset_modelo_v2_transport_carry30d_only.csv",
+    "model_path": "./models/candidates/day05_tabular/v2_transport_carry30d_only_lightgbm_v1/20260306T_day05_run01/model.pkl",
+    "metadata_path": "./models/candidates/day05_tabular/v2_transport_carry30d_only_lightgbm_v1/20260306T_day05_run01/metadata.json"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "run_id": "20260306T_day04_rerun_day043_train",
+  "ts_utc": "2026-03-06T12:29:11.690461+00:00",
+  "day_id": "Day 04.3",
+  "model_variant": "V2_DISPERSION_PLUS_TRANSPORT_CARRY30D_LR_smote_0.5_v1",
+  "cutoff_applied": "2028-02-21",
+  "metrics": {
+    "accuracy": 0.8900345290619605,
+    "balanced_accuracy": 0.8647793471617538,
+    "f1_pos": 0.6561703403808667,
+    "top1_hit": 0.7611090011393847,
+    "top2_hit": 0.8602354728446638,
+    "coverage": 1.0,
+    "test_events": 2633
+  },
+  "registry_row": {
+    "run_id": "20260306T_day04_rerun_day043_train",
+    "day_id": "Day 04.3",
+    "model_variant": "V2_DISPERSION_PLUS_TRANSPORT_CARRY30D_LR_smote_0.5_v1",
+    "model_role": "candidate",
+    "dataset_name": "dataset_modelo_v2_dispersion_plus_transport_carry30d.csv",
+    "dataset_snapshot_hash": "428650b66cf8c491f981fde4196728713d083ada17a29c85cc0c11e43a5b4a8e",
+    "cutoff_date": "2028-02-21",
+    "test_events": "2633",
+    "accuracy": "0.890035",
+    "balanced_accuracy": "0.864779",
+    "f1_pos": "0.656170",
+    "top1_hit": "0.761109",
+    "top2_hit": "0.860235",
+    "coverage": "1.000000",
+    "delta_top2_vs_baseline": "0.001899",
+    "delta_bal_acc_vs_baseline": "-0.000305",
+    "delta_coverage_vs_baseline": "0.000000",
+    "gate_top2_ok": "false",
+    "gate_bal_acc_ok": "false",
+    "gate_coverage_ok": "true",
+    "gate_pass": "false",
+    "promotion_decision": "keep_baseline",
+    "selection_rule": "fixed_recipe(LR_smote_0.5 on V2_DISPERSION_PLUS_TRANSPORT_CARRY30D_LR_smote_0.5_v1) -> registry_gate(top2>=baseline+0.01 & bal_acc>=baseline+0.01 & coverage>=baseline-0.005)",
+    "model_path": "./models/candidates/day043_transport/v2_dispersion_plus_transport_carry30d_lr_smote_0_5_v1/20260306T_day04_rerun_day043_train/model.pkl",
+    "metadata_path": "./models/candidates/day043_transport/v2_dispersion_plus_transport_carry30d_lr_smote_0_5_v1/20260306T_day04_rerun_day043_train/metadata.json",
+    "metrics_source": "./artifacts/public/metrics/candidates/20260306/20260306T_day04_rerun_day043_train_V2_DISPERSION_PLUS_TRANSPORT_CARRY30D_LR_smote_0.5_v1_metrics.json",
+    "created_at_utc": "2026-03-06T12:29:19.242574+00:00"
+  },
+  "artifact_paths": {
+    "dataset_csv": "data/public/day043/dataset_modelo_v2_dispersion_plus_transport_carry30d.csv",
+    "model_path": "./models/candidates/day043_transport/v2_dispersion_plus_transport_carry30d_lr_smote_0_5_v1/20260306T_day04_rerun_day043_train/model.pkl",
+    "metadata_path": "./models/candidates/day043_transport/v2_dispersion_plus_transport_carry30d_lr_smote_0_5_v1/20260306T_day04_rerun_day043_train/metadata.json",
+    "metrics_json": "./artifacts/public/metrics/candidates/20260306/20260306T_day04_rerun_day043_train_V2_DISPERSION_PLUS_TRANSPORT_CARRY30D_LR_smote_0.5_v1_metrics.json"
+  }
+}

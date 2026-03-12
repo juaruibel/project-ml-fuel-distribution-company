@@ -1,314 +1,170 @@
-> ⚠️ Esta es una copia anonimizada del README del entorno privado.
-> Se eliminaron datos reales, ETL operativo y artefactos internos.
-> Branding público: `Fuel Distribution Company, S.L.`.
+# Fuel Distribution Company · Supplier Recommendation
 
-## Snapshot público reproducible (sintético)
+Public, pseudonymized, portfolio-ready version of a full machine learning project for daily supplier recommendation in fuel purchasing.
 
-- `seed`: `42`
-- `generated_utc`: `2026-03-02T07:54:08.411272+00:00`
-- `rows_v1`: `1802`
-- `rows_v2`: `14392`
-- `events_v2`: `1802`
-- `V1 Dummy accuracy`: `0.6011`
-- `V1 KNN (k=5) accuracy`: `0.5429`
-- `V2 Logistic accuracy`: `0.9045`
-- `V2 Logistic balanced_accuracy`: `0.9263`
-- `V2 Logistic f1_pos`: `0.7140`
-- `V2 Logistic Top-1 hit`: `0.8128`
-- `V2 Logistic Top-2 hit`: `0.9916`
-- `Baseline más barato Top-1`: `0.8128`
-- `Baseline más barato Top-2`: `0.9916`
+## What problem this project solves
 
-> Estos valores se regeneran en cada publicación pública con datos sintéticos.
+In the original business flow, a buyer receives daily price comparisons from multiple suppliers and must decide who to buy from for each product and delivery context. That decision is repetitive, time-sensitive, and often driven by a mix of price, transport conditions, historical behavior, and local business rules.
 
-# Project · Unit 07 · Machine Learning · Recommend Supplier (Public Anonymized)
+This project turns that process into a reproducible decision-support system:
 
-*MVP de recomendación de proveedor para compra de combustibles (ETL + ML)*
+- ETL to build auditable training datasets from operational sources.
+- ML models to rank supplier candidates.
+- post-inference policy logic to reflect operational constraints.
+- a Streamlit product layer to make the system usable by non-technical users.
 
-**Project Author**
+The goal is not autopilot. The goal is a defendable human-in-the-loop assistant with traceability.
 
----
+## What this public repo demonstrates
 
-## Índice
+This repository is not a toy excerpt. It is the public portfolio version of the full project, prepared to show the actual work end to end while protecting sensitive information.
 
-1. [Objetivo](#objetivo)
-2. [Transparencia sobre uso de IA](#uso-ia)
-3. [Trazabilidad de prompts](#trazabilidad-prompts)
-4. [Instalación](#instalacion)
-5. [Cómo replicar el proyecto](#como-replicar)
-6. [Run app (Streamlit)](#run-app)
-7. [Estructura del proyecto](#estructura-proyecto)
-8. [Contexto de negocio](#contexto-negocio)
-9. [Dataset](#dataset)
-10. [Pipeline ETL](#pipeline-etl)
-11. [Notebook 01 · KNN baseline](#nb01)
-12. [Notebook 02 · Feature Engineering](#nb02)
-13. [Notebook 03 · Ensemble](#nb03)
-14. [Notebook 04 · Hyperparameter Tuning + Imbalanced](#nb04)
-15. [MVP de inferencia y demo](#mvp-inferencia-demo)
-16. [Resultados / Insights](#resultados-insights)
-17. [Limitaciones y próximos pasos](#limitaciones-proximos-pasos)
-18. [Licencia](#licencia)
+It demonstrates:
 
----
+- a complete ETL and feature engineering pipeline;
+- baseline and champion model training;
+- notebook-driven analysis across the full project lifecycle;
+- explainability work with error analysis and SHAP;
+- operational policy analysis and product-oriented closure;
+- a reproducible public audit process over the published artifacts.
 
-<a id="objetivo"></a>
-## Objetivo
+## Project story
 
-El objetivo de este proyecto de Machine Learning es construir un MVP de recomendación de proveedor para una empresa de logística/venta de hidrocarburos, utilizando un histórico operativo de aproximadamente 10 años.
+### 1. Data and ETL
 
-El problema de negocio es concreto: cada día se reciben ofertas de precios de distintos proveedores y hay que decidir con quién comprar. Esa decisión depende de patrones históricos y de reglas de negocio que no siempre están completamente explícitas en los datos.
+The project starts by converting operational purchasing and offer data into structured marts for modeling. The ETL layer creates progressively richer datasets, moving from a baseline candidate dataset to transport-aware and context-enriched versions.
 
-A nivel técnico, el proyecto plantea una tarea de clasificación para estimar qué proveedor tiene mayor probabilidad de ser el elegido en cada evento de compra. Para validar utilidad real, el modelo se compara contra baselines operativos (`más barato`, `clase mayoritaria histórica`, `top-2 histórico`) y no solo contra métricas de laboratorio.
+The public repo keeps the ETL code and the model-ready public datasets so the feature engineering story is visible, not hidden.
 
-El objetivo operativo del MVP no es sustituir al decisor humano, sino ofrecer una recomendación asistida que reduzca tiempo de decisión, estandarice criterios y mejore trazabilidad. Si el modelo demuestra señal estable frente a baselines, se usará como base para iterar con reglas de negocio más sofisticadas y nuevas variables.
+### 2. Baseline model
 
----
+The initial control model is a logistic-regression baseline over the main candidate dataset. That baseline remains important throughout the project because every later candidate is evaluated against it using the same temporal logic and the same operational metrics.
 
-<a id="uso-ia"></a>
-## Transparencia sobre uso de IA
+### 3. Day 04 and Day 05 model iterations
 
-Durante el proyecto se ha utilizado asistencia por IA en varias fases para acelerar la ejecución y guiar la consecución de objetivos que, sin esta ayuda, habrían tenido un coste temporal significativamente mayor (especialmente en ETL).
+The project then explores stronger candidates:
 
-Para mantener trazabilidad metodológica, los prompts utilizados y el contexto de trabajo con el agente de código se documentan en `src/prompts`.
+- richer context datasets built from the ETL pipeline;
+- transport-related rebuilds and carry-forward strategies;
+- tabular model families;
+- a final pure champion based on the transport-only dataset.
 
----
+The final pure champion promoted in the public repo is:
 
-<a id="trazabilidad-prompts"></a>
-## Trazabilidad de prompts
+- `V2_TRANSPORT_ONLY_LIGHTGBM_CLASS_WEIGHT_BALANCED_v1`
 
-La trazabilidad de interacciones con IA se mantiene en `src/prompts/` con un esquema versionado y orientado a auditoría:
+### 4. Error analysis, SHAP, and operational policies
 
-- `src/prompts/1_prompt.md`: bootstrap del proyecto (contexto, viabilidad, roadmap y arquitectura).
-- `src/prompts/2_prompt_etl_execution.md`: ejecución ETL (V0, dual, cierre train-ready, V2).
-- `src/prompts/3_prompt_ml_execution.md`: ejecución ML (Day 01 a Day 04, inferencia y cierre documental).
-- `src/prompts/prompt_artifact_manifest.yaml`: mapa `prompt_id -> artefactos` verificados en repo.
-- `src/prompts/README.md`: política de mantenimiento de la trazabilidad.
+The work does not stop at raw model metrics. The later notebooks analyze:
 
-Reglas aplicadas:
-- solo prompts ejecutados y con outputs verificables;
-- exclusión de duplicados, borradores y variantes no usadas;
-- metadata YAML normalizada (modelo, versión, alcance y criterios de inclusión).
+- where the champion wins and where it still fails;
+- which slices are operationally meaningful;
+- whether local fallback rules or flags are defendable;
+- why some apparent improvements should not be promoted.
 
----
+That is why notebooks `19`, `20`, and `21` are especially important in this repo: they show the explanation, the restraint, and the decision logic behind the final project story.
 
-<a id="instalacion"></a>
-## Instalación
+### 5. Product layer
 
-Requisitos:
-- `Python 3.11.x`
-- `git`
+The original private project also includes a Streamlit product and a cloud demo profile. This public repo keeps a lightweight public app entrypoint so the product direction remains visible alongside the analytical work.
+
+## Public publication strategy
+
+This repo was built with a pseudonymization strategy designed to preserve the technical value of the project without exposing private business information.
+
+What is preserved:
+
+- the real project structure;
+- the real notebooks;
+- model-ready public datasets;
+- public model retraining;
+- explainability and policy analysis;
+- reproducible public audit artifacts.
+
+What is removed or excluded:
+
+- raw source files;
+- staging and curated business layers;
+- operational documents and internal reports;
+- direct business identifiers;
+- Excel, PDF, and other sensitive source artifacts.
+
+Why the repo contains `data/public`, `models/public`, and `artifacts/public`:
+
+- `data/public` holds the pseudonymized model-ready datasets used by notebooks and training.
+- `models/public` holds public models retrained from those public datasets.
+- `artifacts/public` holds the auditable outputs needed to validate the public repo, including metric parity, notebook execution, and publication manifest files.
+
+## Validation status
+
+The current public state was validated locally before publication.
+
+- public training: `PASS`
+- public notebook execution: `21/21 PASS`
+- strict public audit: `PASS`
+- dataset metric parity: `PASS`
+- sensitive token hits: `0`
+- forbidden extensions in repo tree: `0`
+
+Current public training snapshot:
+
+| role | accuracy | balanced_accuracy | top2_hit |
+|---|---:|---:|---:|
+| baseline | `0.8874` | `0.8651` | `0.8583` |
+| champion_pure | `0.9007` | `0.8814` | `0.8826` |
+
+Audit evidence lives in:
+
+- `artifacts/public/public_audit_summary.json`
+- `artifacts/public/public_publish_manifest.json`
+- `artifacts/public/models/public_training_summary.json`
+- `artifacts/public/notebooks/notebook_execution_summary.json`
+
+## Repository contents
+
+```text
+.
+├── app.py
+├── artifacts/public/
+├── config/
+├── data/public/
+├── models/public/
+├── notebooks/
+├── scripts/
+└── src/
+```
+
+Highlights:
+
+- `notebooks/`: the 21 real notebooks of the project, sanitized and executable.
+- `src/etl`, `src/ml`, `src/sql`, `src/prompts`: the public code and traceability layer.
+- `scripts/train_public_models.py`: retrains the public baseline and champion.
+- `scripts/run_public_notebooks.py`: executes and sanitizes notebook outputs.
+- `scripts/audit_public_repo.py`: runs the strict publication audit.
+
+## How to run
 
 ```bash
 python3.11 -m venv .venv
 source .venv/bin/activate
 python -m pip install --upgrade pip
 pip install -r requirements.txt
-```
-
-## Cómo replicar el proyecto
-
-Orden recomendado en público:
-
-1. Instalar dependencias.
-2. Entrenar modelo público sintético:
-   - `python scripts/train_public_model.py`
-3. Ejecutar notebooks (sin outputs) si quieres reproducir análisis.
-4. Levantar app:
-   - `streamlit run app.py`
-
-Nota:
-- El ETL real no se publica.
-- Este repositorio se limita a capa ML + demo con datos sintéticos.
-
-## Run app (Streamlit)
-
-```bash
-source .venv/bin/activate
-python scripts/train_public_model.py
+python scripts/train_public_models.py
+python scripts/run_public_notebooks.py
+python scripts/audit_public_repo.py --strict
 streamlit run app.py
 ```
 
-Alcance público:
-- datasets sintéticos en `data/synthetic/`;
-- inferencia con `models/public_champion/model.pkl` tras entrenar localmente;
-- ejemplo de entrada en `data/synthetic/inference_input_example_synthetic.csv`;
-- salida de inferencia guardada en `data/synthetic/inference_outputs/`.
+## What to review first
 
-## Estructura del proyecto
+If you want the shortest path through the repo:
 
-```text
-project-public/
-  README.md
-  LICENSE
-  app.py
-  requirements.txt
-  requirements-dev.txt
-  data/
-    synthetic/
-  notebooks/
-    01_ml_knn.ipynb
-    02_ml_feature_eng.ipynb
-    03_ml_ensemble.ipynb
-    04_ml_hyperparameter_tunning.ipynb
-  src/
-    ml/
-    prompts/
-  scripts/
-    train_public_model.py
-  docs/
-    privacy_checklist.md
-    public_publish_manifest.json
-```
+1. `README.md`
+2. `artifacts/public/public_audit_summary.json`
+3. notebooks `19`, `20`, and `21`
+4. `scripts/train_public_models.py`
+5. `src/ml/`
 
-## Contexto de negocio
+## License
 
-Actualmente, el administrativo recibe diariamente por email las ofertas de entre 12 y 28 proveedores. La operativa consiste en cargar esa información en Excel, ejecutar cálculos y seleccionar proveedor aplicando reglas de negocio. El proceso completo de preparación (copiar/pegar entradas y salidas, consolidar datos y revisar) puede superar 1 hora diaria, mientras que la decisión final de análisis/elección suele concentrarse en unos 10 minutos.
-
-El MVP de este proyecto busca reducir esa fricción con una herramienta ejecutable en `app.py` (Streamlit) que entregue recomendaciones `Top-2` con enfoque **human in the loop**. La utilidad del sistema se evalúa contra baselines operativos (`clase mayoritaria`, `más barato`, `top-2 histórico`) para validar si realmente aporta señal de mejora frente a reglas simples.
-
-La principal fricción técnica para escalar es la ingesta automática desde email, que puede convertirse en un punto sensible del pipeline por heterogeneidad de formatos y robustez operativa. En el estado actual, el proceso de decisión real incluye variables no completamente capturadas en los datos históricos: precio mínimo del día, línea de crédito/liquidez por proveedor, contexto de cierre de mes y señales externas como Brent. Estas variables se contemplan como fase de evolución del modelo.
-
-El objetivo de producción no es una automatización ciega, sino un modo asistido con validación humana continua, con meta de alcanzar una cobertura operativa alta y una precisión estable en decisión diaria.
-
-
----
-
-<a id="dataset"></a>
-## Dataset
-
-**Fuentes principales**
-
-| Fuente | Tipo | Qué aporta | Estado |
-|--------|------|-----------|--------|
-| `SUPPLIER_DAILY_COMPARISON/*.xls*` | Excel | Ofertas diarias por terminal/producto/proveedor | ✅ |
-| `compras totales.xls` | Excel | Compras reales históricas (ground truth) | ✅ |
-| `Compras.pdf` | PDF | Histórico documental (no procesado en ETL) | ✅ (no pipeline) |
-
-**Capas de datos**
-- `raw`: ingesta original sin tocar.
-- `staging`: tipado, limpieza y rechazos con trazabilidad.
-- `curated`: tablas normalizadas de negocio (`fact_compras`, `fact_ofertas_diarias`, `join_diagnostico`).
-- `marts`: datasets para entrenamiento/inferencia.
-
-**Resumen de datasets públicos (sintéticos)**
-
-| Dataset | Grano | Filas |
-|---|---|---:|
-| `dataset_modelo_proveedor_v1_synthetic.csv` | 1 línea de compra real | 1802 |
-| `dataset_modelo_proveedor_v2_candidates_synthetic.csv` | 1 par (evento, proveedor candidato) | 14392 |
-| `inference_input_example_synthetic.csv` | muestra de inferencia | variable |
-
-## Pipeline ETL
-
-- Esta sección se ejecuta solo en entorno privado y no se publica en este repositorio.
-- En público se mantiene únicamente trazabilidad anonimizada en `src/prompts/`.
-
-## Notebook 01 · KNN baseline
-
-### Cierre Day 01 (Baseline sintético)
-
-- Dataset: `data/synthetic/dataset_modelo_proveedor_v1_synthetic.csv`
-- Split temporal reproducible (80/20).
-- Dummy accuracy: `0.6011`
-- KNN (`k=5`) accuracy: `0.5429`
-- Lectura: baseline inicial de referencia para validar que el pipeline de evaluación está correcto.
-
-## Notebook 02 · Feature Engineering
-
-### Conclusiones (Day 02 · Feature Engineering sobre V2)
-
-- Se trabajó sobre `data/synthetic/dataset_modelo_proveedor_v2_candidates_synthetic.csv`, cambiando de enfoque a clasificación binaria por candidato (`target_elegido`).
-- El `feature engineering` aplicado en V2 mejora el comportamiento de KNN respecto al baseline inicial de Day 01.
-- En `accuracy`, KNN queda muy cerca de `Dummy` (o lo supera levemente según `k`), sin una ventaja concluyente si se mira solo esa métrica.
-- Esto es coherente con el desbalance de clases: un baseline mayoritario puede mantener accuracy alta sin capturar la lógica real de selección.
-- Para este problema, las métricas prioritarias son `balanced_accuracy`, `f1` de clase positiva (`target_elegido=1`) y métricas por evento (`Top-1` / `Top-2 hit`).
-- Conclusión operativa: KNN + FE aporta valor como baseline diagnóstico, pero el siguiente paso natural son modelos más robustos (LogReg y ensembles).
-
----
-
-<a id="nb03"></a>
-## Notebook 03 · Ensemble
-
-### Cierre Day 03 (comparación operativa)
-
-- Modelo de referencia público: `LogisticRegression` (binaria por candidato, V2).
-- Métricas por fila:
-  - `accuracy`: `0.9045`
-  - `balanced_accuracy`: `0.9263`
-  - `f1_pos`: `0.7140`
-- Métricas por evento:
-  - `Top-1 hit`: `0.8128`
-  - `Top-2 hit`: `0.9916`
-- Baseline más barato:
-  - `Top-1`: `0.8128`
-  - `Top-2`: `0.9916`
-
-## Notebook 04 · Hyperparameter Tuning + Imbalanced
-
-### Cierre Day 04 (modelo exportado en público)
-
-- Champion público exportado: `models/public_champion/model.pkl`.
-- Entrenamiento reproducible: `python scripts/train_public_model.py`.
-- Métricas del champion (reproducibles con seed `42`):
-  - `accuracy`: `0.9045`
-  - `balanced_accuracy`: `0.9263`
-  - `f1_pos`: `0.7140`
-  - `Top-1`: `0.8128`
-  - `Top-2`: `0.9916`
-
-## MVP de inferencia y demo
-
-El MVP público permite:
-
-- entrenar un modelo reproducible sobre datos sintéticos;
-- ejecutar inferencia por `event_id` y ranking `Top-k`;
-- comparar métricas por fila y por evento en la demo;
-- validar flujo de producto sin exponer activos privados.
-
-## Resultados / Insights
-
-### Métricas versionadas (public release)
-
-- `rows_v1`: `1802`
-- `rows_v2`: `14392`
-- `events_v2`: `1802`
-- V1:
-  - `Dummy accuracy`: `0.6011`
-  - `KNN k=5 accuracy`: `0.5429`
-- V2 (`LogisticRegression`):
-  - `accuracy`: `0.9045`
-  - `balanced_accuracy`: `0.9263`
-  - `f1_pos`: `0.7140`
-  - `Top-1`: `0.8128`
-  - `Top-2`: `0.9916`
-- Baseline más barato:
-  - `Top-1`: `0.8128`
-  - `Top-2`: `0.9916`
-
-Nota: todas estas métricas se recalculan durante `publish_to_bootcamp.py`.
-
-## Limitaciones y próximos pasos
-
-**Limitaciones (MVP)**
-- Falta incorporar variables externas de negocio (p. ej. crédito/cupo/stock/mercado).
-- Pipeline aún semimanual para operación diaria completa.
-- Riesgo de sesgo por distribución histórica dominante de proveedores.
-- En el estado actual, la recomendación debe mantenerse en modo **human-in-the-loop**.
-
-**Próximos pasos**
-- [ ] Integrar validación humana + feedback loop de nuevas decisiones.
-- [ ] Mejorar comparativa de negocio y cobertura operativa.
-- [ ] Incorporar nuevas señales de negocio (crédito, cupo, stock y variables externas) para robustecer la decisión.
-- [ ] Definir criterios de promoción a operación diaria (métricas mínimas, cobertura y control de riesgo).
-
-**Cierre**
-- El MVP ya entrega valor operativo inicial y una base técnica reutilizable para iteraciones progresivas hacia producción.
-
----
-
-<a id="licencia"></a>
-## Licencia
-
-Este repositorio se distribuye bajo licencia MIT.  
-Consulta el archivo `LICENSE` para el texto completo.
+This public repository is released under the [MIT License](LICENSE).

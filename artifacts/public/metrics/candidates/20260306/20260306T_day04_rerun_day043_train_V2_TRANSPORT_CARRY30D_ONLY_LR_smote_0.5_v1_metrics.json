@@ -1,0 +1,72 @@
+{
+  "run_id": "20260306T_day04_rerun_day043_train",
+  "ts_utc": "2026-03-06T12:29:11.690461+00:00",
+  "day_id": "Day 04.3",
+  "scope": "model_retrain",
+  "eval_scope": "day02_test_like",
+  "cutoff_applied": "2028-02-21",
+  "model_variant": "V2_TRANSPORT_CARRY30D_ONLY_LR_smote_0.5_v1",
+  "metrics": {
+    "accuracy": 0.8908018415499712,
+    "balanced_accuracy": 0.8640812741513677,
+    "f1_pos": 0.6570266606416629,
+    "top1_hit": 0.7656665400683631,
+    "top2_hit": 0.8625142423091531,
+    "coverage": 1.0,
+    "test_events": 2633
+  },
+  "feature_contract": {
+    "feature_columns_num": [
+      "coste_min_dia_proveedor",
+      "rank_coste_dia_producto",
+      "terminales_cubiertos",
+      "observaciones_oferta",
+      "candidatos_evento_count",
+      "coste_min_evento",
+      "coste_max_evento",
+      "spread_coste_evento",
+      "delta_vs_min_evento",
+      "ratio_vs_min_evento",
+      "litros_evento",
+      "dia_semana",
+      "mes",
+      "fin_mes",
+      "v43_transport_cost_min_day_provider",
+      "v43_transport_cost_mean_day_provider",
+      "v43_transport_cost_range_day_provider",
+      "v43_transport_observations",
+      "v43_transport_unique_terminal_count",
+      "v43_transport_multi_terminal_share",
+      "v43_transport_rank_event",
+      "v43_transport_gap_vs_min_event",
+      "v43_transport_ratio_vs_min_event",
+      "v43_transport_source_raw_explicit",
+      "v43_transport_source_parser_fix",
+      "v43_transport_source_deterministic_rebuild",
+      "v43_transport_source_carry_forward_30d",
+      "v43_transport_source_missing",
+      "v43_transport_imputed_flag",
+      "v43_transport_days_since_last_transport",
+      "v43_transport_cost_min_day_provider_missing_flag",
+      "v43_transport_cost_mean_day_provider_missing_flag",
+      "v43_transport_cost_range_day_provider_missing_flag",
+      "v43_transport_observations_missing_flag",
+      "v43_transport_unique_terminal_count_missing_flag",
+      "v43_transport_multi_terminal_share_missing_flag",
+      "v43_transport_rank_event_missing_flag",
+      "v43_transport_gap_vs_min_event_missing_flag",
+      "v43_transport_ratio_vs_min_event_missing_flag",
+      "v43_transport_days_since_last_transport_missing_flag"
+    ],
+    "feature_columns_cat": [
+      "proveedor_candidato",
+      "producto_canonico",
+      "terminal_compra"
+    ]
+  },
+  "sources": {
+    "dataset_csv": "data/public/day043/dataset_modelo_v2_transport_carry30d_only.csv",
+    "model_path": "./models/candidates/day043_transport/v2_transport_carry30d_only_lr_smote_0_5_v1/20260306T_day04_rerun_day043_train/model.pkl",
+    "metadata_path": "./models/candidates/day043_transport/v2_transport_carry30d_only_lr_smote_0_5_v1/20260306T_day04_rerun_day043_train/metadata.json"
+  }
+}

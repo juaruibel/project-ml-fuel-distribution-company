@@ -1,0 +1,36 @@
+{
+  "run_id": "20260305T160207Z",
+  "ts_utc": "2026-03-05T16:02:07.984519+00:00",
+  "day_id": "Day 03",
+  "scope": "before_policy",
+  "eval_scope": "day02_test_like",
+  "cutoff_applied": "2028-02-21",
+  "policy": "PRODUCT_002_follow_PRODUCT_003_SUPPLIER_009",
+  "metrics": {
+    "accuracy": 0.9095050834452331,
+    "balanced_accuracy": 0.8614631928825947,
+    "f1_pos": 0.6898931799506984,
+    "top1_hit": 0.7721230535510825,
+    "top2_hit": 0.8628940372199012,
+    "coverage": 1.0,
+    "test_events": 2633,
+    "pair_groups_PRODUCT_002_PRODUCT_003": 365,
+    "coherence_before": 0.915068493150685,
+    "coherence_after": 1.0,
+    "coherence_delta": 0.08493150684931505,
+    "overrides_count": 44,
+    "overrides_improved": 44,
+    "overrides_harmed": 0,
+    "overrides_neutral": 2589
+  },
+  "sources": {
+    "dataset_csv": "./data/public/dataset_modelo_proveedor_v2_candidates.csv",
+    "eval_scope": "day02_test_like",
+    "cutoff_applied": "2028-02-21",
+    "scored_input_csv": "./artifacts/public/postinferencia/audits/20260305/day03_scored_input_20260305T160207Z.csv",
+    "detail_csv": "./artifacts/public/postinferencia/audits/20260305/day03_scored_input_20260305T160207Z_detalle_assist_PRODUCT_002_follow_PRODUCT_003_SUPPLIER_009_20260305T160207Z.csv",
+    "resumen_evento_csv": "./artifacts/public/postinferencia/audits/20260305/day03_scored_input_20260305T160207Z_resumen_evento_assist_PRODUCT_002_follow_PRODUCT_003_SUPPLIER_009_20260305T160207Z.csv",
+    "resumen_albaran_csv": "./artifacts/public/postinferencia/audits/20260305/day03_scored_input_20260305T160207Z_resumen_albaran_assist_PRODUCT_002_follow_PRODUCT_003_SUPPLIER_009_20260305T160207Z.csv",
+    "summary_json": "./artifacts/public/postinferencia/audits/20260305/day03_scored_input_20260305T160207Z_summary_assist_PRODUCT_002_follow_PRODUCT_003_SUPPLIER_009_20260305T160207Z.json"
+  }
+}

@@ -1,0 +1,345 @@
+{
+  "status": "PASS",
+  "generated_utc": "2026-03-12T19:28:56.989161+00:00",
+  "checks": {
+    "public_root_preserves_git": true,
+    "notebook_count": 21,
+    "notebook_expected_count": 21,
+    "notebook_execution_status": "PASS",
+    "training_status": "PASS",
+    "dataset_metric_parity_status": "PASS",
+    "disallowed_existing": [],
+    "forbidden_extensions": [],
+    "sensitive_hits": []
+  },
+  "inventory": {
+    "datasets": {
+      "core": [
+        "data/public/dataset_modelo_proveedor_v1.csv",
+        "data/public/dataset_modelo_proveedor_v2_candidates.csv",
+        "data/public/dataset_modelo_proveedor_v2_excluded_events.csv",
+        "data/public/dataset_modelo_proveedor_v3_context.csv",
+        "data/public/day041/dataset_modelo_v2_source_quality.csv",
+        "data/public/day041/dataset_modelo_v2_dispersion.csv",
+        "data/public/day041/dataset_modelo_v2_competition.csv",
+        "data/public/day041/dataset_modelo_v2_transport_only.csv",
+        "data/public/day042/dataset_modelo_v2_dispersion_plus_transport_rebuilt.csv",
+        "data/public/day042/dataset_modelo_v2_transport_rebuilt_only.csv",
+        "data/public/day043/dataset_modelo_v2_dispersion_plus_transport_carry30d.csv",
+        "data/public/day043/dataset_modelo_v2_transport_carry30d_only.csv",
+        "data/public/inference_inputs/example_real_day_2024-05-28.csv"
+      ],
+      "support": [
+        "data/public/support/ofertas_typed.csv",
+        "data/public/support/ofertas_raw_mincost.csv",
+        "data/public/support/ofertas_transport_signals_day042.csv"
+      ]
+    },
+    "published_notebooks": [
+      "notebooks/01_ml_knn.ipynb",
+      "notebooks/02_ml_feature_eng.ipynb",
+      "notebooks/03_ml_ensemble.ipynb",
+      "notebooks/04_ml_hyperparameter_tunning.ipynb",
+      "notebooks/05_ml_postinferencia.ipynb",
+      "notebooks/06_final_baseline_vs_candidates_sql.ipynb",
+      "notebooks/07_sql_serving.ipynb",
+      "notebooks/08_patrones.ipynb",
+      "notebooks/09_validacion_posinferencia_albaran.ipynb",
+      "notebooks/10_day03_postinferencia_albaran_backtest.ipynb",
+      "notebooks/11_day04_v3a_raw_contract_and_eval.ipynb",
+      "notebooks/12_day04_1_transport_parser_and_ablation.ipynb",
+      "notebooks/13_day04_2_transport_rebuild_and_retrain.ipynb",
+      "notebooks/14_day04_3_transport_carry30d_and_retrain.ipynb",
+      "notebooks/15_day04_rerun_after_date_fix.ipynb",
+      "notebooks/16_day05_tabular_models_only.ipynb",
+      "notebooks/17_day05_1_balanced_tree_baselines.ipynb",
+      "notebooks/18_day05_2_short_tuning_new_champion_pure.ipynb",
+      "notebooks/19_day05_3_error_analysis_and_shap_explainer.ipynb",
+      "notebooks/20_day05_4_fallback_flags_and_local_policies.ipynb",
+      "notebooks/21_day05_4_operational_closure_and_presentation_summary.ipynb"
+    ],
+    "generated_models": [
+      {
+        "role": "baseline",
+        "model_variant": "LR_smote_0.5",
+        "model_path": "models/public/baseline/model.pkl",
+        "metadata_path": "models/public/baseline/metadata.json",
+        "parity_status": "PASS"
+      },
+      {
+        "role": "champion_pure",
+        "model_variant": "V2_TRANSPORT_ONLY_LIGHTGBM_CLASS_WEIGHT_BALANCED_v1",
+        "model_path": "models/public/champion_pure/model.pkl",
+        "metadata_path": "models/public/champion_pure/metadata.json",
+        "parity_status": "PASS"
+      }
+    ],
+    "notebook_execution": {
+      "status": "PASS",
+      "generated_utc": "2026-03-12T18:57:40.785316+00:00",
+      "notebook_count": 21,
+      "failures": [],
+      "records": [
+        {
+          "notebook": "notebooks/01_ml_knn.ipynb",
+          "started_utc": "2026-03-12T18:57:09.829555+00:00",
+          "duration_seconds": null,
+          "status": "SKIP",
+          "error": ""
+        },
+        {
+          "notebook": "notebooks/02_ml_feature_eng.ipynb",
+          "started_utc": "2026-03-12T18:57:09.893783+00:00",
+          "duration_seconds": null,
+          "status": "SKIP",
+          "error": ""
+        },
+        {
+          "notebook": "notebooks/03_ml_ensemble.ipynb",
+          "started_utc": "2026-03-12T18:57:09.906361+00:00",
+          "duration_seconds": null,
+          "status": "SKIP",
+          "error": ""
+        },
+        {
+          "notebook": "notebooks/04_ml_hyperparameter_tunning.ipynb",
+          "started_utc": "2026-03-12T18:57:09.915132+00:00",
+          "duration_seconds": null,
+          "status": "SKIP",
+          "error": ""
+        },
+        {
+          "notebook": "notebooks/05_ml_postinferencia.ipynb",
+          "started_utc": "2026-03-12T18:57:09.926100+00:00",
+          "duration_seconds": null,
+          "status": "SKIP",
+          "error": ""
+        },
+        {
+          "notebook": "notebooks/06_final_baseline_vs_candidates_sql.ipynb",
+          "started_utc": "2026-03-12T18:57:09.932051+00:00",
+          "duration_seconds": null,
+          "status": "SKIP",
+          "error": ""
+        },
+        {
+          "notebook": "notebooks/07_sql_serving.ipynb",
+          "started_utc": "2026-03-12T18:57:09.935883+00:00",
+          "duration_seconds": null,
+          "status": "SKIP",
+          "error": ""
+        },
+        {
+          "notebook": "notebooks/08_patrones.ipynb",
+          "started_utc": "2026-03-12T18:57:09.941025+00:00",
+          "duration_seconds": null,
+          "status": "SKIP",
+          "error": ""
+        },
+        {
+          "notebook": "notebooks/09_validacion_posinferencia_albaran.ipynb",
+          "started_utc": "2026-03-12T18:57:09.947656+00:00",
+          "duration_seconds": null,
+          "status": "SKIP",
+          "error": ""
+        },
+        {
+          "notebook": "notebooks/10_day03_postinferencia_albaran_backtest.ipynb",
+          "started_utc": "2026-03-12T18:57:09.950406+00:00",
+          "duration_seconds": 4.06,
+          "status": "PASS",
+          "error": ""
+        },
+        {
+          "notebook": "notebooks/11_day04_v3a_raw_contract_and_eval.ipynb",
+          "started_utc": "2026-03-12T18:57:14.010489+00:00",
+          "duration_seconds": null,
+          "status": "SKIP",
+          "error": ""
+        },
+        {
+          "notebook": "notebooks/12_day04_1_transport_parser_and_ablation.ipynb",
+          "started_utc": "2026-03-12T18:57:14.020421+00:00",
+          "duration_seconds": null,
+          "status": "SKIP",
+          "error": ""
+        },
+        {
+          "notebook": "notebooks/13_day04_2_transport_rebuild_and_retrain.ipynb",
+          "started_utc": "2026-03-12T18:57:14.028977+00:00",
+          "duration_seconds": null,
+          "status": "SKIP",
+          "error": ""
+        },
+        {
+          "notebook": "notebooks/14_day04_3_transport_carry30d_and_retrain.ipynb",
+          "started_utc": "2026-03-12T18:57:14.042653+00:00",
+          "duration_seconds": null,
+          "status": "SKIP",
+          "error": ""
+        },
+        {
+          "notebook": "notebooks/15_day04_rerun_after_date_fix.ipynb",
+          "started_utc": "2026-03-12T18:57:14.054225+00:00",
+          "duration_seconds": null,
+          "status": "SKIP",
+          "error": ""
+        },
+        {
+          "notebook": "notebooks/16_day05_tabular_models_only.ipynb",
+          "started_utc": "2026-03-12T18:57:14.064940+00:00",
+          "duration_seconds": null,
+          "status": "SKIP",
+          "error": ""
+        },
+        {
+          "notebook": "notebooks/17_day05_1_balanced_tree_baselines.ipynb",
+          "started_utc": "2026-03-12T18:57:14.072018+00:00",
+          "duration_seconds": null,
+          "status": "SKIP",
+          "error": ""
+        },
+        {
+          "notebook": "notebooks/18_day05_2_short_tuning_new_champion_pure.ipynb",
+          "started_utc": "2026-03-12T18:57:14.077988+00:00",
+          "duration_seconds": null,
+          "status": "SKIP",
+          "error": ""
+        },
+        {
+          "notebook": "notebooks/19_day05_3_error_analysis_and_shap_explainer.ipynb",
+          "started_utc": "2026-03-12T18:57:14.082135+00:00",
+          "duration_seconds": 26.69,
+          "status": "PASS",
+          "error": ""
+        },
+        {
+          "notebook": "notebooks/20_day05_4_fallback_flags_and_local_policies.ipynb",
+          "started_utc": "2026-03-12T18:57:40.773487+00:00",
+          "duration_seconds": null,
+          "status": "SKIP",
+          "error": ""
+        },
+        {
+          "notebook": "notebooks/21_day05_4_operational_closure_and_presentation_summary.ipynb",
+          "started_utc": "2026-03-12T18:57:40.779059+00:00",
+          "duration_seconds": null,
+          "status": "SKIP",
+          "error": ""
+        }
+      ]
+    },
+    "dataset_metric_parity": {
+      "status": "PASS",
+      "generated_utc": "2026-03-12T18:34:31.870048+00:00",
+      "reference_snapshot": {
+        "seed": 42,
+        "generated_utc": "2026-03-12T18:34:29.892970+00:00",
+        "rows_v1": 16315,
+        "rows_v2": 155946,
+        "events_v2": 15404,
+        "v1_dummy_accuracy": 0.7796961325966851,
+        "v1_knn_accuracy": 0.5535220994475138,
+        "v2_lr_accuracy": 0.8365144830232112,
+        "v2_lr_balanced_accuracy": 0.8484478950004135,
+        "v2_lr_f1_pos": 0.5717874638864464,
+        "v2_lr_top1_hit": 0.7725028484618306,
+        "v2_lr_top2_hit": 0.858336498290923,
+        "v2_cheapest_top1_hit": 0.306114698063046,
+        "v2_cheapest_top2_hit": 0.5362704139764527
+      },
+      "candidate_snapshot": {
+        "seed": 42,
+        "generated_utc": "2026-03-12T18:34:31.743761+00:00",
+        "rows_v1": 16315,
+        "rows_v2": 155946,
+        "events_v2": 15404,
+        "v1_dummy_accuracy": 0.7796961325966851,
+        "v1_knn_accuracy": 0.5535220994475138,
+        "v2_lr_accuracy": 0.8365144830232112,
+        "v2_lr_balanced_accuracy": 0.8484478950004135,
+        "v2_lr_f1_pos": 0.5717874638864464,
+        "v2_lr_top1_hit": 0.7725028484618306,
+        "v2_lr_top2_hit": 0.858336498290923,
+        "v2_cheapest_top1_hit": 0.306114698063046,
+        "v2_cheapest_top2_hit": 0.5362704139764527
+      },
+      "metric_checks": [
+        {
+          "metric": "rows_v1",
+          "reference": 16315.0,
+          "candidate": 16315.0,
+          "matches": true
+        },
+        {
+          "metric": "rows_v2",
+          "reference": 155946.0,
+          "candidate": 155946.0,
+          "matches": true
+        },
+        {
+          "metric": "events_v2",
+          "reference": 15404.0,
+          "candidate": 15404.0,
+          "matches": true
+        },
+        {
+          "metric": "v1_dummy_accuracy",
+          "reference": 0.7796961325966851,
+          "candidate": 0.7796961325966851,
+          "matches": true
+        },
+        {
+          "metric": "v1_knn_accuracy",
+          "reference": 0.5535220994475138,
+          "candidate": 0.5535220994475138,
+          "matches": true
+        },
+        {
+          "metric": "v2_lr_accuracy",
+          "reference": 0.8365144830232112,
+          "candidate": 0.8365144830232112,
+          "matches": true
+        },
+        {
+          "metric": "v2_lr_balanced_accuracy",
+          "reference": 0.8484478950004135,
+          "candidate": 0.8484478950004135,
+          "matches": true
+        },
+        {
+          "metric": "v2_lr_f1_pos",
+          "reference": 0.5717874638864464,
+          "candidate": 0.5717874638864464,
+          "matches": true
+        },
+        {
+          "metric": "v2_lr_top1_hit",
+          "reference": 0.7725028484618306,
+          "candidate": 0.7725028484618306,
+          "matches": true
+        },
+        {
+          "metric": "v2_lr_top2_hit",
+          "reference": 0.858336498290923,
+          "candidate": 0.858336498290923,
+          "matches": true
+        },
+        {
+          "metric": "v2_cheapest_top1_hit",
+          "reference": 0.306114698063046,
+          "candidate": 0.306114698063046,
+          "matches": true
+        },
+        {
+          "metric": "v2_cheapest_top2_hit",
+          "reference": 0.5362704139764527,
+          "candidate": 0.5362704139764527,
+          "matches": true
+        }
+      ]
+    }
+  },
+  "manifest_path": "artifacts/public/public_publish_manifest.json",
+  "managed_file_count": 338
+}

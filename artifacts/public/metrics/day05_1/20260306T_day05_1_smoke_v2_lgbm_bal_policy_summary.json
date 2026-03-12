@@ -1,0 +1,6 @@
+{
+  "run_id": "20260306T_day05_1_smoke_v2_lgbm_bal",
+  "executed": false,
+  "reason": "no_defendible_variant",
+  "best_final_pure_variant": "V2_LIGHTGBM_CLASS_WEIGHT_BALANCED_v1"
+}

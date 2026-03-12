@@ -1,0 +1,28 @@
+{
+  "status": "gated_no_train",
+  "run_id": "20260306T_day042_train",
+  "ts_utc": "2026-03-06T10:55:12.368284+00:00",
+  "day_id": "Day 04.2",
+  "gate": {
+    "coverage_gate_pass": false,
+    "leakage_gate_pass": false,
+    "structural_gate_pass": true,
+    "training_allowed": false,
+    "coverage_train_final": 0.7805648897902387,
+    "coverage_test_final": 0.9837425666602724,
+    "coverage_train_final_no_lookahead": 0.7719568338933874,
+    "coverage_test_final_no_lookahead": 0.9830232112027624,
+    "failure_reasons": [
+      "coverage_below_min_threshold",
+      "heuristic_lookahead_detected"
+    ]
+  },
+  "baseline_metrics": {
+    "top2_hit": 0.862894,
+    "balanced_accuracy": 0.861463,
+    "top1_hit": 0.772123
+  },
+  "trained_variants": [],
+  "policy_variant": "",
+  "message": "Day 04.2 no entrena porque el artefacto reconstruido no supera cobertura/leakage."
+}

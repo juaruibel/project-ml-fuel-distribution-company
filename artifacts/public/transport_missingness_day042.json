@@ -1,0 +1,474 @@
+{
+  "status": "ok",
+  "run_id": "20260306T_day04_rerun_day042_rebuild",
+  "generated_ts_utc": "2026-03-06T12:26:08.380806+00:00",
+  "cutoff_date": "2028-02-21",
+  "inputs": {
+    "transport_input": "data/public/support/ofertas_transport_signals.csv",
+    "matrix_input": "data/public/support/ofertas_raw_matrix_cells.csv",
+    "v2_input": "data/public/dataset_modelo_proveedor_v2_candidates.csv"
+  },
+  "outputs": {
+    "staging_output": "data/public/support/ofertas_transport_signals_day042.csv",
+    "missingness_json": "artifacts/public/transport_missingness_day042.json",
+    "missingness_csv": "artifacts/public/transport_missingness_day042.csv"
+  },
+  "bucket_counts_unique_keys": {
+    "exact_raw_match": 23678,
+    "no_raw_source": 2558,
+    "heuristic_same_month_only": 546,
+    "deterministic_rebuild_possible": 78,
+    "parser_fix_possible": 3
+  },
+  "bucket_counts_v2_rows": {
+    "exact_raw_match": 137411,
+    "no_raw_source": 14872,
+    "heuristic_same_month_only": 3105,
+    "deterministic_rebuild_possible": 535,
+    "parser_fix_possible": 23
+  },
+  "bucket_breakdown_by_year_v2_rows": {
+    "2017": {
+      "deterministic_rebuild_possible": 535,
+      "exact_raw_match": 14866,
+      "heuristic_same_month_only": 320,
+      "no_raw_source": 3808
+    },
+    "2018": {
+      "exact_raw_match": 15036,
+      "heuristic_same_month_only": 78,
+      "no_raw_source": 3589
+    },
+    "2019": {
+      "exact_raw_match": 16488,
+      "heuristic_same_month_only": 393,
+      "no_raw_source": 1652
+    },
+    "2020": {
+      "exact_raw_match": 18707,
+      "heuristic_same_month_only": 816,
+      "no_raw_source": 2007
+    },
+    "2021": {
+      "exact_raw_match": 17608,
+      "heuristic_same_month_only": 487,
+      "no_raw_source": 1508
+    },
+    "2022": {
+      "exact_raw_match": 15652,
+      "heuristic_same_month_only": 314,
+      "no_raw_source": 1698,
+      "parser_fix_possible": 23
+    },
+    "2023": {
+      "exact_raw_match": 13951,
+      "heuristic_same_month_only": 514,
+      "no_raw_source": 243
+    },
+    "2024": {
+      "exact_raw_match": 13016,
+      "heuristic_same_month_only": 26,
+      "no_raw_source": 93
+    },
+    "2025": {
+      "exact_raw_match": 12087,
+      "heuristic_same_month_only": 157,
+      "no_raw_source": 274
+    }
+  },
+  "bucket_breakdown_by_product_v2_rows": {
+    "PRODUCT_001": {
+      "deterministic_rebuild_possible": 21,
+      "exact_raw_match": 12383,
+      "heuristic_same_month_only": 296,
+      "no_raw_source": 1527,
+      "parser_fix_possible": 5
+    },
+    "PRODUCT_002": {
+      "deterministic_rebuild_possible": 196,
+      "exact_raw_match": 58000,
+      "heuristic_same_month_only": 1547,
+      "no_raw_source": 6744,
+      "parser_fix_possible": 11
+    },
+    "PRODUCT_003": {
+      "deterministic_rebuild_possible": 318,
+      "exact_raw_match": 66184,
+      "heuristic_same_month_only": 1241,
+      "no_raw_source": 6539,
+      "parser_fix_possible": 7
+    },
+    "PRODUCT_004": {
+      "exact_raw_match": 2,
+      "no_raw_source": 3
+    },
+    "PRODUCT_005": {
+      "exact_raw_match": 786,
+      "heuristic_same_month_only": 20,
+      "no_raw_source": 17
+    },
+    "PRODUCT_006": {
+      "exact_raw_match": 56,
+      "heuristic_same_month_only": 1,
+      "no_raw_source": 42
+    }
+  },
+  "top_provider_bucket_rows_v2": [
+    {
+      "proveedor_candidato": "SUPPLIER_009",
+      "transport_bucket_origin": "exact_raw_match",
+      "rows": 15214
+    },
+    {
+      "proveedor_candidato": "SUPPLIER_050",
+      "transport_bucket_origin": "exact_raw_match",
+      "rows": 15183
+    },
+    {
+      "proveedor_candidato": "SUPPLIER_020",
+      "transport_bucket_origin": "exact_raw_match",
+      "rows": 14262
+    },
+    {
+      "proveedor_candidato": "SUPPLIER_054",
+      "transport_bucket_origin": "exact_raw_match",
+      "rows": 13277
+    },
+    {
+      "proveedor_candidato": "SUPPLIER_019",
+      "transport_bucket_origin": "exact_raw_match",
+      "rows": 11939
+    },
+    {
+      "proveedor_candidato": "SUPPLIER_003",
+      "transport_bucket_origin": "exact_raw_match",
+      "rows": 7853
+    },
+    {
+      "proveedor_candidato": "SUPPLIER_058",
+      "transport_bucket_origin": "exact_raw_match",
+      "rows": 7340
+    },
+    {
+      "proveedor_candidato": "SUPPLIER_035",
+      "transport_bucket_origin": "exact_raw_match",
+      "rows": 6896
+    },
+    {
+      "proveedor_candidato": "SUPPLIER_004",
+      "transport_bucket_origin": "exact_raw_match",
+      "rows": 5512
+    },
+    {
+      "proveedor_candidato": "SUPPLIER_041",
+      "transport_bucket_origin": "exact_raw_match",
+      "rows": 5110
+    },
+    {
+      "proveedor_candidato": "SUPPLIER_049",
+      "transport_bucket_origin": "exact_raw_match",
+      "rows": 4026
+    },
+    {
+      "proveedor_candidato": "SUPPLIER_033",
+      "transport_bucket_origin": "exact_raw_match",
+      "rows": 3907
+    },
+    {
+      "proveedor_candidato": "SUPPLIER_013",
+      "transport_bucket_origin": "exact_raw_match",
+      "rows": 3129
+    },
+    {
+      "proveedor_candidato": "SUPPLIER_053",
+      "transport_bucket_origin": "exact_raw_match",
+      "rows": 2779
+    },
+    {
+      "proveedor_candidato": "SUPPLIER_010",
+      "transport_bucket_origin": "exact_raw_match",
+      "rows": 2562
+    },
+    {
+      "proveedor_candidato": "SUPPLIER_001",
+      "transport_bucket_origin": "no_raw_source",
+      "rows": 2383
+    },
+    {
+      "proveedor_candidato": "SUPPLIER_039",
+      "transport_bucket_origin": "exact_raw_match",
+      "rows": 1984
+    },
+    {
+      "proveedor_candidato": "SUPPLIER_059",
+      "transport_bucket_origin": "exact_raw_match",
+      "rows": 1639
+    },
+    {
+      "proveedor_candidato": "SUPPLIER_016",
+      "transport_bucket_origin": "exact_raw_match",
+      "rows": 1577
+    },
+    {
+      "proveedor_candidato": "SUPPLIER_049",
+      "transport_bucket_origin": "no_raw_source",
+      "rows": 1529
+    },
+    {
+      "proveedor_candidato": "SUPPLIER_018",
+      "transport_bucket_origin": "exact_raw_match",
+      "rows": 1520
+    },
+    {
+      "proveedor_candidato": "SUPPLIER_061",
+      "transport_bucket_origin": "no_raw_source",
+      "rows": 1450
+    },
+    {
+      "proveedor_candidato": "SUPPLIER_042",
+      "transport_bucket_origin": "no_raw_source",
+      "rows": 1284
+    },
+    {
+      "proveedor_candidato": "SUPPLIER_001",
+      "transport_bucket_origin": "exact_raw_match",
+      "rows": 1097
+    },
+    {
+      "proveedor_candidato": "SUPPLIER_024",
+      "transport_bucket_origin": "exact_raw_match",
+      "rows": 1067
+    },
+    {
+      "proveedor_candidato": "SUPPLIER_018",
+      "transport_bucket_origin": "no_raw_source",
+      "rows": 1064
+    },
+    {
+      "proveedor_candidato": "SUPPLIER_039",
+      "transport_bucket_origin": "no_raw_source",
+      "rows": 1020
+    },
+    {
+      "proveedor_candidato": "SUPPLIER_008",
+      "transport_bucket_origin": "exact_raw_match",
+      "rows": 846
+    },
+    {
+      "proveedor_candidato": "SUPPLIER_025",
+      "transport_bucket_origin": "exact_raw_match",
+      "rows": 789
+    },
+    {
+      "proveedor_candidato": "SUPPLIER_043",
+      "transport_bucket_origin": "no_raw_source",
+      "rows": 749
+    },
+    {
+      "proveedor_candidato": "SUPPLIER_023",
+      "transport_bucket_origin": "no_raw_source",
+      "rows": 733
+    },
+    {
+      "proveedor_candidato": "SUPPLIER_011",
+      "transport_bucket_origin": "exact_raw_match",
+      "rows": 667
+    },
+    {
+      "proveedor_candidato": "SUPPLIER_051",
+      "transport_bucket_origin": "exact_raw_match",
+      "rows": 610
+    },
+    {
+      "proveedor_candidato": "SUPPLIER_014",
+      "transport_bucket_origin": "exact_raw_match",
+      "rows": 584
+    },
+    {
+      "proveedor_candidato": "SUPPLIER_006",
+      "transport_bucket_origin": "no_raw_source",
+      "rows": 574
+    },
+    {
+      "proveedor_candidato": "SUPPLIER_051",
+      "transport_bucket_origin": "no_raw_source",
+      "rows": 573
+    },
+    {
+      "proveedor_candidato": "SUPPLIER_024",
+      "transport_bucket_origin": "heuristic_same_month_only",
+      "rows": 537
+    },
+    {
+      "proveedor_candidato": "SUPPLIER_034",
+      "transport_bucket_origin": "exact_raw_match",
+      "rows": 512
+    },
+    {
+      "proveedor_candidato": "SUPPLIER_017",
+      "transport_bucket_origin": "exact_raw_match",
+      "rows": 492
+    },
+    {
+      "proveedor_candidato": "SUPPLIER_064",
+      "transport_bucket_origin": "exact_raw_match",
+      "rows": 474
+    },
+    {
+      "proveedor_candidato": "SUPPLIER_044",
+      "transport_bucket_origin": "exact_raw_match",
+      "rows": 458
+    },
+    {
+      "proveedor_candidato": "SUPPLIER_059",
+      "transport_bucket_origin": "no_raw_source",
+      "rows": 441
+    },
+    {
+      "proveedor_candidato": "SUPPLIER_027",
+      "transport_bucket_origin": "exact_raw_match",
+      "rows": 425
+    },
+    {
+      "proveedor_candidato": "SUPPLIER_004",
+      "transport_bucket_origin": "no_raw_source",
+      "rows": 423
+    },
+    {
+      "proveedor_candidato": "SUPPLIER_007",
+      "transport_bucket_origin": "exact_raw_match",
+      "rows": 397
+    },
+    {
+      "proveedor_candidato": "SUPPLIER_018",
+      "transport_bucket_origin": "heuristic_same_month_only",
+      "rows": 389
+    },
+    {
+      "proveedor_candidato": "SUPPLIER_021",
+      "transport_bucket_origin": "exact_raw_match",
+      "rows": 387
+    },
+    {
+      "proveedor_candidato": "SUPPLIER_046",
+      "transport_bucket_origin": "exact_raw_match",
+      "rows": 356
+    },
+    {
+      "proveedor_candidato": "SUPPLIER_022",
+      "transport_bucket_origin": "no_raw_source",
+      "rows": 340
+    },
+    {
+      "proveedor_candidato": "SUPPLIER_032",
+      "transport_bucket_origin": "exact_raw_match",
+      "rows": 326
+    }
+  ],
+  "no_raw_subreason_counts_v2_rows": {
+    "same_date_product_other_provider_only": 14784,
+    "no_date_raw": 60,
+    "same_date_other_product_only": 28
+  },
+  "stage_coverage": {
+    "raw_explicit": {
+      "coverage_train": 0.8666632122818186,
+      "coverage_test": 0.9749664300786496
+    },
+    "parser_fix_or_rebuild": {
+      "coverage_train": 0.8707936695930241,
+      "coverage_test": 0.9749664300786496
+    },
+    "final_after_heuristic": {
+      "coverage_train": 0.892423053577509,
+      "coverage_test": 0.9837425666602724
+    },
+    "final_after_heuristic_no_lookahead": {
+      "coverage_train": 0.8859682887470947,
+      "coverage_test": 0.9830232112027624
+    }
+  },
+  "lookahead_stats": {
+    "heuristic_unique_keys": 546,
+    "heuristic_unique_keys_with_lookahead": 182,
+    "heuristic_v2_rows_with_lookahead": 887
+  },
+  "recovery_summary": {
+    "parser_fix_rows_v2": 23,
+    "deterministic_rebuild_rows_v2": 535,
+    "heuristic_rows_v2": 3105,
+    "explicit_train_coverage": 0.8666632122818186,
+    "final_train_coverage": 0.892423053577509,
+    "final_train_coverage_no_lookahead": 0.8859682887470947
+  },
+  "provider_alias_resolution": {
+    "resolved_aliases": [
+      {
+        "proveedor_raw": "SUPPLIER_061 OIL",
+        "resolved_provider": "SUPPLIER_061",
+        "alias_method": "suffix_strip"
+      },
+      {
+        "proveedor_raw": "SUPPLIER_019 IBERIA",
+        "resolved_provider": "SUPPLIER_019",
+        "alias_method": "suffix_strip"
+      },
+      {
+        "proveedor_raw": "SUPPLIER_009 OFERTA",
+        "resolved_provider": "SUPPLIER_009",
+        "alias_method": "suffix_strip"
+      },
+      {
+        "proveedor_raw": "SUPPLIER_009 PREPAGO",
+        "resolved_provider": "SUPPLIER_009",
+        "alias_method": "suffix_strip"
+      },
+      {
+        "proveedor_raw": "SUPPLIER_056 ENERGY",
+        "resolved_provider": "SUPPLIER_056",
+        "alias_method": "suffix_strip"
+      },
+      {
+        "proveedor_raw": "PETRO MEDITERRANEO",
+        "resolved_provider": "SUPPLIER_043",
+        "alias_method": "exact_squash"
+      },
+      {
+        "proveedor_raw": "RUTA PETROL",
+        "resolved_provider": "SUPPLIER_051",
+        "alias_method": "exact_squash"
+      },
+      {
+        "proveedor_raw": "PETRO MEDITERRANEA",
+        "resolved_provider": "SUPPLIER_043",
+        "alias_method": "fuzzy_0.941"
+      },
+      {
+        "proveedor_raw": "PETROMEDITERRÁNEA",
+        "resolved_provider": "SUPPLIER_043",
+        "alias_method": "fuzzy_0.941"
+      },
+      {
+        "proveedor_raw": "PETROMEDITERRANEA",
+        "resolved_provider": "SUPPLIER_043",
+        "alias_method": "fuzzy_0.941"
+      },
+      {
+        "proveedor_raw": "DEVIPETROL",
+        "resolved_provider": "SUPPLIER_015",
+        "alias_method": "exact_squash"
+      }
+    ],
+    "resolution_method_counts": {
+      "unresolved": 30,
+      "suffix_strip": 5,
+      "exact_squash": 3,
+      "fuzzy_0.941": 3
+    }
+  },
+  "detail_rebuild_summary": {
+    "detail_rows_output": 197370,
+    "detail_unique_day_keys": 68961,
+    "detail_keys_used_for_v2_rebuild": 3281
+  }
+}

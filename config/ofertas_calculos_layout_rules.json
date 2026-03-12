@@ -1,0 +1,35 @@
+{
+  "version": "1.0",
+  "preferred_sheet_names": [
+    "Cálculos",
+    "Calculos"
+  ],
+  "anchors": {
+    "price_with_transport_token": "PRECIO CON TRANSPORTE",
+    "min_price_token": "MENOR PRECIO EUR/M3",
+    "date_token": "FECHA"
+  },
+  "product_tokens": [
+    "PRODUCT_006",
+    "PRODUCT_001",
+    "PRODUCT_002",
+    "PRODUCT_003",
+    "PRODUCT_005",
+    "PRODUCT_004",
+    "AGROMAX"
+  ],
+  "terminal_regex": "^(C\\.L\\.H\\.|CLH-|CÓRDOBA|CORDOBA|SEVILLA|HUELVA|ROTA|SAN ROQUE|MÁLAGA|MALAGA|DECAL)",
+  "invalid_cost_tokens": [
+    "999999",
+    "999999.0",
+    "",
+    "-",
+    "nan"
+  ],
+  "filename_date_patterns": [
+    "(\\d{1,2})[-_](\\d{1,2})[-_](\\d{4})",
+    "(\\d{1,2})[-_](\\d{1,2})[-_](\\d{2})"
+  ],
+  "provider_row_search_window": 4,
+  "product_row_search_window": 4
+}

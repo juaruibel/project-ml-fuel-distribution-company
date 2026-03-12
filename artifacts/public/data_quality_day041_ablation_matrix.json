@@ -1,0 +1,1878 @@
+{
+  "status": "ok",
+  "run_id": "20260306T_day04_rerun_day041_build",
+  "generated_ts_utc": "2026-03-06T12:24:33.765861+00:00",
+  "cutoff_date": "2028-02-21",
+  "min_coverage": 0.8,
+  "input_v2_dataset": "data/public/dataset_modelo_proveedor_v2_candidates.csv",
+  "input_ofertas_typed": "data/public/support/ofertas_typed.csv",
+  "input_transport_signals": "data/public/support/ofertas_transport_signals.csv",
+  "input_transport_report": "artifacts/public/transport_parser_day041.json",
+  "output_dir": "data/public/day041",
+  "variants": {
+    "source_quality": {
+      "variant_name": "source_quality",
+      "dataset_name": "dataset_modelo_v2_source_quality.csv",
+      "rows_output": 155946,
+      "events_output": 15404,
+      "rows_vs_v2_match": 1,
+      "events_vs_v2_match": 1,
+      "events_with_invalid_positive_count": 0,
+      "added_columns": [
+        "v3_selected_source_calculos_share",
+        "v3_cost_source_calculos_share",
+        "v3_reconciliation_conflict_share",
+        "v3_reconciliation_single_source_share"
+      ],
+      "missing_flag_columns": [],
+      "feature_coverage": {
+        "v3_selected_source_calculos_share": {
+          "coverage_train": 1.0,
+          "coverage_test": 1.0
+        },
+        "v3_cost_source_calculos_share": {
+          "coverage_train": 1.0,
+          "coverage_test": 1.0
+        },
+        "v3_reconciliation_conflict_share": {
+          "coverage_train": 1.0,
+          "coverage_test": 1.0
+        },
+        "v3_reconciliation_single_source_share": {
+          "coverage_train": 1.0,
+          "coverage_test": 1.0
+        }
+      },
+      "dataset_path": "data/public/day041/dataset_modelo_v2_source_quality.csv",
+      "status": "built"
+    },
+    "dispersion": {
+      "variant_name": "dispersion",
+      "dataset_name": "dataset_modelo_v2_dispersion.csv",
+      "rows_output": 155946,
+      "events_output": 15404,
+      "rows_vs_v2_match": 1,
+      "events_vs_v2_match": 1,
+      "events_with_invalid_positive_count": 0,
+      "added_columns": [
+        "v3_cost_mean_terminal",
+        "v3_cost_std_terminal",
+        "v3_cost_range_terminal",
+        "v3_cost_cv_terminal",
+        "v3_share_terminales_min_cost"
+      ],
+      "missing_flag_columns": [],
+      "feature_coverage": {
+        "v3_cost_mean_terminal": {
+          "coverage_train": 1.0,
+          "coverage_test": 1.0
+        },
+        "v3_cost_std_terminal": {
+          "coverage_train": 1.0,
+          "coverage_test": 1.0
+        },
+        "v3_cost_range_terminal": {
+          "coverage_train": 1.0,
+          "coverage_test": 1.0
+        },
+        "v3_cost_cv_terminal": {
+          "coverage_train": 1.0,
+          "coverage_test": 1.0
+        },
+        "v3_share_terminales_min_cost": {
+          "coverage_train": 1.0,
+          "coverage_test": 1.0
+        }
+      },
+      "dataset_path": "data/public/day041/dataset_modelo_v2_dispersion.csv",
+      "status": "built"
+    },
+    "competition": {
+      "variant_name": "competition",
+      "dataset_name": "dataset_modelo_v2_competition.csv",
+      "rows_output": 155946,
+      "events_output": 15404,
+      "rows_vs_v2_match": 1,
+      "events_vs_v2_match": 1,
+      "events_with_invalid_positive_count": 0,
+      "added_columns": [
+        "v3_coste_segundo_evento",
+        "v3_gap_min_vs_second_evento",
+        "v3_delta_vs_second_evento",
+        "v3_ratio_vs_second_evento",
+        "v3_rank_pct_evento",
+        "v3_coste_mean_evento",
+        "v3_delta_vs_mean_evento",
+        "v3_candidatos_min_coste_count",
+        "v3_is_unique_min_coste_evento"
+      ],
+      "missing_flag_columns": [],
+      "feature_coverage": {
+        "v3_coste_segundo_evento": {
+          "coverage_train": 1.0,
+          "coverage_test": 1.0
+        },
+        "v3_gap_min_vs_second_evento": {
+          "coverage_train": 1.0,
+          "coverage_test": 1.0
+        },
+        "v3_delta_vs_second_evento": {
+          "coverage_train": 1.0,
+          "coverage_test": 1.0
+        },
+        "v3_ratio_vs_second_evento": {
+          "coverage_train": 1.0,
+          "coverage_test": 1.0
+        },
+        "v3_rank_pct_evento": {
+          "coverage_train": 1.0,
+          "coverage_test": 1.0
+        },
+        "v3_coste_mean_evento": {
+          "coverage_train": 1.0,
+          "coverage_test": 1.0
+        },
+        "v3_delta_vs_mean_evento": {
+          "coverage_train": 1.0,
+          "coverage_test": 1.0
+        },
+        "v3_candidatos_min_coste_count": {
+          "coverage_train": 1.0,
+          "coverage_test": 1.0
+        },
+        "v3_is_unique_min_coste_evento": {
+          "coverage_train": 1.0,
+          "coverage_test": 1.0
+        }
+      },
+      "dataset_path": "data/public/day041/dataset_modelo_v2_competition.csv",
+      "status": "built"
+    },
+    "transport_only": {
+      "variant_name": "transport_only",
+      "dataset_name": "dataset_modelo_v2_transport_only.csv",
+      "added_columns": [
+        "v41_transport_cost_min_day_provider",
+        "v41_transport_cost_mean_day_provider",
+        "v41_transport_cost_range_day_provider",
+        "v41_transport_observations",
+        "v41_transport_unique_terminal_count",
+        "v41_transport_multi_terminal_share",
+        "v41_transport_rank_event",
+        "v41_transport_gap_vs_min_event",
+        "v41_transport_ratio_vs_min_event"
+      ],
+      "feature_coverage": {
+        "v41_transport_cost_min_day_provider": {
+          "coverage_train": 0.8666632122818186,
+          "coverage_test": 0.9749664300786496
+        },
+        "v41_transport_cost_mean_day_provider": {
+          "coverage_train": 0.8666632122818186,
+          "coverage_test": 0.9749664300786496
+        },
+        "v41_transport_cost_range_day_provider": {
+          "coverage_train": 0.8666632122818186,
+          "coverage_test": 0.9749664300786496
+        },
+        "v41_transport_observations": {
+          "coverage_train": 0.8666632122818186,
+          "coverage_test": 0.9749664300786496
+        },
+        "v41_transport_unique_terminal_count": {
+          "coverage_train": 0.8666632122818186,
+          "coverage_test": 0.9749664300786496
+        },
+        "v41_transport_multi_terminal_share": {
+          "coverage_train": 0.8666632122818186,
+          "coverage_test": 0.9749664300786496
+        },
+        "v41_transport_rank_event": {
+          "coverage_train": 0.8666632122818186,
+          "coverage_test": 0.9749664300786496
+        },
+        "v41_transport_gap_vs_min_event": {
+          "coverage_train": 0.8666632122818186,
+          "coverage_test": 0.9749664300786496
+        },
+        "v41_transport_ratio_vs_min_event": {
+          "coverage_train": 0.8666632122818186,
+          "coverage_test": 0.9749664300786496
+        }
+      },
+      "transport_gate_pass": true,
+      "transport_min_train_coverage": 0.8666632122818186,
+      "transport_min_test_coverage": 0.9749664300786496,
+      "transport_parser_report": {
+        "status": "ok",
+        "parser_run_id": "20260306T_day04_rerun_day041_parser",
+        "parser_ts_utc": "2026-03-06T12:24:05.071534+00:00",
+        "matrix_input": "data/public/support/ofertas_raw_matrix_cells.csv",
+        "layout_rules": "config/ofertas_layout_rules.json",
+        "output_csv": "data/public/support/ofertas_transport_signals.csv",
+        "rows_output": 98070,
+        "files_parsed": 2496,
+        "distinct_source_files_with_output": 2496,
+        "status_counts": {
+          "parsed_multi_terminal_aggregate": 98035,
+          "parsed_unique_terminal": 35
+        },
+        "layout_variant_counts": {
+          "tabla_anchor_row_27": 95314,
+          "tabla_anchor_row_21": 2537,
+          "tabla_anchor_row_25": 219
+        },
+        "xls_rows": 179,
+        "xlsx_rows": 97891,
+        "rows_with_unknown_provider": 2622,
+        "rows_with_unknown_product": 0,
+        "rows_with_unknown_terminal": 0,
+        "rows_with_multi_terminal_aggregate": 98035,
+        "anchor_profiles": [
+          {
+            "anchor_row_idx": 21,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2015 COMPARATIVA DE PRECIOS/2015 -10 OCTUBRE/Comparativa de precios 13-10-2015.xls",
+            "sheet_name": "Tabla",
+            "rows_extracted": 32
+          },
+          {
+            "anchor_row_idx": 21,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2015 COMPARATIVA DE PRECIOS/2015 -10 OCTUBRE/Comparativa de precios 14-10-2015.xls",
+            "sheet_name": "Tabla",
+            "rows_extracted": 27
+          },
+          {
+            "anchor_row_idx": 21,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2015 COMPARATIVA DE PRECIOS/2015 -10 OCTUBRE/Comparativa de precios 15-10-2015.xls",
+            "sheet_name": "Tabla",
+            "rows_extracted": 31
+          },
+          {
+            "anchor_row_idx": 21,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2015 COMPARATIVA DE PRECIOS/2015 -10 OCTUBRE/Comparativa de precios 16-10-2015.xls",
+            "sheet_name": "Tabla",
+            "rows_extracted": 29
+          },
+          {
+            "anchor_row_idx": 21,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2015 COMPARATIVA DE PRECIOS/2015 -10 OCTUBRE/Comparativa de precios 19-10-2015.xls",
+            "sheet_name": "Tabla",
+            "rows_extracted": 32
+          },
+          {
+            "anchor_row_idx": 21,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2015 COMPARATIVA DE PRECIOS/2015 -10 OCTUBRE/Comparativa de precios 20-10-2015.xls",
+            "sheet_name": "Tabla",
+            "rows_extracted": 28
+          },
+          {
+            "anchor_row_idx": 21,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2015 COMPARATIVA DE PRECIOS/2015 -10 OCTUBRE/Comparativa de precios 21-10-2015.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 32
+          },
+          {
+            "anchor_row_idx": 21,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2015 COMPARATIVA DE PRECIOS/2015 -10 OCTUBRE/Comparativa de precios 22-10-2015.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 33
+          },
+          {
+            "anchor_row_idx": 21,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2015 COMPARATIVA DE PRECIOS/2015 -10 OCTUBRE/Comparativa de precios 23-10-2015.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 32
+          },
+          {
+            "anchor_row_idx": 21,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2015 COMPARATIVA DE PRECIOS/2015 -10 OCTUBRE/Comparativa de precios 26-10-2015.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 32
+          },
+          {
+            "anchor_row_idx": 21,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2015 COMPARATIVA DE PRECIOS/2015 -10 OCTUBRE/Comparativa de precios 27-10-2015.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 35
+          },
+          {
+            "anchor_row_idx": 21,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2015 COMPARATIVA DE PRECIOS/2015 -10 OCTUBRE/Comparativa de precios 28-10-2015.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 32
+          },
+          {
+            "anchor_row_idx": 21,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2015 COMPARATIVA DE PRECIOS/2015 -10 OCTUBRE/Comparativa de precios 29-10-2015.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 37
+          },
+          {
+            "anchor_row_idx": 21,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2015 COMPARATIVA DE PRECIOS/2015 -10 OCTUBRE/Comparativa de precios 30-10-2015.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 36
+          },
+          {
+            "anchor_row_idx": 21,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2015 COMPARATIVA DE PRECIOS/2015 -11 NOVIEMBRE/Comparativa de precios 03-11-2015.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 32
+          },
+          {
+            "anchor_row_idx": 21,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2015 COMPARATIVA DE PRECIOS/2015 -11 NOVIEMBRE/Comparativa de precios 04-11-2015.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 37
+          },
+          {
+            "anchor_row_idx": 21,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2015 COMPARATIVA DE PRECIOS/2015 -11 NOVIEMBRE/Comparativa de precios 05-11-2015.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 36
+          },
+          {
+            "anchor_row_idx": 21,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2015 COMPARATIVA DE PRECIOS/2015 -11 NOVIEMBRE/Comparativa de precios 06-11-2015.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 40
+          },
+          {
+            "anchor_row_idx": 21,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2015 COMPARATIVA DE PRECIOS/2015 -11 NOVIEMBRE/Comparativa de precios 09-11-2015.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 33
+          },
+          {
+            "anchor_row_idx": 21,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2015 COMPARATIVA DE PRECIOS/2015 -11 NOVIEMBRE/Comparativa de precios 10-11-2015.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 32
+          },
+          {
+            "anchor_row_idx": 21,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2015 COMPARATIVA DE PRECIOS/2015 -11 NOVIEMBRE/Comparativa de precios 11-11-2015.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 28
+          },
+          {
+            "anchor_row_idx": 21,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2015 COMPARATIVA DE PRECIOS/2015 -11 NOVIEMBRE/Comparativa de precios 12-11-2015.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 29
+          },
+          {
+            "anchor_row_idx": 21,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2015 COMPARATIVA DE PRECIOS/2015 -11 NOVIEMBRE/Comparativa de precios 13-11-2015.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 34
+          },
+          {
+            "anchor_row_idx": 21,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2015 COMPARATIVA DE PRECIOS/2015 -11 NOVIEMBRE/Comparativa de precios 16-11-2015.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 32
+          },
+          {
+            "anchor_row_idx": 21,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2015 COMPARATIVA DE PRECIOS/2015 -11 NOVIEMBRE/Comparativa de precios 17-11-2015.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 32
+          },
+          {
+            "anchor_row_idx": 21,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2015 COMPARATIVA DE PRECIOS/2015 -11 NOVIEMBRE/Comparativa de precios 18-11-2015.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 29
+          },
+          {
+            "anchor_row_idx": 21,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2015 COMPARATIVA DE PRECIOS/2015 -11 NOVIEMBRE/Comparativa de precios 19-11-2015.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 32
+          },
+          {
+            "anchor_row_idx": 21,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2015 COMPARATIVA DE PRECIOS/2015 -11 NOVIEMBRE/Comparativa de precios 20-11-2015.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 33
+          },
+          {
+            "anchor_row_idx": 21,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2015 COMPARATIVA DE PRECIOS/2015 -11 NOVIEMBRE/Comparativa de precios 23-11-2015.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 35
+          },
+          {
+            "anchor_row_idx": 21,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2015 COMPARATIVA DE PRECIOS/2015 -11 NOVIEMBRE/Comparativa de precios 24-11-2015.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 36
+          },
+          {
+            "anchor_row_idx": 21,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2015 COMPARATIVA DE PRECIOS/2015 -11 NOVIEMBRE/Comparativa de precios 25-11-2015.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 36
+          },
+          {
+            "anchor_row_idx": 21,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2015 COMPARATIVA DE PRECIOS/2015 -11 NOVIEMBRE/Comparativa de precios 26-11-2015.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 36
+          },
+          {
+            "anchor_row_idx": 21,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2015 COMPARATIVA DE PRECIOS/2015 -11 NOVIEMBRE/Comparativa de precios 27-11-2015.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 33
+          },
+          {
+            "anchor_row_idx": 21,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2015 COMPARATIVA DE PRECIOS/2015 -11 NOVIEMBRE/Comparativa de precios 30-11-2015.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 32
+          },
+          {
+            "anchor_row_idx": 21,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2015 COMPARATIVA DE PRECIOS/2015 -12 DICIEMBRE/Comparativa de precios 01-12-2015.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 33
+          },
+          {
+            "anchor_row_idx": 21,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2015 COMPARATIVA DE PRECIOS/2015 -12 DICIEMBRE/Comparativa de precios 02-12-2015.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 36
+          },
+          {
+            "anchor_row_idx": 21,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2015 COMPARATIVA DE PRECIOS/2015 -12 DICIEMBRE/Comparativa de precios 03-12-2015.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 34
+          },
+          {
+            "anchor_row_idx": 21,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2015 COMPARATIVA DE PRECIOS/2015 -12 DICIEMBRE/Comparativa de precios 04-12-2015.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 35
+          },
+          {
+            "anchor_row_idx": 21,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2015 COMPARATIVA DE PRECIOS/2015 -12 DICIEMBRE/Comparativa de precios 09-12-2015.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 35
+          },
+          {
+            "anchor_row_idx": 21,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2015 COMPARATIVA DE PRECIOS/2015 -12 DICIEMBRE/Comparativa de precios 10-12-2015.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 38
+          },
+          {
+            "anchor_row_idx": 21,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2015 COMPARATIVA DE PRECIOS/2015 -12 DICIEMBRE/Comparativa de precios 11-12-2015.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 42
+          },
+          {
+            "anchor_row_idx": 21,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2015 COMPARATIVA DE PRECIOS/2015 -12 DICIEMBRE/Comparativa de precios 14-12-2015.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 36
+          },
+          {
+            "anchor_row_idx": 21,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2015 COMPARATIVA DE PRECIOS/2015 -12 DICIEMBRE/Comparativa de precios 15-12-2015.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 31
+          },
+          {
+            "anchor_row_idx": 21,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2015 COMPARATIVA DE PRECIOS/2015 -12 DICIEMBRE/Comparativa de precios 16-12-2015.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 30
+          },
+          {
+            "anchor_row_idx": 21,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2015 COMPARATIVA DE PRECIOS/2015 -12 DICIEMBRE/Comparativa de precios 17-12-2015.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 38
+          },
+          {
+            "anchor_row_idx": 21,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2015 COMPARATIVA DE PRECIOS/2015 -12 DICIEMBRE/Comparativa de precios 18-12-2015.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 30
+          },
+          {
+            "anchor_row_idx": 21,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2015 COMPARATIVA DE PRECIOS/2015 -12 DICIEMBRE/Comparativa de precios 21-12-2015.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 33
+          },
+          {
+            "anchor_row_idx": 21,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2015 COMPARATIVA DE PRECIOS/2015 -12 DICIEMBRE/Comparativa de precios 22-12-2015.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 37
+          },
+          {
+            "anchor_row_idx": 21,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2015 COMPARATIVA DE PRECIOS/2015 -12 DICIEMBRE/Comparativa de precios 23-12-2015.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 38
+          },
+          {
+            "anchor_row_idx": 21,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2015 COMPARATIVA DE PRECIOS/2015 -12 DICIEMBRE/Comparativa de precios 24-12-2015.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 25
+          },
+          {
+            "anchor_row_idx": 21,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2015 COMPARATIVA DE PRECIOS/2015 -12 DICIEMBRE/Comparativa de precios 28-12-2015.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 32
+          },
+          {
+            "anchor_row_idx": 21,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2015 COMPARATIVA DE PRECIOS/2015 -12 DICIEMBRE/Comparativa de precios 29-12-2015.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 32
+          },
+          {
+            "anchor_row_idx": 21,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2015 COMPARATIVA DE PRECIOS/2015 -12 DICIEMBRE/Comparativa de precios 30-12-2015.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 36
+          },
+          {
+            "anchor_row_idx": 21,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2015 COMPARATIVA DE PRECIOS/2015 -12 DICIEMBRE/Comparativa de precios 31-12-2015.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 28
+          },
+          {
+            "anchor_row_idx": 21,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -01 ENERO/Comparativa de precios 04-01-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 43
+          },
+          {
+            "anchor_row_idx": 21,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -01 ENERO/Comparativa de precios 05-01-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 37
+          },
+          {
+            "anchor_row_idx": 21,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -01 ENERO/Comparativa de precios 07-01-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 43
+          },
+          {
+            "anchor_row_idx": 21,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -01 ENERO/Comparativa de precios 08-01-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 41
+          },
+          {
+            "anchor_row_idx": 21,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -01 ENERO/Comparativa de precios 11-01-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 42
+          },
+          {
+            "anchor_row_idx": 21,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -01 ENERO/Comparativa de precios 12-01-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 34
+          },
+          {
+            "anchor_row_idx": 21,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -01 ENERO/Comparativa de precios 13-01-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 35
+          },
+          {
+            "anchor_row_idx": 21,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -01 ENERO/Comparativa de precios 14-01-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 35
+          },
+          {
+            "anchor_row_idx": 21,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -01 ENERO/Comparativa de precios 15-01-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 38
+          },
+          {
+            "anchor_row_idx": 21,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -01 ENERO/Comparativa de precios 18-01-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 35
+          },
+          {
+            "anchor_row_idx": 21,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -01 ENERO/Comparativa de precios 19-01-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 38
+          },
+          {
+            "anchor_row_idx": 21,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -01 ENERO/Comparativa de precios 20-01-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 41
+          },
+          {
+            "anchor_row_idx": 21,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -01 ENERO/Comparativa de precios 21-01-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 33
+          },
+          {
+            "anchor_row_idx": 21,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -01 ENERO/Comparativa de precios 22-01-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 30
+          },
+          {
+            "anchor_row_idx": 21,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -01 ENERO/Comparativa de precios 25-01-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 42
+          },
+          {
+            "anchor_row_idx": 21,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -01 ENERO/Comparativa de precios 26-01-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 44
+          },
+          {
+            "anchor_row_idx": 21,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -01 ENERO/Comparativa de precios 27-01-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 44
+          },
+          {
+            "anchor_row_idx": 21,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -01 ENERO/Comparativa de precios 28-01-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 44
+          },
+          {
+            "anchor_row_idx": 21,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -01 ENERO/Comparativa de precios 29-01-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 44
+          },
+          {
+            "anchor_row_idx": 25,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -02 FEBRERO/Comparativa de precios 01-02-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 43
+          },
+          {
+            "anchor_row_idx": 25,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -02 FEBRERO/Comparativa de precios 02-02-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 44
+          },
+          {
+            "anchor_row_idx": 25,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -02 FEBRERO/Comparativa de precios 03-02-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 44
+          },
+          {
+            "anchor_row_idx": 25,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -02 FEBRERO/Comparativa de precios 04-02-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 44
+          },
+          {
+            "anchor_row_idx": 25,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -02 FEBRERO/Comparativa de precios 05-02-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 44
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -02 FEBRERO/Comparativa de precios 08-02-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 36
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -02 FEBRERO/Comparativa de precios 09-02-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 44
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -02 FEBRERO/Comparativa de precios 10-02-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 44
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -02 FEBRERO/Comparativa de precios 11-02-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 43
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -02 FEBRERO/Comparativa de precios 12-02-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 41
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -02 FEBRERO/Comparativa de precios 15-02-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 44
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -02 FEBRERO/Comparativa de precios 16-02-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 42
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -02 FEBRERO/Comparativa de precios 17-02-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 40
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -02 FEBRERO/Comparativa de precios 18-02-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 42
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -02 FEBRERO/Comparativa de precios 19-02-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 43
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -02 FEBRERO/Comparativa de precios 22-02-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 43
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -02 FEBRERO/Comparativa de precios 23-02-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 43
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -02 FEBRERO/Comparativa de precios 24-02-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 43
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -02 FEBRERO/Comparativa de precios 25-02-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 43
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -02 FEBRERO/Comparativa de precios 26-02-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 44
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -03 MARZO/Comparativa de precios 01-03-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 44
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -03 MARZO/Comparativa de precios 02-03-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 44
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -03 MARZO/Comparativa de precios 03-03-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 43
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -03 MARZO/Comparativa de precios 04-03-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 43
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -03 MARZO/Comparativa de precios 07-03-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 43
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -03 MARZO/Comparativa de precios 08-03-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 43
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -03 MARZO/Comparativa de precios 09-03-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 43
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -03 MARZO/Comparativa de precios 10-03-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 42
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -03 MARZO/Comparativa de precios 11-03-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 43
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -03 MARZO/Comparativa de precios 14-03-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 42
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -03 MARZO/Comparativa de precios 15-03-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 40
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -03 MARZO/Comparativa de precios 16-03-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 43
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -03 MARZO/Comparativa de precios 17-03-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 41
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -03 MARZO/Comparativa de precios 18-03-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 31
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -03 MARZO/Comparativa de precios 21-03-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 43
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -03 MARZO/Comparativa de precios 22-03-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 43
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -03 MARZO/Comparativa de precios 23-03-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 38
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -03 MARZO/Comparativa de precios 28-03-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 42
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -03 MARZO/Comparativa de precios 29-03-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 43
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -03 MARZO/Comparativa de precios 30-03-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 43
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -03 MARZO/Comparativa de precios 31-03-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 43
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -04 ABRIL/Comparativa de precios 01-04-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 43
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -04 ABRIL/Comparativa de precios 04-04-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 43
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -04 ABRIL/Comparativa de precios 05-04-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 44
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -04 ABRIL/Comparativa de precios 06-04-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 44
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -04 ABRIL/Comparativa de precios 07-04-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 41
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -04 ABRIL/Comparativa de precios 08-04-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 41
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -04 ABRIL/Comparativa de precios 11-04-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 43
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -04 ABRIL/Comparativa de precios 12-04-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 41
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -04 ABRIL/Comparativa de precios 13-04-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 41
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -04 ABRIL/Comparativa de precios 14-04-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 41
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -04 ABRIL/Comparativa de precios 15-04-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 38
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -04 ABRIL/Comparativa de precios 18-04-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 41
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -04 ABRIL/Comparativa de precios 19-04-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 40
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -04 ABRIL/Comparativa de precios 20-04-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 40
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -04 ABRIL/Comparativa de precios 21-04-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 41
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -04 ABRIL/Comparativa de precios 22-04-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 41
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -04 ABRIL/Comparativa de precios 25-04-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 41
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -04 ABRIL/Comparativa de precios 26-04-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 38
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -04 ABRIL/Comparativa de precios 27-04-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 34
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -04 ABRIL/Comparativa de precios 28-04-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 37
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -04 ABRIL/Comparativa de precios 29-04-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 37
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -05 MAYO/Comparativa de precios 03-05-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 37
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -05 MAYO/Comparativa de precios 04-05-2016 .xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 41
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -05 MAYO/Comparativa de precios 05-05-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 42
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -05 MAYO/Comparativa de precios 06-05-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 41
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -05 MAYO/Comparativa de precios 09-05-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 40
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -05 MAYO/Comparativa de precios 10-05-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 44
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -05 MAYO/Comparativa de precios 11-05-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 41
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -05 MAYO/Comparativa de precios 12-05-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 42
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -05 MAYO/Comparativa de precios 13-05-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 41
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -05 MAYO/Comparativa de precios 16-05-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 41
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -05 MAYO/Comparativa de precios 17-05-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 42
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -05 MAYO/Comparativa de precios 18-05-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 41
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -05 MAYO/Comparativa de precios 19-05-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 41
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -05 MAYO/Comparativa de precios 20-05-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 41
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -05 MAYO/Comparativa de precios 23-05-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 38
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -05 MAYO/Comparativa de precios 24-05-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 45
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -05 MAYO/Comparativa de precios 25-05-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 41
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -05 MAYO/Comparativa de precios 26-05-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 37
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -05 MAYO/Comparativa de precios 27-05-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 41
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -05 MAYO/Comparativa de precios 30-05-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 41
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -05 MAYO/Comparativa de precios 31-05-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 41
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -06 JUNIO/Comparativa de precios 01-06-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 41
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -06 JUNIO/Comparativa de precios 02-06-2016..xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 41
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -06 JUNIO/Comparativa de precios 03-06-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 46
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -06 JUNIO/Comparativa de precios 06-06-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 48
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -06 JUNIO/Comparativa de precios 07-06-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 49
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -06 JUNIO/Comparativa de precios 08-06-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 49
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -06 JUNIO/Comparativa de precios 09-06-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 46
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -06 JUNIO/Comparativa de precios 10-06-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 50
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -06 JUNIO/Comparativa de precios 13-06-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 50
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -06 JUNIO/Comparativa de precios 14-06-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 53
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -06 JUNIO/Comparativa de precios 15-06-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 53
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -06 JUNIO/Comparativa de precios 16-06-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 53
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -06 JUNIO/Comparativa de precios 17-06-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 49
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -06 JUNIO/Comparativa de precios 20-06-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 53
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -06 JUNIO/Comparativa de precios 21-06-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 53
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -06 JUNIO/Comparativa de precios 22-06-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 49
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -06 JUNIO/Comparativa de precios 23-06-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 49
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -06 JUNIO/Comparativa de precios 24-06-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 48
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -06 JUNIO/Comparativa de precios 27-06-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 45
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -06 JUNIO/Comparativa de precios 28-06-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 45
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -06 JUNIO/Comparativa de precios 29-06-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 53
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -06 JUNIO/Comparativa de precios 30-06-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 49
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -07 JULIO/Comparativa de precios 01-07-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 49
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -07 JULIO/Comparativa de precios 04-07-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 49
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -07 JULIO/Comparativa de precios 05-07-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 49
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -07 JULIO/Comparativa de precios 06-07-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 49
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -07 JULIO/Comparativa de precios 07-07-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 53
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -07 JULIO/Comparativa de precios 08-07-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 49
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -07 JULIO/Comparativa de precios 11-07-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 48
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -07 JULIO/Comparativa de precios 12-07-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 45
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -07 JULIO/Comparativa de precios 13-07-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 53
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -07 JULIO/Comparativa de precios 14-07-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 53
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -07 JULIO/Comparativa de precios 15-07-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 45
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -07 JULIO/Comparativa de precios 18-07-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 51
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -07 JULIO/Comparativa de precios 19-07-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 49
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -07 JULIO/Comparativa de precios 20-07-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 53
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -07 JULIO/Comparativa de precios 21-07-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 53
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -07 JULIO/Comparativa de precios 22-07-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 52
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -07 JULIO/Comparativa de precios 25-07-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 48
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -07 JULIO/Comparativa de precios 26-07-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 53
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -07 JULIO/Comparativa de precios 27-07-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 45
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -07 JULIO/Comparativa de precios 28-07-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 53
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -07 JULIO/Comparativa de precios 29-07-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 53
+          },
+          {
+            "anchor_row_idx": 27,
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -08 AGOSTO/Comparativa de precios 01-08-2016.xlsx",
+            "sheet_name": "Tabla",
+            "rows_extracted": 49
+          }
+        ],
+        "sample_rows": [
+          {
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2015 COMPARATIVA DE PRECIOS/2015 -10 OCTUBRE/Comparativa de precios 13-10-2015.xls",
+            "sheet_name": "Tabla",
+            "source_file_type": "xls",
+            "fecha_oferta": "2019-10-13",
+            "layout_variant": "tabla_anchor_row_21",
+            "anchor_row_idx": 21,
+            "provider_header_row_idx": 5,
+            "product_header_row_idx": 7,
+            "terminal_raw": "MULTI_TERMINAL_AGGREGATE",
+            "terminal_canonico": "MULTI_TERMINAL_AGGREGATE",
+            "producto_raw": "PRODUCT_001",
+            "producto_canonico": "PRODUCT_001",
+            "proveedor_raw": "SUPPLIER_003",
+            "proveedor_candidato": "SUPPLIER_003",
+            "transport_cost_value": 850.62,
+            "parser_status": "parsed_multi_terminal_aggregate",
+            "parser_run_id": "20260306T_day04_rerun_day041_parser",
+            "parser_ts_utc": "2026-03-06T12:24:05.071534+00:00"
+          },
+          {
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2015 COMPARATIVA DE PRECIOS/2015 -10 OCTUBRE/Comparativa de precios 13-10-2015.xls",
+            "sheet_name": "Tabla",
+            "source_file_type": "xls",
+            "fecha_oferta": "2019-10-13",
+            "layout_variant": "tabla_anchor_row_21",
+            "anchor_row_idx": 21,
+            "provider_header_row_idx": 5,
+            "product_header_row_idx": 7,
+            "terminal_raw": "MULTI_TERMINAL_AGGREGATE",
+            "terminal_canonico": "MULTI_TERMINAL_AGGREGATE",
+            "producto_raw": "PRODUCT_001",
+            "producto_canonico": "PRODUCT_001",
+            "proveedor_raw": "SUPPLIER_006",
+            "proveedor_candidato": "SUPPLIER_006",
+            "transport_cost_value": 854.34,
+            "parser_status": "parsed_multi_terminal_aggregate",
+            "parser_run_id": "20260306T_day04_rerun_day041_parser",
+            "parser_ts_utc": "2026-03-06T12:24:05.071534+00:00"
+          },
+          {
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2015 COMPARATIVA DE PRECIOS/2015 -10 OCTUBRE/Comparativa de precios 13-10-2015.xls",
+            "sheet_name": "Tabla",
+            "source_file_type": "xls",
+            "fecha_oferta": "2019-10-13",
+            "layout_variant": "tabla_anchor_row_21",
+            "anchor_row_idx": 21,
+            "provider_header_row_idx": 5,
+            "product_header_row_idx": 7,
+            "terminal_raw": "MULTI_TERMINAL_AGGREGATE",
+            "terminal_canonico": "MULTI_TERMINAL_AGGREGATE",
+            "producto_raw": "PRODUCT_001",
+            "producto_canonico": "PRODUCT_001",
+            "proveedor_raw": "SUPPLIER_009",
+            "proveedor_candidato": "SUPPLIER_009",
+            "transport_cost_value": 873.397,
+            "parser_status": "parsed_multi_terminal_aggregate",
+            "parser_run_id": "20260306T_day04_rerun_day041_parser",
+            "parser_ts_utc": "2026-03-06T12:24:05.071534+00:00"
+          },
+          {
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2015 COMPARATIVA DE PRECIOS/2015 -10 OCTUBRE/Comparativa de precios 13-10-2015.xls",
+            "sheet_name": "Tabla",
+            "source_file_type": "xls",
+            "fecha_oferta": "2019-10-13",
+            "layout_variant": "tabla_anchor_row_21",
+            "anchor_row_idx": 21,
+            "provider_header_row_idx": 5,
+            "product_header_row_idx": 7,
+            "terminal_raw": "MULTI_TERMINAL_AGGREGATE",
+            "terminal_canonico": "MULTI_TERMINAL_AGGREGATE",
+            "producto_raw": "PRODUCT_001",
+            "producto_canonico": "PRODUCT_001",
+            "proveedor_raw": "SUPPLIER_020",
+            "proveedor_candidato": "SUPPLIER_020",
+            "transport_cost_value": 847.34,
+            "parser_status": "parsed_multi_terminal_aggregate",
+            "parser_run_id": "20260306T_day04_rerun_day041_parser",
+            "parser_ts_utc": "2026-03-06T12:24:05.071534+00:00"
+          },
+          {
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2015 COMPARATIVA DE PRECIOS/2015 -10 OCTUBRE/Comparativa de precios 13-10-2015.xls",
+            "sheet_name": "Tabla",
+            "source_file_type": "xls",
+            "fecha_oferta": "2019-10-13",
+            "layout_variant": "tabla_anchor_row_21",
+            "anchor_row_idx": 21,
+            "provider_header_row_idx": 5,
+            "product_header_row_idx": 7,
+            "terminal_raw": "MULTI_TERMINAL_AGGREGATE",
+            "terminal_canonico": "MULTI_TERMINAL_AGGREGATE",
+            "producto_raw": "PRODUCT_001",
+            "producto_canonico": "PRODUCT_001",
+            "proveedor_raw": "SUPPLIER_039",
+            "proveedor_candidato": "SUPPLIER_039",
+            "transport_cost_value": 855.61,
+            "parser_status": "parsed_multi_terminal_aggregate",
+            "parser_run_id": "20260306T_day04_rerun_day041_parser",
+            "parser_ts_utc": "2026-03-06T12:24:05.071534+00:00"
+          },
+          {
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2015 COMPARATIVA DE PRECIOS/2015 -10 OCTUBRE/Comparativa de precios 13-10-2015.xls",
+            "sheet_name": "Tabla",
+            "source_file_type": "xls",
+            "fecha_oferta": "2019-10-13",
+            "layout_variant": "tabla_anchor_row_21",
+            "anchor_row_idx": 21,
+            "provider_header_row_idx": 5,
+            "product_header_row_idx": 7,
+            "terminal_raw": "MULTI_TERMINAL_AGGREGATE",
+            "terminal_canonico": "MULTI_TERMINAL_AGGREGATE",
+            "producto_raw": "PRODUCT_001",
+            "producto_canonico": "PRODUCT_001",
+            "proveedor_raw": "SUPPLIER_049",
+            "proveedor_candidato": "SUPPLIER_049",
+            "transport_cost_value": 863.84,
+            "parser_status": "parsed_multi_terminal_aggregate",
+            "parser_run_id": "20260306T_day04_rerun_day041_parser",
+            "parser_ts_utc": "2026-03-06T12:24:05.071534+00:00"
+          },
+          {
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2015 COMPARATIVA DE PRECIOS/2015 -10 OCTUBRE/Comparativa de precios 13-10-2015.xls",
+            "sheet_name": "Tabla",
+            "source_file_type": "xls",
+            "fecha_oferta": "2019-10-13",
+            "layout_variant": "tabla_anchor_row_21",
+            "anchor_row_idx": 21,
+            "provider_header_row_idx": 5,
+            "product_header_row_idx": 7,
+            "terminal_raw": "MULTI_TERMINAL_AGGREGATE",
+            "terminal_canonico": "MULTI_TERMINAL_AGGREGATE",
+            "producto_raw": "PRODUCT_001",
+            "producto_canonico": "PRODUCT_001",
+            "proveedor_raw": "SUPPLIER_054",
+            "proveedor_candidato": "SUPPLIER_054",
+            "transport_cost_value": 849.73,
+            "parser_status": "parsed_multi_terminal_aggregate",
+            "parser_run_id": "20260306T_day04_rerun_day041_parser",
+            "parser_ts_utc": "2026-03-06T12:24:05.071534+00:00"
+          },
+          {
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2015 COMPARATIVA DE PRECIOS/2015 -10 OCTUBRE/Comparativa de precios 13-10-2015.xls",
+            "sheet_name": "Tabla",
+            "source_file_type": "xls",
+            "fecha_oferta": "2019-10-13",
+            "layout_variant": "tabla_anchor_row_21",
+            "anchor_row_idx": 21,
+            "provider_header_row_idx": 5,
+            "product_header_row_idx": 7,
+            "terminal_raw": "MULTI_TERMINAL_AGGREGATE",
+            "terminal_canonico": "MULTI_TERMINAL_AGGREGATE",
+            "producto_raw": "PRODUCT_002",
+            "producto_canonico": "PRODUCT_002",
+            "proveedor_raw": "SUPPLIER_003",
+            "proveedor_candidato": "SUPPLIER_003",
+            "transport_cost_value": 758.34,
+            "parser_status": "parsed_multi_terminal_aggregate",
+            "parser_run_id": "20260306T_day04_rerun_day041_parser",
+            "parser_ts_utc": "2026-03-06T12:24:05.071534+00:00"
+          },
+          {
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2015 COMPARATIVA DE PRECIOS/2015 -10 OCTUBRE/Comparativa de precios 13-10-2015.xls",
+            "sheet_name": "Tabla",
+            "source_file_type": "xls",
+            "fecha_oferta": "2019-10-13",
+            "layout_variant": "tabla_anchor_row_21",
+            "anchor_row_idx": 21,
+            "provider_header_row_idx": 5,
+            "product_header_row_idx": 7,
+            "terminal_raw": "MULTI_TERMINAL_AGGREGATE",
+            "terminal_canonico": "MULTI_TERMINAL_AGGREGATE",
+            "producto_raw": "PRODUCT_002",
+            "producto_canonico": "PRODUCT_002",
+            "proveedor_raw": "SUPPLIER_006",
+            "proveedor_candidato": "SUPPLIER_006",
+            "transport_cost_value": 764.34,
+            "parser_status": "parsed_multi_terminal_aggregate",
+            "parser_run_id": "20260306T_day04_rerun_day041_parser",
+            "parser_ts_utc": "2026-03-06T12:24:05.071534+00:00"
+          },
+          {
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2015 COMPARATIVA DE PRECIOS/2015 -10 OCTUBRE/Comparativa de precios 13-10-2015.xls",
+            "sheet_name": "Tabla",
+            "source_file_type": "xls",
+            "fecha_oferta": "2019-10-13",
+            "layout_variant": "tabla_anchor_row_21",
+            "anchor_row_idx": 21,
+            "provider_header_row_idx": 5,
+            "product_header_row_idx": 7,
+            "terminal_raw": "MULTI_TERMINAL_AGGREGATE",
+            "terminal_canonico": "MULTI_TERMINAL_AGGREGATE",
+            "producto_raw": "PRODUCT_002",
+            "producto_canonico": "PRODUCT_002",
+            "proveedor_raw": "SUPPLIER_009",
+            "proveedor_candidato": "SUPPLIER_009",
+            "transport_cost_value": 778.77,
+            "parser_status": "parsed_multi_terminal_aggregate",
+            "parser_run_id": "20260306T_day04_rerun_day041_parser",
+            "parser_ts_utc": "2026-03-06T12:24:05.071534+00:00"
+          },
+          {
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2015 COMPARATIVA DE PRECIOS/2015 -10 OCTUBRE/Comparativa de precios 13-10-2015.xls",
+            "sheet_name": "Tabla",
+            "source_file_type": "xls",
+            "fecha_oferta": "2019-10-13",
+            "layout_variant": "tabla_anchor_row_21",
+            "anchor_row_idx": 21,
+            "provider_header_row_idx": 5,
+            "product_header_row_idx": 7,
+            "terminal_raw": "MULTI_TERMINAL_AGGREGATE",
+            "terminal_canonico": "MULTI_TERMINAL_AGGREGATE",
+            "producto_raw": "PRODUCT_002",
+            "producto_canonico": "PRODUCT_002",
+            "proveedor_raw": "SUPPLIER_013",
+            "proveedor_candidato": "SUPPLIER_013",
+            "transport_cost_value": 780.97,
+            "parser_status": "parsed_multi_terminal_aggregate",
+            "parser_run_id": "20260306T_day04_rerun_day041_parser",
+            "parser_ts_utc": "2026-03-06T12:24:05.071534+00:00"
+          },
+          {
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2015 COMPARATIVA DE PRECIOS/2015 -10 OCTUBRE/Comparativa de precios 13-10-2015.xls",
+            "sheet_name": "Tabla",
+            "source_file_type": "xls",
+            "fecha_oferta": "2019-10-13",
+            "layout_variant": "tabla_anchor_row_21",
+            "anchor_row_idx": 21,
+            "provider_header_row_idx": 5,
+            "product_header_row_idx": 7,
+            "terminal_raw": "MULTI_TERMINAL_AGGREGATE",
+            "terminal_canonico": "MULTI_TERMINAL_AGGREGATE",
+            "producto_raw": "PRODUCT_002",
+            "producto_canonico": "PRODUCT_002",
+            "proveedor_raw": "SUPPLIER_020",
+            "proveedor_candidato": "SUPPLIER_020",
+            "transport_cost_value": 758.34,
+            "parser_status": "parsed_multi_terminal_aggregate",
+            "parser_run_id": "20260306T_day04_rerun_day041_parser",
+            "parser_ts_utc": "2026-03-06T12:24:05.071534+00:00"
+          },
+          {
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2015 COMPARATIVA DE PRECIOS/2015 -10 OCTUBRE/Comparativa de precios 13-10-2015.xls",
+            "sheet_name": "Tabla",
+            "source_file_type": "xls",
+            "fecha_oferta": "2019-10-13",
+            "layout_variant": "tabla_anchor_row_21",
+            "anchor_row_idx": 21,
+            "provider_header_row_idx": 5,
+            "product_header_row_idx": 7,
+            "terminal_raw": "MULTI_TERMINAL_AGGREGATE",
+            "terminal_canonico": "MULTI_TERMINAL_AGGREGATE",
+            "producto_raw": "PRODUCT_002",
+            "producto_canonico": "PRODUCT_002",
+            "proveedor_raw": "SUPPLIER_039",
+            "proveedor_candidato": "SUPPLIER_039",
+            "transport_cost_value": 763.7,
+            "parser_status": "parsed_multi_terminal_aggregate",
+            "parser_run_id": "20260306T_day04_rerun_day041_parser",
+            "parser_ts_utc": "2026-03-06T12:24:05.071534+00:00"
+          },
+          {
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2015 COMPARATIVA DE PRECIOS/2015 -10 OCTUBRE/Comparativa de precios 13-10-2015.xls",
+            "sheet_name": "Tabla",
+            "source_file_type": "xls",
+            "fecha_oferta": "2019-10-13",
+            "layout_variant": "tabla_anchor_row_21",
+            "anchor_row_idx": 21,
+            "provider_header_row_idx": 5,
+            "product_header_row_idx": 7,
+            "terminal_raw": "MULTI_TERMINAL_AGGREGATE",
+            "terminal_canonico": "MULTI_TERMINAL_AGGREGATE",
+            "producto_raw": "PRODUCT_002",
+            "producto_canonico": "PRODUCT_002",
+            "proveedor_raw": "SUPPLIER_049",
+            "proveedor_candidato": "SUPPLIER_049",
+            "transport_cost_value": 780.24,
+            "parser_status": "parsed_multi_terminal_aggregate",
+            "parser_run_id": "20260306T_day04_rerun_day041_parser",
+            "parser_ts_utc": "2026-03-06T12:24:05.071534+00:00"
+          },
+          {
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2015 COMPARATIVA DE PRECIOS/2015 -10 OCTUBRE/Comparativa de precios 13-10-2015.xls",
+            "sheet_name": "Tabla",
+            "source_file_type": "xls",
+            "fecha_oferta": "2019-10-13",
+            "layout_variant": "tabla_anchor_row_21",
+            "anchor_row_idx": 21,
+            "provider_header_row_idx": 5,
+            "product_header_row_idx": 7,
+            "terminal_raw": "MULTI_TERMINAL_AGGREGATE",
+            "terminal_canonico": "MULTI_TERMINAL_AGGREGATE",
+            "producto_raw": "PRODUCT_002",
+            "producto_canonico": "PRODUCT_002",
+            "proveedor_raw": "SUPPLIER_054",
+            "proveedor_candidato": "SUPPLIER_054",
+            "transport_cost_value": 756.44,
+            "parser_status": "parsed_multi_terminal_aggregate",
+            "parser_run_id": "20260306T_day04_rerun_day041_parser",
+            "parser_ts_utc": "2026-03-06T12:24:05.071534+00:00"
+          },
+          {
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2015 COMPARATIVA DE PRECIOS/2015 -10 OCTUBRE/Comparativa de precios 13-10-2015.xls",
+            "sheet_name": "Tabla",
+            "source_file_type": "xls",
+            "fecha_oferta": "2019-10-13",
+            "layout_variant": "tabla_anchor_row_21",
+            "anchor_row_idx": 21,
+            "provider_header_row_idx": 5,
+            "product_header_row_idx": 7,
+            "terminal_raw": "MULTI_TERMINAL_AGGREGATE",
+            "terminal_canonico": "MULTI_TERMINAL_AGGREGATE",
+            "producto_raw": "PRODUCT_003",
+            "producto_canonico": "PRODUCT_003",
+            "proveedor_raw": "SUPPLIER_003",
+            "proveedor_candidato": "SUPPLIER_003",
+            "transport_cost_value": 454.34,
+            "parser_status": "parsed_multi_terminal_aggregate",
+            "parser_run_id": "20260306T_day04_rerun_day041_parser",
+            "parser_ts_utc": "2026-03-06T12:24:05.071534+00:00"
+          },
+          {
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2015 COMPARATIVA DE PRECIOS/2015 -10 OCTUBRE/Comparativa de precios 13-10-2015.xls",
+            "sheet_name": "Tabla",
+            "source_file_type": "xls",
+            "fecha_oferta": "2019-10-13",
+            "layout_variant": "tabla_anchor_row_21",
+            "anchor_row_idx": 21,
+            "provider_header_row_idx": 5,
+            "product_header_row_idx": 7,
+            "terminal_raw": "MULTI_TERMINAL_AGGREGATE",
+            "terminal_canonico": "MULTI_TERMINAL_AGGREGATE",
+            "producto_raw": "PRODUCT_003",
+            "producto_canonico": "PRODUCT_003",
+            "proveedor_raw": "SUPPLIER_006",
+            "proveedor_candidato": "SUPPLIER_006",
+            "transport_cost_value": 460.34,
+            "parser_status": "parsed_multi_terminal_aggregate",
+            "parser_run_id": "20260306T_day04_rerun_day041_parser",
+            "parser_ts_utc": "2026-03-06T12:24:05.071534+00:00"
+          },
+          {
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2015 COMPARATIVA DE PRECIOS/2015 -10 OCTUBRE/Comparativa de precios 13-10-2015.xls",
+            "sheet_name": "Tabla",
+            "source_file_type": "xls",
+            "fecha_oferta": "2019-10-13",
+            "layout_variant": "tabla_anchor_row_21",
+            "anchor_row_idx": 21,
+            "provider_header_row_idx": 5,
+            "product_header_row_idx": 7,
+            "terminal_raw": "MULTI_TERMINAL_AGGREGATE",
+            "terminal_canonico": "MULTI_TERMINAL_AGGREGATE",
+            "producto_raw": "PRODUCT_003",
+            "producto_canonico": "PRODUCT_003",
+            "proveedor_raw": "SUPPLIER_009",
+            "proveedor_candidato": "SUPPLIER_009",
+            "transport_cost_value": 471.989,
+            "parser_status": "parsed_multi_terminal_aggregate",
+            "parser_run_id": "20260306T_day04_rerun_day041_parser",
+            "parser_ts_utc": "2026-03-06T12:24:05.071534+00:00"
+          },
+          {
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2015 COMPARATIVA DE PRECIOS/2015 -10 OCTUBRE/Comparativa de precios 13-10-2015.xls",
+            "sheet_name": "Tabla",
+            "source_file_type": "xls",
+            "fecha_oferta": "2019-10-13",
+            "layout_variant": "tabla_anchor_row_21",
+            "anchor_row_idx": 21,
+            "provider_header_row_idx": 5,
+            "product_header_row_idx": 7,
+            "terminal_raw": "MULTI_TERMINAL_AGGREGATE",
+            "terminal_canonico": "MULTI_TERMINAL_AGGREGATE",
+            "producto_raw": "PRODUCT_003",
+            "producto_canonico": "PRODUCT_003",
+            "proveedor_raw": "SUPPLIER_013",
+            "proveedor_candidato": "SUPPLIER_013",
+            "transport_cost_value": 480.868,
+            "parser_status": "parsed_multi_terminal_aggregate",
+            "parser_run_id": "20260306T_day04_rerun_day041_parser",
+            "parser_ts_utc": "2026-03-06T12:24:05.071534+00:00"
+          },
+          {
+            "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2015 COMPARATIVA DE PRECIOS/2015 -10 OCTUBRE/Comparativa de precios 13-10-2015.xls",
+            "sheet_name": "Tabla",
+            "source_file_type": "xls",
+            "fecha_oferta": "2019-10-13",
+            "layout_variant": "tabla_anchor_row_21",
+            "anchor_row_idx": 21,
+            "provider_header_row_idx": 5,
+            "product_header_row_idx": 7,
+            "terminal_raw": "MULTI_TERMINAL_AGGREGATE",
+            "terminal_canonico": "MULTI_TERMINAL_AGGREGATE",
+            "producto_raw": "PRODUCT_003",
+            "producto_canonico": "PRODUCT_003",
+            "proveedor_raw": "SUPPLIER_020",
+            "proveedor_candidato": "SUPPLIER_020",
+            "transport_cost_value": 451.34,
+            "parser_status": "parsed_multi_terminal_aggregate",
+            "parser_run_id": "20260306T_day04_rerun_day041_parser",
+            "parser_ts_utc": "2026-03-06T12:24:05.071534+00:00"
+          }
+        ]
+      },
+      "rows_output": 155946,
+      "events_output": 15404,
+      "rows_vs_v2_match": 1,
+      "events_vs_v2_match": 1,
+      "events_with_invalid_positive_count": 0,
+      "missing_flag_columns": [
+        "v41_transport_cost_min_day_provider_missing_flag",
+        "v41_transport_cost_mean_day_provider_missing_flag",
+        "v41_transport_cost_range_day_provider_missing_flag",
+        "v41_transport_observations_missing_flag",
+        "v41_transport_unique_terminal_count_missing_flag",
+        "v41_transport_multi_terminal_share_missing_flag",
+        "v41_transport_rank_event_missing_flag",
+        "v41_transport_gap_vs_min_event_missing_flag",
+        "v41_transport_ratio_vs_min_event_missing_flag"
+      ],
+      "dataset_path": "data/public/day041/dataset_modelo_v2_transport_only.csv",
+      "status": "built"
+    }
+  },
+  "base_feature_columns_num": [
+    "coste_min_dia_proveedor",
+    "rank_coste_dia_producto",
+    "terminales_cubiertos",
+    "observaciones_oferta",
+    "candidatos_evento_count",
+    "coste_min_evento",
+    "coste_max_evento",
+    "spread_coste_evento",
+    "delta_vs_min_evento",
+    "ratio_vs_min_evento",
+    "litros_evento",
+    "dia_semana",
+    "mes",
+    "fin_mes"
+  ],
+  "base_feature_columns_cat": [
+    "proveedor_candidato",
+    "producto_canonico",
+    "terminal_compra"
+  ],
+  "target_column": "target_elegido"
+}

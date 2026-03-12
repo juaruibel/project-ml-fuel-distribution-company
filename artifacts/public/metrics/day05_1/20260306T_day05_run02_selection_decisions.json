@@ -1,0 +1,20 @@
+{
+  "run_id": "20260306T_day05_run02",
+  "defendible_variants": [
+    "V2_TRANSPORT_ONLY_LIGHTGBM_CLASS_WEIGHT_BALANCED_v1"
+  ],
+  "almost_gate_variants": [
+    "V2_LIGHTGBM_CLASS_WEIGHT_BALANCED_v1",
+    "V2_TRANSPORT_CARRY30D_ONLY_LIGHTGBM_CLASS_WEIGHT_BALANCED_v1",
+    "V2_XGBOOST_SCALE_POS_WEIGHT_v1"
+  ],
+  "best_balanced_variant": "V2_TRANSPORT_ONLY_LIGHTGBM_CLASS_WEIGHT_BALANCED_v1",
+  "pre_policy_close_decision": "open_single_policy_check_then_decide_tuning",
+  "close_decision": "promote_pure_model_open_short_tuning",
+  "final_close_decision": "promote_pure_model_open_short_tuning",
+  "pure_model_decision": "promote_model_champion",
+  "current_model_champion_variant": "V2_TRANSPORT_ONLY_LIGHTGBM_CLASS_WEIGHT_BALANCED_v1",
+  "policy_decision": "reject_new_policy_keep_previous_operational_policy",
+  "current_operational_policy_variant": "V2_TRANSPORT_ONLY_LR_smote_0.5_WITH_DETERMINISTIC_LAYER_PRODUCT_002_FOLLOW_PRODUCT_003_SUPPLIER_009_v1",
+  "rejected_policy_variant": "V2_TRANSPORT_ONLY_LIGHTGBM_CLASS_WEIGHT_BALANCED_v1_WITH_DETERMINISTIC_LAYER_PRODUCT_002_FOLLOW_PRODUCT_003_SUPPLIER_009_v1"
+}

@@ -1,0 +1,26 @@
+{
+  "run_id": "20260306T_day05_run01",
+  "ts_utc": "2026-03-06T15:13:10.268174+00:00",
+  "day_id": "Day 05",
+  "scope": "model_retrain",
+  "eval_scope": "day02_test_like",
+  "cutoff_applied": "2028-02-21",
+  "model_variant": "V2_CATBOOST_v1",
+  "dataset_alias": "V2",
+  "model_family": "CATBOOST",
+  "variant_stage": "phase1",
+  "metrics": {
+    "accuracy": 0.9249952042969499,
+    "balanced_accuracy": 0.7759420363632104,
+    "f1_pos": 0.66,
+    "top1_hit": 0.715153816938853,
+    "top2_hit": 0.8560577288264337,
+    "coverage": 1.0,
+    "test_events": 2633
+  },
+  "sources": {
+    "dataset_csv": "./data/public/dataset_modelo_proveedor_v2_candidates.csv",
+    "model_path": "./models/candidates/day05_tabular/v2_catboost_v1/20260306T_day05_run01/model.pkl",
+    "metadata_path": "./models/candidates/day05_tabular/v2_catboost_v1/20260306T_day05_run01/metadata.json"
+  }
+}

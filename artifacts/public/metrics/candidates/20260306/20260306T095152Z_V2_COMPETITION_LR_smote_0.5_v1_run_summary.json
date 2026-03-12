@@ -1,0 +1,51 @@
+{
+  "run_id": "20260306T095152Z",
+  "ts_utc": "2026-03-06T09:56:49.482675+00:00",
+  "day_id": "Day 04.1",
+  "model_variant": "V2_COMPETITION_LR_smote_0.5_v1",
+  "cutoff_applied": "2028-02-21",
+  "metrics": {
+    "accuracy": 0.895645501630539,
+    "balanced_accuracy": 0.8666906521776336,
+    "f1_pos": 0.6670746634026927,
+    "top1_hit": 0.7637675655146221,
+    "top2_hit": 0.854538549183441,
+    "coverage": 1.0,
+    "test_events": 2633
+  },
+  "registry_row": {
+    "run_id": "20260306T095152Z",
+    "day_id": "Day 04.1",
+    "model_variant": "V2_COMPETITION_LR_smote_0.5_v1",
+    "model_role": "candidate",
+    "dataset_name": "dataset_modelo_v2_competition.csv",
+    "dataset_snapshot_hash": "91bd5bdbffb310ce792a7c20643b65ac5f7c6eb4d3fb98bd5bae2eea6c298ea3",
+    "cutoff_date": "2028-02-21",
+    "test_events": "2633",
+    "accuracy": "0.895646",
+    "balanced_accuracy": "0.866691",
+    "f1_pos": "0.667075",
+    "top1_hit": "0.763768",
+    "top2_hit": "0.854539",
+    "coverage": "1.000000",
+    "delta_top2_vs_baseline": "-0.008355",
+    "delta_bal_acc_vs_baseline": "0.005228",
+    "delta_coverage_vs_baseline": "0.000000",
+    "gate_top2_ok": "false",
+    "gate_bal_acc_ok": "false",
+    "gate_coverage_ok": "true",
+    "gate_pass": "false",
+    "promotion_decision": "keep_baseline",
+    "selection_rule": "fixed_recipe(LR_smote_0.5 on V2_COMPETITION_LR_smote_0.5_v1) -> registry_gate(top2>=baseline+0.01 & bal_acc>=baseline+0.01 & coverage>=baseline-0.005)",
+    "model_path": "./models/candidates/day041_ablation/v2_competition_lr_smote_0_5_v1/20260306T095152Z/model.pkl",
+    "metadata_path": "./models/candidates/day041_ablation/v2_competition_lr_smote_0_5_v1/20260306T095152Z/metadata.json",
+    "metrics_source": "./artifacts/public/metrics/candidates/20260306/20260306T095152Z_V2_COMPETITION_LR_smote_0.5_v1_metrics.json",
+    "created_at_utc": "2026-03-06T09:52:01.438485+00:00"
+  },
+  "artifact_paths": {
+    "dataset_csv": "data/public/day041/dataset_modelo_v2_competition.csv",
+    "model_path": "./models/candidates/day041_ablation/v2_competition_lr_smote_0_5_v1/20260306T095152Z/model.pkl",
+    "metadata_path": "./models/candidates/day041_ablation/v2_competition_lr_smote_0_5_v1/20260306T095152Z/metadata.json",
+    "metrics_json": "./artifacts/public/metrics/candidates/20260306/20260306T095152Z_V2_COMPETITION_LR_smote_0.5_v1_metrics.json"
+  }
+}

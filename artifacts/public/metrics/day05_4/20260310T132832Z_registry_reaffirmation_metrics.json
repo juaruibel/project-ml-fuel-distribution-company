@@ -1,0 +1,25 @@
+{
+  "run_id": "20260310T132832Z",
+  "day_id": "Day 05.4b",
+  "scope": "day054b_operational_reaffirmation",
+  "decision": "keep_current_operational_policy",
+  "reference_variant": "V2_TRANSPORT_ONLY_LR_smote_0.5_WITH_DETERMINISTIC_LAYER_PRODUCT_002_FOLLOW_PRODUCT_003_SUPPLIER_009_v1",
+  "historical_invalidated_run_id": "20260310T093320Z",
+  "base_day054_valid_run_id": "20260310T110104Z",
+  "metrics": {
+    "accuracy": 0.8916171110684826,
+    "balanced_accuracy": 0.8658474486897993,
+    "f1_pos": 0.6595360048207292,
+    "top1_hit": 0.7895936194454994,
+    "top2_hit": 0.8602354728446638,
+    "coverage": 1.0,
+    "test_events": 2633
+  },
+  "refs": {
+    "run_summary": "./artifacts/public/metrics/day05_4/20260310T132832Z_run_summary.json",
+    "base_day054_run_summary": "./artifacts/public/metrics/day05_4/20260310T110104Z_run_summary.json",
+    "invalidation": "./artifacts/public/metrics/day05_4/invalidations/20260310T093320Z_invalidated.json",
+    "notebook_ref": "notebooks/20_day05_4_fallback_flags_and_local_policies.ipynb",
+    "prompt_ref": "src/prompts/daily/20260310_day05_4_run03_prompt.md"
+  }
+}

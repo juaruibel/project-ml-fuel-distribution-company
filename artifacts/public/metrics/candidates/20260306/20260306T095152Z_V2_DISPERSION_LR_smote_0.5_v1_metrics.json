@@ -1,0 +1,51 @@
+{
+  "run_id": "20260306T095152Z",
+  "ts_utc": "2026-03-06T09:56:49.482675+00:00",
+  "day_id": "Day 04.1",
+  "scope": "model_retrain",
+  "eval_scope": "day02_test_like",
+  "cutoff_applied": "2028-02-21",
+  "model_variant": "V2_DISPERSION_LR_smote_0.5_v1",
+  "metrics": {
+    "accuracy": 0.8870132361404182,
+    "balanced_accuracy": 0.8648373722528163,
+    "f1_pos": 0.6511696772283091,
+    "top1_hit": 0.7645271553361185,
+    "top2_hit": 0.8571971135586783,
+    "coverage": 1.0,
+    "test_events": 2633
+  },
+  "feature_contract": {
+    "feature_columns_num": [
+      "coste_min_dia_proveedor",
+      "rank_coste_dia_producto",
+      "terminales_cubiertos",
+      "observaciones_oferta",
+      "candidatos_evento_count",
+      "coste_min_evento",
+      "coste_max_evento",
+      "spread_coste_evento",
+      "delta_vs_min_evento",
+      "ratio_vs_min_evento",
+      "litros_evento",
+      "dia_semana",
+      "mes",
+      "fin_mes",
+      "v3_cost_mean_terminal",
+      "v3_cost_std_terminal",
+      "v3_cost_range_terminal",
+      "v3_cost_cv_terminal",
+      "v3_share_terminales_min_cost"
+    ],
+    "feature_columns_cat": [
+      "proveedor_candidato",
+      "producto_canonico",
+      "terminal_compra"
+    ]
+  },
+  "sources": {
+    "dataset_csv": "data/public/day041/dataset_modelo_v2_dispersion.csv",
+    "model_path": "./models/candidates/day041_ablation/v2_dispersion_lr_smote_0_5_v1/20260306T095152Z/model.pkl",
+    "metadata_path": "./models/candidates/day041_ablation/v2_dispersion_lr_smote_0_5_v1/20260306T095152Z/metadata.json"
+  }
+}

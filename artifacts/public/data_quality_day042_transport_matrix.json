@@ -1,0 +1,334 @@
+{
+  "status": "ok",
+  "run_id": "20260306T_day04_rerun_day042_build",
+  "generated_ts_utc": "2026-03-06T12:27:28.265000+00:00",
+  "cutoff_date": "2028-02-21",
+  "min_coverage": 0.8,
+  "input_v2_dataset": "data/public/dataset_modelo_proveedor_v2_candidates.csv",
+  "input_ofertas_typed": "data/public/support/ofertas_typed.csv",
+  "input_transport_rebuilt": "data/public/support/ofertas_transport_signals_day042.csv",
+  "input_missingness_report": "artifacts/public/transport_missingness_day042.json",
+  "output_dir": "data/public/day042",
+  "variants": {
+    "transport_rebuilt_only": {
+      "variant_name": "transport_rebuilt_only",
+      "dataset_name": "dataset_modelo_v2_transport_rebuilt_only.csv",
+      "rows_output": 155946,
+      "events_output": 15404,
+      "rows_vs_v2_match": 1,
+      "events_vs_v2_match": 1,
+      "events_with_invalid_positive_count": 0,
+      "added_columns": [
+        "v42_transport_cost_min_day_provider",
+        "v42_transport_cost_mean_day_provider",
+        "v42_transport_cost_range_day_provider",
+        "v42_transport_observations",
+        "v42_transport_unique_terminal_count",
+        "v42_transport_multi_terminal_share",
+        "v42_transport_rank_event",
+        "v42_transport_gap_vs_min_event",
+        "v42_transport_ratio_vs_min_event",
+        "v42_transport_source_raw_explicit",
+        "v42_transport_source_parser_fix",
+        "v42_transport_source_deterministic_rebuild",
+        "v42_transport_source_heuristic_same_month",
+        "v42_transport_source_missing",
+        "v42_transport_imputed_flag",
+        "v42_transport_days_gap",
+        "v42_transport_lookahead_flag"
+      ],
+      "missing_flag_columns": [
+        "v42_transport_cost_min_day_provider_missing_flag",
+        "v42_transport_cost_mean_day_provider_missing_flag",
+        "v42_transport_cost_range_day_provider_missing_flag",
+        "v42_transport_observations_missing_flag",
+        "v42_transport_unique_terminal_count_missing_flag",
+        "v42_transport_multi_terminal_share_missing_flag",
+        "v42_transport_rank_event_missing_flag",
+        "v42_transport_gap_vs_min_event_missing_flag",
+        "v42_transport_ratio_vs_min_event_missing_flag",
+        "v42_transport_days_gap_missing_flag"
+      ],
+      "feature_coverage": {
+        "v42_transport_cost_min_day_provider": {
+          "coverage_train": 0.892423053577509,
+          "coverage_test": 0.9837425666602724
+        },
+        "v42_transport_cost_mean_day_provider": {
+          "coverage_train": 0.892423053577509,
+          "coverage_test": 0.9837425666602724
+        },
+        "v42_transport_cost_range_day_provider": {
+          "coverage_train": 0.892423053577509,
+          "coverage_test": 0.9837425666602724
+        },
+        "v42_transport_observations": {
+          "coverage_train": 0.892423053577509,
+          "coverage_test": 0.9837425666602724
+        },
+        "v42_transport_unique_terminal_count": {
+          "coverage_train": 0.892423053577509,
+          "coverage_test": 0.9837425666602724
+        },
+        "v42_transport_multi_terminal_share": {
+          "coverage_train": 0.892423053577509,
+          "coverage_test": 0.9837425666602724
+        },
+        "v42_transport_rank_event": {
+          "coverage_train": 0.892423053577509,
+          "coverage_test": 0.9837425666602724
+        },
+        "v42_transport_gap_vs_min_event": {
+          "coverage_train": 0.892423053577509,
+          "coverage_test": 0.9837425666602724
+        },
+        "v42_transport_ratio_vs_min_event": {
+          "coverage_train": 0.892423053577509,
+          "coverage_test": 0.9837425666602724
+        },
+        "v42_transport_source_raw_explicit": {
+          "coverage_train": 1.0,
+          "coverage_test": 1.0
+        },
+        "v42_transport_source_parser_fix": {
+          "coverage_train": 1.0,
+          "coverage_test": 1.0
+        },
+        "v42_transport_source_deterministic_rebuild": {
+          "coverage_train": 1.0,
+          "coverage_test": 1.0
+        },
+        "v42_transport_source_heuristic_same_month": {
+          "coverage_train": 1.0,
+          "coverage_test": 1.0
+        },
+        "v42_transport_source_missing": {
+          "coverage_train": 1.0,
+          "coverage_test": 1.0
+        },
+        "v42_transport_imputed_flag": {
+          "coverage_train": 1.0,
+          "coverage_test": 1.0
+        },
+        "v42_transport_days_gap": {
+          "coverage_train": 0.021629383984484878,
+          "coverage_test": 0.008776136581622867
+        },
+        "v42_transport_lookahead_flag": {
+          "coverage_train": 1.0,
+          "coverage_test": 1.0
+        }
+      },
+      "dataset_path": "data/public/day042/dataset_modelo_v2_transport_rebuilt_only.csv",
+      "status": "built"
+    },
+    "dispersion_plus_transport_rebuilt": {
+      "variant_name": "dispersion_plus_transport_rebuilt",
+      "dataset_name": "dataset_modelo_v2_dispersion_plus_transport_rebuilt.csv",
+      "rows_output": 155946,
+      "events_output": 15404,
+      "rows_vs_v2_match": 1,
+      "events_vs_v2_match": 1,
+      "events_with_invalid_positive_count": 0,
+      "added_columns": [
+        "v42_transport_cost_min_day_provider",
+        "v42_transport_cost_mean_day_provider",
+        "v42_transport_cost_range_day_provider",
+        "v42_transport_observations",
+        "v42_transport_unique_terminal_count",
+        "v42_transport_multi_terminal_share",
+        "v42_transport_rank_event",
+        "v42_transport_gap_vs_min_event",
+        "v42_transport_ratio_vs_min_event",
+        "v42_transport_source_raw_explicit",
+        "v42_transport_source_parser_fix",
+        "v42_transport_source_deterministic_rebuild",
+        "v42_transport_source_heuristic_same_month",
+        "v42_transport_source_missing",
+        "v42_transport_imputed_flag",
+        "v42_transport_days_gap",
+        "v42_transport_lookahead_flag",
+        "v3_cost_mean_terminal",
+        "v3_cost_std_terminal",
+        "v3_cost_range_terminal",
+        "v3_cost_cv_terminal",
+        "v3_share_terminales_min_cost"
+      ],
+      "missing_flag_columns": [
+        "v42_transport_cost_min_day_provider_missing_flag",
+        "v42_transport_cost_mean_day_provider_missing_flag",
+        "v42_transport_cost_range_day_provider_missing_flag",
+        "v42_transport_observations_missing_flag",
+        "v42_transport_unique_terminal_count_missing_flag",
+        "v42_transport_multi_terminal_share_missing_flag",
+        "v42_transport_rank_event_missing_flag",
+        "v42_transport_gap_vs_min_event_missing_flag",
+        "v42_transport_ratio_vs_min_event_missing_flag",
+        "v42_transport_days_gap_missing_flag"
+      ],
+      "feature_coverage": {
+        "v42_transport_cost_min_day_provider": {
+          "coverage_train": 0.892423053577509,
+          "coverage_test": 0.9837425666602724
+        },
+        "v42_transport_cost_mean_day_provider": {
+          "coverage_train": 0.892423053577509,
+          "coverage_test": 0.9837425666602724
+        },
+        "v42_transport_cost_range_day_provider": {
+          "coverage_train": 0.892423053577509,
+          "coverage_test": 0.9837425666602724
+        },
+        "v42_transport_observations": {
+          "coverage_train": 0.892423053577509,
+          "coverage_test": 0.9837425666602724
+        },
+        "v42_transport_unique_terminal_count": {
+          "coverage_train": 0.892423053577509,
+          "coverage_test": 0.9837425666602724
+        },
+        "v42_transport_multi_terminal_share": {
+          "coverage_train": 0.892423053577509,
+          "coverage_test": 0.9837425666602724
+        },
+        "v42_transport_rank_event": {
+          "coverage_train": 0.892423053577509,
+          "coverage_test": 0.9837425666602724
+        },
+        "v42_transport_gap_vs_min_event": {
+          "coverage_train": 0.892423053577509,
+          "coverage_test": 0.9837425666602724
+        },
+        "v42_transport_ratio_vs_min_event": {
+          "coverage_train": 0.892423053577509,
+          "coverage_test": 0.9837425666602724
+        },
+        "v42_transport_source_raw_explicit": {
+          "coverage_train": 1.0,
+          "coverage_test": 1.0
+        },
+        "v42_transport_source_parser_fix": {
+          "coverage_train": 1.0,
+          "coverage_test": 1.0
+        },
+        "v42_transport_source_deterministic_rebuild": {
+          "coverage_train": 1.0,
+          "coverage_test": 1.0
+        },
+        "v42_transport_source_heuristic_same_month": {
+          "coverage_train": 1.0,
+          "coverage_test": 1.0
+        },
+        "v42_transport_source_missing": {
+          "coverage_train": 1.0,
+          "coverage_test": 1.0
+        },
+        "v42_transport_imputed_flag": {
+          "coverage_train": 1.0,
+          "coverage_test": 1.0
+        },
+        "v42_transport_days_gap": {
+          "coverage_train": 0.021629383984484878,
+          "coverage_test": 0.008776136581622867
+        },
+        "v42_transport_lookahead_flag": {
+          "coverage_train": 1.0,
+          "coverage_test": 1.0
+        },
+        "v3_cost_mean_terminal": {
+          "coverage_train": 1.0,
+          "coverage_test": 1.0
+        },
+        "v3_cost_std_terminal": {
+          "coverage_train": 1.0,
+          "coverage_test": 1.0
+        },
+        "v3_cost_range_terminal": {
+          "coverage_train": 1.0,
+          "coverage_test": 1.0
+        },
+        "v3_cost_cv_terminal": {
+          "coverage_train": 1.0,
+          "coverage_test": 1.0
+        },
+        "v3_share_terminales_min_cost": {
+          "coverage_train": 1.0,
+          "coverage_test": 1.0
+        }
+      },
+      "dataset_path": "data/public/day042/dataset_modelo_v2_dispersion_plus_transport_rebuilt.csv",
+      "status": "built"
+    }
+  },
+  "stage_coverage": {
+    "raw_explicit": {
+      "coverage_train": 0.8666632122818186,
+      "coverage_test": 0.9749664300786496
+    },
+    "parser_fix_plus_deterministic": {
+      "coverage_train": 0.8707936695930241,
+      "coverage_test": 0.9749664300786496
+    },
+    "final_after_heuristic": {
+      "coverage_train": 0.892423053577509,
+      "coverage_test": 0.9837425666602724
+    },
+    "final_after_heuristic_no_lookahead": {
+      "coverage_train": 0.8859682887470947,
+      "coverage_test": 0.9830232112027624
+    }
+  },
+  "lookahead": {
+    "heuristic_unique_keys_with_lookahead": 182,
+    "heuristic_v2_rows_with_lookahead": 887
+  },
+  "gate": {
+    "coverage_gate_pass": true,
+    "leakage_gate_pass": false,
+    "structural_gate_pass": true,
+    "training_allowed": false,
+    "coverage_train_final": 0.892423053577509,
+    "coverage_test_final": 0.9837425666602724,
+    "coverage_train_final_no_lookahead": 0.8859682887470947,
+    "coverage_test_final_no_lookahead": 0.9830232112027624,
+    "failure_reasons": [
+      "heuristic_lookahead_detected"
+    ]
+  },
+  "transport_missingness_summary": {
+    "bucket_counts_v2_rows": {
+      "exact_raw_match": 137411,
+      "no_raw_source": 14872,
+      "heuristic_same_month_only": 3105,
+      "deterministic_rebuild_possible": 535,
+      "parser_fix_possible": 23
+    },
+    "no_raw_subreason_counts_v2_rows": {
+      "same_date_product_other_provider_only": 14784,
+      "no_date_raw": 60,
+      "same_date_other_product_only": 28
+    }
+  },
+  "base_feature_columns_num": [
+    "coste_min_dia_proveedor",
+    "rank_coste_dia_producto",
+    "terminales_cubiertos",
+    "observaciones_oferta",
+    "candidatos_evento_count",
+    "coste_min_evento",
+    "coste_max_evento",
+    "spread_coste_evento",
+    "delta_vs_min_evento",
+    "ratio_vs_min_evento",
+    "litros_evento",
+    "dia_semana",
+    "mes",
+    "fin_mes"
+  ],
+  "base_feature_columns_cat": [
+    "proveedor_candidato",
+    "producto_canonico",
+    "terminal_compra"
+  ],
+  "target_column": "target_elegido"
+}

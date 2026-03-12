@@ -1,0 +1,26 @@
+{
+  "run_id": "20260306T_day05_run02",
+  "ts_utc": "2026-03-06T15:46:42.426383+00:00",
+  "day_id": "Day 05.1",
+  "scope": "model_retrain",
+  "eval_scope": "day02_test_like",
+  "cutoff_applied": "2028-02-21",
+  "model_variant": "V2_LIGHTGBM_CLASS_WEIGHT_BALANCED_v1",
+  "dataset_alias": "V2",
+  "model_family": "LIGHTGBM",
+  "variant_stage": "phase1_balanced_native",
+  "metrics": {
+    "accuracy": 0.8953098024170343,
+    "balanced_accuracy": 0.8742963167856863,
+    "f1_pos": 0.6711854194908872,
+    "top1_hit": 0.7485757690846943,
+    "top2_hit": 0.8890998860615268,
+    "coverage": 1.0,
+    "test_events": 2633
+  },
+  "sources": {
+    "dataset_csv": "./data/public/dataset_modelo_proveedor_v2_candidates.csv",
+    "model_path": "./models/candidates/day05_1_balanced_trees/v2_lightgbm_class_weight_balanced_v1/20260306T_day05_run02/model.pkl",
+    "metadata_path": "./models/candidates/day05_1_balanced_trees/v2_lightgbm_class_weight_balanced_v1/20260306T_day05_run02/metadata.json"
+  }
+}

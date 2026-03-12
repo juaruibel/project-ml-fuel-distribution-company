@@ -1,0 +1,30 @@
+{
+  "status": "ok",
+  "run_id": "20260306T_day04_rerun_v2_seq",
+  "generated_ts_utc": "2026-03-06T12:21:19.371129+00:00",
+  "input_fact_compras": "data/public/support/fact_compras.csv",
+  "input_fact_ofertas": "data/public/support/fact_ofertas_diarias.csv",
+  "input_blocklist": "config/business_blocklist_rules.csv",
+  "output_dataset": "data/public/dataset_modelo_proveedor_v2_candidates.csv",
+  "output_excluded_events": "data/public/dataset_modelo_proveedor_v2_excluded_events.csv",
+  "output_data_dictionary": "artifacts/public/data_dictionary_v2_candidates.md",
+  "events_total": 16315,
+  "events_with_candidates": 16315,
+  "events_included": 15404,
+  "events_excluded_no_candidates": 0,
+  "events_excluded_no_positive": 911,
+  "events_excluded_multiple_positive": 0,
+  "avg_candidates_per_event": 10.12373409504025,
+  "p50_candidates_per_event": 11.0,
+  "p90_candidates_per_event": 12.0,
+  "rows_output": 155946,
+  "critical_null_counts": {
+    "event_id": 0,
+    "fecha_evento": 0,
+    "producto_canonico": 0,
+    "proveedor_candidato": 0,
+    "target_elegido": 0
+  },
+  "events_with_invalid_positive_count": 0,
+  "blocked_rows": 28481
+}

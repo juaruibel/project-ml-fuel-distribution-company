@@ -1,0 +1,64 @@
+contract_id: inference_input_v1
+version: "1.0.0"
+status: active
+owner: proyecto-ml-source
+description: >
+  Contrato mínimo de validación del input diario para inferencia de proveedor.
+  Define grano, columnas obligatorias, tipos base, reglas de dominio y coherencia.
+
+grain:
+  key_columns:
+    - event_id
+    - proveedor_candidato
+
+columns:
+  date:
+    - fecha_evento
+  categorical_non_empty:
+    - event_id
+    - proveedor_candidato
+    - producto_canonico
+    - terminal_compra
+  numeric:
+    - coste_min_dia_proveedor
+    - rank_coste_dia_producto
+    - terminales_cubiertos
+    - observaciones_oferta
+    - candidatos_evento_count
+    - coste_min_evento
+    - coste_max_evento
+    - spread_coste_evento
+    - delta_vs_min_evento
+    - ratio_vs_min_evento
+    - litros_evento
+    - dia_semana
+    - mes
+    - fin_mes
+
+domain:
+  mes:
+    min_inclusive: 1
+    max_inclusive: 12
+  dia_semana:
+    allowed: [0, 1, 2, 3, 4, 5, 6]
+  fin_mes:
+    allowed: [0, 1]
+  litros_evento:
+    min_exclusive: 0
+  coste_min_dia_proveedor:
+    min_exclusive: 0
+  rank_coste_dia_producto:
+    min_inclusive: 1
+  candidatos_evento_count:
+    min_inclusive: 1
+  spread_coste_evento:
+    min_inclusive: 0
+
+coherence:
+  - rule_id: min_event_le_max_event
+    left: coste_min_evento
+    operator: "<="
+    right: coste_max_evento
+
+report:
+  warn_on_extra_columns: true

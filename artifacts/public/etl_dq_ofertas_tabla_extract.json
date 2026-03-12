@@ -1,0 +1,1600 @@
+{
+  "status": "ok",
+  "run_id": "20260306T_day04_rerun_extract",
+  "files_total": 2571,
+  "files_ok": 2496,
+  "files_rejected": 75,
+  "coverage_ok_ratio": 0.970828471411902,
+  "rows_mincost": 74872,
+  "rows_matrix_cells": 821950,
+  "rows_rejects": 75,
+  "top_reject_reasons": {
+    "no_tabla_sheet": 71,
+    "missing_summary_terminal_rows": 4
+  },
+  "output_mincost": "data/public/support/ofertas_raw_mincost.csv",
+  "output_matrix": "data/public/support/ofertas_raw_matrix_cells.csv",
+  "output_rejects": "data/public/support/ofertas_rejects_extract.csv",
+  "date_resolution_audit": {
+    "files_with_date_audit": 2500,
+    "autocorrected_files": 149,
+    "unresolved_day_month_conflicts": 43,
+    "resolution_status_counts": {
+      "row_date_matches_file_name": 2308,
+      "auto_correct_year_from_file_name": 149,
+      "row_date_kept_day_month_conflict": 43
+    },
+    "path_year_to_row_year": {
+      "2020->2020": 250,
+      "2019->2019": 248,
+      "2021->2021": 248,
+      "2016->2016": 247,
+      "2017->2017": 241,
+      "2022->2022": 234,
+      "2024->2024": 232,
+      "2023->2023": 230,
+      "2025->2025": 226,
+      "2018->2017": 147,
+      "2018->2018": 104,
+      "2015->2015": 58,
+      "2026->2026": 32,
+      "2021->2020": 2,
+      "2026->2025": 1
+    },
+    "path_year_to_selected_year": {
+      "2018->2018": 251,
+      "2020->2020": 250,
+      "2021->2021": 250,
+      "2019->2019": 248,
+      "2016->2016": 247,
+      "2017->2017": 241,
+      "2022->2022": 234,
+      "2024->2024": 232,
+      "2023->2023": 230,
+      "2025->2025": 226,
+      "2015->2015": 58,
+      "2026->2026": 32,
+      "2026->2025": 1
+    },
+    "corrected_files": [
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018 -01 ENERO/Comparativa de precios 02-01-18.xlsx",
+        "fecha_row_candidate": "2021-01-02",
+        "fecha_file_hint": "2022-01-02",
+        "fecha_raw": "2022-01-02",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018 -01 ENERO/Comparativa de precios 03-01-18.xlsx",
+        "fecha_row_candidate": "2021-01-03",
+        "fecha_file_hint": "2022-01-03",
+        "fecha_raw": "2022-01-03",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018 -01 ENERO/Comparativa de precios 04-01-18.xlsx",
+        "fecha_row_candidate": "2021-01-04",
+        "fecha_file_hint": "2022-01-04",
+        "fecha_raw": "2022-01-04",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018 -01 ENERO/Comparativa de precios 05-01-18.xlsx",
+        "fecha_row_candidate": "2021-01-05",
+        "fecha_file_hint": "2022-01-05",
+        "fecha_raw": "2022-01-05",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018 -01 ENERO/Comparativa de precios 08-01-18.xlsx",
+        "fecha_row_candidate": "2021-01-08",
+        "fecha_file_hint": "2022-01-08",
+        "fecha_raw": "2022-01-08",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018 -01 ENERO/Comparativa de precios 09-01-18.xlsx",
+        "fecha_row_candidate": "2021-01-09",
+        "fecha_file_hint": "2022-01-09",
+        "fecha_raw": "2022-01-09",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018 -01 ENERO/Comparativa de precios 10-01-18.xlsx",
+        "fecha_row_candidate": "2021-01-10",
+        "fecha_file_hint": "2022-01-10",
+        "fecha_raw": "2022-01-10",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018 -01 ENERO/Comparativa de precios 11-01-18.xlsx",
+        "fecha_row_candidate": "2021-01-11",
+        "fecha_file_hint": "2022-01-11",
+        "fecha_raw": "2022-01-11",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018 -01 ENERO/Comparativa de precios 12-01-18.xlsx",
+        "fecha_row_candidate": "2021-01-12",
+        "fecha_file_hint": "2022-01-12",
+        "fecha_raw": "2022-01-12",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018 -01 ENERO/Comparativa de precios 15-01-18.xlsx",
+        "fecha_row_candidate": "2021-01-15",
+        "fecha_file_hint": "2022-01-15",
+        "fecha_raw": "2022-01-15",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018 -01 ENERO/Comparativa de precios 16-01-18.xlsx",
+        "fecha_row_candidate": "2021-01-16",
+        "fecha_file_hint": "2022-01-16",
+        "fecha_raw": "2022-01-16",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018 -01 ENERO/Comparativa de precios 17-01-18.xlsx",
+        "fecha_row_candidate": "2021-01-17",
+        "fecha_file_hint": "2022-01-17",
+        "fecha_raw": "2022-01-17",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018 -01 ENERO/Comparativa de precios 18-01-18.xlsx",
+        "fecha_row_candidate": "2021-01-18",
+        "fecha_file_hint": "2022-01-18",
+        "fecha_raw": "2022-01-18",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018 -01 ENERO/Comparativa de precios 19-01-18.xlsx",
+        "fecha_row_candidate": "2021-01-19",
+        "fecha_file_hint": "2022-01-19",
+        "fecha_raw": "2022-01-19",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018 -01 ENERO/Comparativa de precios 22-01-18.xlsx",
+        "fecha_row_candidate": "2021-01-22",
+        "fecha_file_hint": "2022-01-22",
+        "fecha_raw": "2022-01-22",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018 -01 ENERO/Comparativa de precios 23-01-18.xlsx",
+        "fecha_row_candidate": "2021-01-23",
+        "fecha_file_hint": "2022-01-23",
+        "fecha_raw": "2022-01-23",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018 -01 ENERO/Comparativa de precios 24-01-18.xlsx",
+        "fecha_row_candidate": "2021-01-24",
+        "fecha_file_hint": "2022-01-24",
+        "fecha_raw": "2022-01-24",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018 -01 ENERO/Comparativa de precios 25-01-18.xlsx",
+        "fecha_row_candidate": "2021-01-25",
+        "fecha_file_hint": "2022-01-25",
+        "fecha_raw": "2022-01-25",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018 -01 ENERO/Comparativa de precios 26-01-18.xlsx",
+        "fecha_row_candidate": "2021-01-26",
+        "fecha_file_hint": "2022-01-26",
+        "fecha_raw": "2022-01-26",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018 -01 ENERO/Comparativa de precios 29-01-18.xlsx",
+        "fecha_row_candidate": "2021-01-29",
+        "fecha_file_hint": "2022-01-29",
+        "fecha_raw": "2022-01-29",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018 -01 ENERO/Comparativa de precios 30-01-18.xlsx",
+        "fecha_row_candidate": "2021-01-30",
+        "fecha_file_hint": "2022-01-30",
+        "fecha_raw": "2022-01-30",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018 -01 ENERO/Comparativa de precios 31-01-18.xlsx",
+        "fecha_row_candidate": "2021-01-31",
+        "fecha_file_hint": "2022-01-31",
+        "fecha_raw": "2022-01-31",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 02 FEBRERO/Comparativa de precios 01-02-18.xlsx",
+        "fecha_row_candidate": "2021-02-01",
+        "fecha_file_hint": "2022-02-01",
+        "fecha_raw": "2022-02-01",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 02 FEBRERO/Comparativa de precios 02-02-18.xlsx",
+        "fecha_row_candidate": "2021-02-02",
+        "fecha_file_hint": "2022-02-02",
+        "fecha_raw": "2022-02-02",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 02 FEBRERO/Comparativa de precios 05-02-18.xlsx",
+        "fecha_row_candidate": "2021-02-05",
+        "fecha_file_hint": "2022-02-05",
+        "fecha_raw": "2022-02-05",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 02 FEBRERO/Comparativa de precios 06-02-18.xlsx",
+        "fecha_row_candidate": "2021-02-06",
+        "fecha_file_hint": "2022-02-06",
+        "fecha_raw": "2022-02-06",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 02 FEBRERO/Comparativa de precios 07-02-18.xlsx",
+        "fecha_row_candidate": "2021-02-07",
+        "fecha_file_hint": "2022-02-07",
+        "fecha_raw": "2022-02-07",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 02 FEBRERO/Comparativa de precios 08-02-18.xlsx",
+        "fecha_row_candidate": "2021-02-08",
+        "fecha_file_hint": "2022-02-08",
+        "fecha_raw": "2022-02-08",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 02 FEBRERO/Comparativa de precios 09-02-18.xlsx",
+        "fecha_row_candidate": "2021-02-09",
+        "fecha_file_hint": "2022-02-09",
+        "fecha_raw": "2022-02-09",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 02 FEBRERO/Comparativa de precios 12-02-18.xlsx",
+        "fecha_row_candidate": "2021-02-12",
+        "fecha_file_hint": "2022-02-12",
+        "fecha_raw": "2022-02-12",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 02 FEBRERO/Comparativa de precios 13-02-18.xlsx",
+        "fecha_row_candidate": "2021-02-13",
+        "fecha_file_hint": "2022-02-13",
+        "fecha_raw": "2022-02-13",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 02 FEBRERO/Comparativa de precios 14-02-18.xlsx",
+        "fecha_row_candidate": "2021-02-14",
+        "fecha_file_hint": "2022-02-14",
+        "fecha_raw": "2022-02-14",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 02 FEBRERO/Comparativa de precios 15-02-18.xlsx",
+        "fecha_row_candidate": "2021-02-15",
+        "fecha_file_hint": "2022-02-15",
+        "fecha_raw": "2022-02-15",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 02 FEBRERO/Comparativa de precios 16-02-18.xlsx",
+        "fecha_row_candidate": "2021-02-16",
+        "fecha_file_hint": "2022-02-16",
+        "fecha_raw": "2022-02-16",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 02 FEBRERO/Comparativa de precios 19-02-18.xlsx",
+        "fecha_row_candidate": "2021-02-19",
+        "fecha_file_hint": "2022-02-19",
+        "fecha_raw": "2022-02-19",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 02 FEBRERO/Comparativa de precios 20-02-18.xlsx",
+        "fecha_row_candidate": "2021-02-20",
+        "fecha_file_hint": "2022-02-20",
+        "fecha_raw": "2022-02-20",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 02 FEBRERO/Comparativa de precios 21-02-18.xlsx",
+        "fecha_row_candidate": "2021-02-21",
+        "fecha_file_hint": "2022-02-21",
+        "fecha_raw": "2022-02-21",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 02 FEBRERO/Comparativa de precios 22-02-18.xlsx",
+        "fecha_row_candidate": "2021-02-22",
+        "fecha_file_hint": "2022-02-22",
+        "fecha_raw": "2022-02-22",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 02 FEBRERO/Comparativa de precios 23-02-18.xlsx",
+        "fecha_row_candidate": "2021-02-23",
+        "fecha_file_hint": "2022-02-23",
+        "fecha_raw": "2022-02-23",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 02 FEBRERO/Comparativa de precios 26-02-18.xlsx",
+        "fecha_row_candidate": "2021-02-26",
+        "fecha_file_hint": "2022-02-26",
+        "fecha_raw": "2022-02-26",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 02 FEBRERO/Comparativa de precios 27-02-18.xlsx",
+        "fecha_row_candidate": "2021-02-27",
+        "fecha_file_hint": "2022-02-27",
+        "fecha_raw": "2022-02-27",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 03 MARZO/Comparativa de precios 01-03-18.xlsx",
+        "fecha_row_candidate": "2021-03-01",
+        "fecha_file_hint": "2022-03-01",
+        "fecha_raw": "2022-03-01",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 03 MARZO/Comparativa de precios 02-03-18.xlsx",
+        "fecha_row_candidate": "2021-03-02",
+        "fecha_file_hint": "2022-03-02",
+        "fecha_raw": "2022-03-02",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 03 MARZO/Comparativa de precios 05-03-18.xlsx",
+        "fecha_row_candidate": "2021-03-05",
+        "fecha_file_hint": "2022-03-05",
+        "fecha_raw": "2022-03-05",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 03 MARZO/Comparativa de precios 06-03-18.xlsx",
+        "fecha_row_candidate": "2021-03-06",
+        "fecha_file_hint": "2022-03-06",
+        "fecha_raw": "2022-03-06",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 03 MARZO/Comparativa de precios 07-03-18.xlsx",
+        "fecha_row_candidate": "2021-03-07",
+        "fecha_file_hint": "2022-03-07",
+        "fecha_raw": "2022-03-07",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 03 MARZO/Comparativa de precios 08-03-18.xlsx",
+        "fecha_row_candidate": "2021-03-08",
+        "fecha_file_hint": "2022-03-08",
+        "fecha_raw": "2022-03-08",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 03 MARZO/Comparativa de precios 09-03-18.xlsx",
+        "fecha_row_candidate": "2021-03-09",
+        "fecha_file_hint": "2022-03-09",
+        "fecha_raw": "2022-03-09",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 03 MARZO/Comparativa de precios 12-03-18.xlsx",
+        "fecha_row_candidate": "2021-03-12",
+        "fecha_file_hint": "2022-03-12",
+        "fecha_raw": "2022-03-12",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 03 MARZO/Comparativa de precios 13-03-18.xlsx",
+        "fecha_row_candidate": "2021-03-13",
+        "fecha_file_hint": "2022-03-13",
+        "fecha_raw": "2022-03-13",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 03 MARZO/Comparativa de precios 14-03-18.xlsx",
+        "fecha_row_candidate": "2021-03-14",
+        "fecha_file_hint": "2022-03-14",
+        "fecha_raw": "2022-03-14",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 03 MARZO/Comparativa de precios 15-03-18.xlsx",
+        "fecha_row_candidate": "2021-03-15",
+        "fecha_file_hint": "2022-03-15",
+        "fecha_raw": "2022-03-15",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 03 MARZO/Comparativa de precios 16-03-18.xlsx",
+        "fecha_row_candidate": "2021-03-16",
+        "fecha_file_hint": "2022-03-16",
+        "fecha_raw": "2022-03-16",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 03 MARZO/Comparativa de precios 19-03-18.xlsx",
+        "fecha_row_candidate": "2021-03-19",
+        "fecha_file_hint": "2022-03-19",
+        "fecha_raw": "2022-03-19",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 03 MARZO/Comparativa de precios 20-03-18.xlsx",
+        "fecha_row_candidate": "2021-03-20",
+        "fecha_file_hint": "2022-03-20",
+        "fecha_raw": "2022-03-20",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 03 MARZO/Comparativa de precios 21-03-18.xlsx",
+        "fecha_row_candidate": "2021-03-21",
+        "fecha_file_hint": "2022-03-21",
+        "fecha_raw": "2022-03-21",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 03 MARZO/Comparativa de precios 22-03-18.xlsx",
+        "fecha_row_candidate": "2021-03-22",
+        "fecha_file_hint": "2022-03-22",
+        "fecha_raw": "2022-03-22",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 03 MARZO/Comparativa de precios 23-03-18.xlsx",
+        "fecha_row_candidate": "2021-03-23",
+        "fecha_file_hint": "2022-03-23",
+        "fecha_raw": "2022-03-23",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 03 MARZO/Comparativa de precios 26-03-18.xlsx",
+        "fecha_row_candidate": "2021-03-26",
+        "fecha_file_hint": "2022-03-26",
+        "fecha_raw": "2022-03-26",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 03 MARZO/Comparativa de precios 27-03-18.xlsx",
+        "fecha_row_candidate": "2021-03-27",
+        "fecha_file_hint": "2022-03-27",
+        "fecha_raw": "2022-03-27",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 03 MARZO/Comparativa de precios 28-03-18.xlsx",
+        "fecha_row_candidate": "2021-03-28",
+        "fecha_file_hint": "2022-03-28",
+        "fecha_raw": "2022-03-28",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 04 ABRIL/Comparativa de precios 02-04-18.xlsx",
+        "fecha_row_candidate": "2021-04-02",
+        "fecha_file_hint": "2022-04-02",
+        "fecha_raw": "2022-04-02",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 04 ABRIL/Comparativa de precios 03-04-18.xlsx",
+        "fecha_row_candidate": "2021-04-03",
+        "fecha_file_hint": "2022-04-03",
+        "fecha_raw": "2022-04-03",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 04 ABRIL/Comparativa de precios 04-04-18.xlsx",
+        "fecha_row_candidate": "2021-04-04",
+        "fecha_file_hint": "2022-04-04",
+        "fecha_raw": "2022-04-04",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 04 ABRIL/Comparativa de precios 05-04-18.xlsx",
+        "fecha_row_candidate": "2021-04-05",
+        "fecha_file_hint": "2022-04-05",
+        "fecha_raw": "2022-04-05",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 04 ABRIL/Comparativa de precios 06-04-18.xlsx",
+        "fecha_row_candidate": "2021-04-06",
+        "fecha_file_hint": "2022-04-06",
+        "fecha_raw": "2022-04-06",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 04 ABRIL/Comparativa de precios 09-04-18.xlsx",
+        "fecha_row_candidate": "2021-04-09",
+        "fecha_file_hint": "2022-04-09",
+        "fecha_raw": "2022-04-09",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 04 ABRIL/Comparativa de precios 10-04-18.xlsx",
+        "fecha_row_candidate": "2021-04-10",
+        "fecha_file_hint": "2022-04-10",
+        "fecha_raw": "2022-04-10",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 04 ABRIL/Comparativa de precios 11-04-18.xlsx",
+        "fecha_row_candidate": "2021-04-11",
+        "fecha_file_hint": "2022-04-11",
+        "fecha_raw": "2022-04-11",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 04 ABRIL/Comparativa de precios 12-04-18.xlsx",
+        "fecha_row_candidate": "2021-04-12",
+        "fecha_file_hint": "2022-04-12",
+        "fecha_raw": "2022-04-12",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 04 ABRIL/Comparativa de precios 13-04-18.xlsx",
+        "fecha_row_candidate": "2021-04-13",
+        "fecha_file_hint": "2022-04-13",
+        "fecha_raw": "2022-04-13",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 04 ABRIL/Comparativa de precios 16-04-18.xlsx",
+        "fecha_row_candidate": "2021-04-16",
+        "fecha_file_hint": "2022-04-16",
+        "fecha_raw": "2022-04-16",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 04 ABRIL/Comparativa de precios 17-04-18.xlsx",
+        "fecha_row_candidate": "2021-04-17",
+        "fecha_file_hint": "2022-04-17",
+        "fecha_raw": "2022-04-17",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 04 ABRIL/Comparativa de precios 18-04-18.xlsx",
+        "fecha_row_candidate": "2021-04-18",
+        "fecha_file_hint": "2022-04-18",
+        "fecha_raw": "2022-04-18",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 04 ABRIL/Comparativa de precios 19-04-18.xlsx",
+        "fecha_row_candidate": "2021-04-19",
+        "fecha_file_hint": "2022-04-19",
+        "fecha_raw": "2022-04-19",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 04 ABRIL/Comparativa de precios 20-04-18.xlsx",
+        "fecha_row_candidate": "2021-04-20",
+        "fecha_file_hint": "2022-04-20",
+        "fecha_raw": "2022-04-20",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 04 ABRIL/Comparativa de precios 23-04-18.xlsx",
+        "fecha_row_candidate": "2021-04-23",
+        "fecha_file_hint": "2022-04-23",
+        "fecha_raw": "2022-04-23",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 04 ABRIL/Comparativa de precios 24-04-18.xlsx",
+        "fecha_row_candidate": "2021-04-24",
+        "fecha_file_hint": "2022-04-24",
+        "fecha_raw": "2022-04-24",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 04 ABRIL/Comparativa de precios 25-04-18.xlsx",
+        "fecha_row_candidate": "2021-04-25",
+        "fecha_file_hint": "2022-04-25",
+        "fecha_raw": "2022-04-25",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 04 ABRIL/Comparativa de precios 26-04-18.xlsx",
+        "fecha_row_candidate": "2021-04-26",
+        "fecha_file_hint": "2022-04-26",
+        "fecha_raw": "2022-04-26",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 04 ABRIL/Comparativa de precios 27-04-18.xlsx",
+        "fecha_row_candidate": "2021-04-27",
+        "fecha_file_hint": "2022-04-27",
+        "fecha_raw": "2022-04-27",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 04 ABRIL/Comparativa de precios 30-04-18.xlsx",
+        "fecha_row_candidate": "2021-04-30",
+        "fecha_file_hint": "2022-04-30",
+        "fecha_raw": "2022-04-30",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 05 MAYO/Comparativa de precios 02-05-18.xlsx",
+        "fecha_row_candidate": "2021-05-02",
+        "fecha_file_hint": "2022-05-02",
+        "fecha_raw": "2022-05-02",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 05 MAYO/Comparativa de precios 03-05-18.xlsx",
+        "fecha_row_candidate": "2021-05-03",
+        "fecha_file_hint": "2022-05-03",
+        "fecha_raw": "2022-05-03",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 05 MAYO/Comparativa de precios 04-05-18.xlsx",
+        "fecha_row_candidate": "2021-05-04",
+        "fecha_file_hint": "2022-05-04",
+        "fecha_raw": "2022-05-04",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 05 MAYO/Comparativa de precios 07-05-18.xlsx",
+        "fecha_row_candidate": "2021-05-07",
+        "fecha_file_hint": "2022-05-07",
+        "fecha_raw": "2022-05-07",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 05 MAYO/Comparativa de precios 08-05-18.xlsx",
+        "fecha_row_candidate": "2021-05-08",
+        "fecha_file_hint": "2022-05-08",
+        "fecha_raw": "2022-05-08",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 05 MAYO/Comparativa de precios 09-05-18.xlsx",
+        "fecha_row_candidate": "2021-05-09",
+        "fecha_file_hint": "2022-05-09",
+        "fecha_raw": "2022-05-09",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 05 MAYO/Comparativa de precios 10-05-18.xlsx",
+        "fecha_row_candidate": "2021-05-10",
+        "fecha_file_hint": "2022-05-10",
+        "fecha_raw": "2022-05-10",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 05 MAYO/Comparativa de precios 11-05-18.xlsx",
+        "fecha_row_candidate": "2021-05-11",
+        "fecha_file_hint": "2022-05-11",
+        "fecha_raw": "2022-05-11",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 05 MAYO/Comparativa de precios 14-05-18.xlsx",
+        "fecha_row_candidate": "2021-05-14",
+        "fecha_file_hint": "2022-05-14",
+        "fecha_raw": "2022-05-14",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 05 MAYO/Comparativa de precios 15-05-18.xlsx",
+        "fecha_row_candidate": "2021-05-15",
+        "fecha_file_hint": "2022-05-15",
+        "fecha_raw": "2022-05-15",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 05 MAYO/Comparativa de precios 16-05-18.xlsx",
+        "fecha_row_candidate": "2021-05-16",
+        "fecha_file_hint": "2022-05-16",
+        "fecha_raw": "2022-05-16",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 05 MAYO/Comparativa de precios 17-05-18.xlsx",
+        "fecha_row_candidate": "2021-05-17",
+        "fecha_file_hint": "2022-05-17",
+        "fecha_raw": "2022-05-17",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 05 MAYO/Comparativa de precios 18-05-18.xlsx",
+        "fecha_row_candidate": "2021-05-18",
+        "fecha_file_hint": "2022-05-18",
+        "fecha_raw": "2022-05-18",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 05 MAYO/Comparativa de precios 21-05-18.xlsx",
+        "fecha_row_candidate": "2021-05-21",
+        "fecha_file_hint": "2022-05-21",
+        "fecha_raw": "2022-05-21",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 05 MAYO/Comparativa de precios 22-05-18.xlsx",
+        "fecha_row_candidate": "2021-05-22",
+        "fecha_file_hint": "2022-05-22",
+        "fecha_raw": "2022-05-22",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 05 MAYO/Comparativa de precios 23-05-18.xlsx",
+        "fecha_row_candidate": "2021-05-23",
+        "fecha_file_hint": "2022-05-23",
+        "fecha_raw": "2022-05-23",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 05 MAYO/Comparativa de precios 24-05-18.xlsx",
+        "fecha_row_candidate": "2021-05-24",
+        "fecha_file_hint": "2022-05-24",
+        "fecha_raw": "2022-05-24",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 05 MAYO/Comparativa de precios 25-05-18.xlsx",
+        "fecha_row_candidate": "2021-05-25",
+        "fecha_file_hint": "2022-05-25",
+        "fecha_raw": "2022-05-25",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 05 MAYO/Comparativa de precios 28-05-18.xlsx",
+        "fecha_row_candidate": "2021-05-28",
+        "fecha_file_hint": "2022-05-28",
+        "fecha_raw": "2022-05-28",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 05 MAYO/Comparativa de precios 29-05-18.xlsx",
+        "fecha_row_candidate": "2021-05-29",
+        "fecha_file_hint": "2022-05-29",
+        "fecha_raw": "2022-05-29",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 05 MAYO/Comparativa de precios 30-05-18.xlsx",
+        "fecha_row_candidate": "2021-05-30",
+        "fecha_file_hint": "2022-05-30",
+        "fecha_raw": "2022-05-30",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 05 MAYO/Comparativa de precios 31-05-18.xlsx",
+        "fecha_row_candidate": "2021-05-31",
+        "fecha_file_hint": "2022-05-31",
+        "fecha_raw": "2022-05-31",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 06 JUNIO/Comparativa de precios 01-06-18.xlsx",
+        "fecha_row_candidate": "2021-06-01",
+        "fecha_file_hint": "2022-06-01",
+        "fecha_raw": "2022-06-01",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 06 JUNIO/Comparativa de precios 04-06-18.xlsx",
+        "fecha_row_candidate": "2021-06-04",
+        "fecha_file_hint": "2022-06-04",
+        "fecha_raw": "2022-06-04",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 06 JUNIO/Comparativa de precios 05-06-18.xlsx",
+        "fecha_row_candidate": "2021-06-05",
+        "fecha_file_hint": "2022-06-05",
+        "fecha_raw": "2022-06-05",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 06 JUNIO/Comparativa de precios 06-06-18.xlsx",
+        "fecha_row_candidate": "2021-06-06",
+        "fecha_file_hint": "2022-06-06",
+        "fecha_raw": "2022-06-06",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 06 JUNIO/Comparativa de precios 07-06-18.xlsx",
+        "fecha_row_candidate": "2021-06-07",
+        "fecha_file_hint": "2022-06-07",
+        "fecha_raw": "2022-06-07",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 06 JUNIO/Comparativa de precios 08-06-18.xlsx",
+        "fecha_row_candidate": "2021-06-08",
+        "fecha_file_hint": "2022-06-08",
+        "fecha_raw": "2022-06-08",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 06 JUNIO/Comparativa de precios 11-06-18.xlsx",
+        "fecha_row_candidate": "2021-06-11",
+        "fecha_file_hint": "2022-06-11",
+        "fecha_raw": "2022-06-11",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 06 JUNIO/Comparativa de precios 12-06-18.xlsx",
+        "fecha_row_candidate": "2021-06-12",
+        "fecha_file_hint": "2022-06-12",
+        "fecha_raw": "2022-06-12",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 06 JUNIO/Comparativa de precios 13-06-18.xlsx",
+        "fecha_row_candidate": "2021-06-13",
+        "fecha_file_hint": "2022-06-13",
+        "fecha_raw": "2022-06-13",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 06 JUNIO/Comparativa de precios 14-06-18.xlsx",
+        "fecha_row_candidate": "2021-06-14",
+        "fecha_file_hint": "2022-06-14",
+        "fecha_raw": "2022-06-14",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 06 JUNIO/Comparativa de precios 15-06-18.xlsx",
+        "fecha_row_candidate": "2021-06-15",
+        "fecha_file_hint": "2022-06-15",
+        "fecha_raw": "2022-06-15",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 06 JUNIO/Comparativa de precios 18-06-18.xlsx",
+        "fecha_row_candidate": "2021-06-18",
+        "fecha_file_hint": "2022-06-18",
+        "fecha_raw": "2022-06-18",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 06 JUNIO/Comparativa de precios 19-06-18.xlsx",
+        "fecha_row_candidate": "2021-06-19",
+        "fecha_file_hint": "2022-06-19",
+        "fecha_raw": "2022-06-19",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 06 JUNIO/Comparativa de precios 20-06-18.xlsx",
+        "fecha_row_candidate": "2021-06-20",
+        "fecha_file_hint": "2022-06-20",
+        "fecha_raw": "2022-06-20",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 06 JUNIO/Comparativa de precios 21-06-18.xlsx",
+        "fecha_row_candidate": "2021-06-21",
+        "fecha_file_hint": "2022-06-21",
+        "fecha_raw": "2022-06-21",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 06 JUNIO/Comparativa de precios 22-06-18.xlsx",
+        "fecha_row_candidate": "2021-06-22",
+        "fecha_file_hint": "2022-06-22",
+        "fecha_raw": "2022-06-22",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 06 JUNIO/Comparativa de precios 25-06-18.xlsx",
+        "fecha_row_candidate": "2021-06-25",
+        "fecha_file_hint": "2022-06-25",
+        "fecha_raw": "2022-06-25",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 06 JUNIO/Comparativa de precios 26-06-18.xlsx",
+        "fecha_row_candidate": "2021-06-26",
+        "fecha_file_hint": "2022-06-26",
+        "fecha_raw": "2022-06-26",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 06 JUNIO/Comparativa de precios 27-06-18.xlsx",
+        "fecha_row_candidate": "2021-06-27",
+        "fecha_file_hint": "2022-06-27",
+        "fecha_raw": "2022-06-27",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 06 JUNIO/Comparativa de precios 28-06-18.xlsx",
+        "fecha_row_candidate": "2021-06-28",
+        "fecha_file_hint": "2022-06-28",
+        "fecha_raw": "2022-06-28",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 06 JUNIO/Comparativa de precios 29-06-18.xlsx",
+        "fecha_row_candidate": "2021-06-29",
+        "fecha_file_hint": "2022-06-29",
+        "fecha_raw": "2022-06-29",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 07 JULIO/Comparativa de precios 02-07-18.xlsx",
+        "fecha_row_candidate": "2021-07-02",
+        "fecha_file_hint": "2022-07-02",
+        "fecha_raw": "2022-07-02",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 07 JULIO/Comparativa de precios 03-07-18.xlsx",
+        "fecha_row_candidate": "2021-07-03",
+        "fecha_file_hint": "2022-07-03",
+        "fecha_raw": "2022-07-03",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 07 JULIO/Comparativa de precios 04-07-18.xlsx",
+        "fecha_row_candidate": "2021-07-04",
+        "fecha_file_hint": "2022-07-04",
+        "fecha_raw": "2022-07-04",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 07 JULIO/Comparativa de precios 05-07-18.xlsx",
+        "fecha_row_candidate": "2021-07-05",
+        "fecha_file_hint": "2022-07-05",
+        "fecha_raw": "2022-07-05",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 07 JULIO/Comparativa de precios 06-07-18.xlsx",
+        "fecha_row_candidate": "2021-07-06",
+        "fecha_file_hint": "2022-07-06",
+        "fecha_raw": "2022-07-06",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 07 JULIO/Comparativa de precios 09-07-18.xlsx",
+        "fecha_row_candidate": "2021-07-09",
+        "fecha_file_hint": "2022-07-09",
+        "fecha_raw": "2022-07-09",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 07 JULIO/Comparativa de precios 10-07-18.xlsx",
+        "fecha_row_candidate": "2021-07-10",
+        "fecha_file_hint": "2022-07-10",
+        "fecha_raw": "2022-07-10",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 07 JULIO/Comparativa de precios 11-07-18.xlsx",
+        "fecha_row_candidate": "2021-07-11",
+        "fecha_file_hint": "2022-07-11",
+        "fecha_raw": "2022-07-11",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 07 JULIO/Comparativa de precios 12-07-18.xlsx",
+        "fecha_row_candidate": "2021-07-12",
+        "fecha_file_hint": "2022-07-12",
+        "fecha_raw": "2022-07-12",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 07 JULIO/Comparativa de precios 13-07-18.xlsx",
+        "fecha_row_candidate": "2021-07-13",
+        "fecha_file_hint": "2022-07-13",
+        "fecha_raw": "2022-07-13",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 07 JULIO/Comparativa de precios 16-07-18.xlsx",
+        "fecha_row_candidate": "2021-07-16",
+        "fecha_file_hint": "2022-07-16",
+        "fecha_raw": "2022-07-16",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 07 JULIO/Comparativa de precios 17-07-18.xlsx",
+        "fecha_row_candidate": "2021-07-17",
+        "fecha_file_hint": "2022-07-17",
+        "fecha_raw": "2022-07-17",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 07 JULIO/Comparativa de precios 18-07-18.xlsx",
+        "fecha_row_candidate": "2021-07-18",
+        "fecha_file_hint": "2022-07-18",
+        "fecha_raw": "2022-07-18",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 07 JULIO/Comparativa de precios 19-07-18.xlsx",
+        "fecha_row_candidate": "2021-07-19",
+        "fecha_file_hint": "2022-07-19",
+        "fecha_raw": "2022-07-19",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 07 JULIO/Comparativa de precios 20-07-18.xlsx",
+        "fecha_row_candidate": "2021-07-20",
+        "fecha_file_hint": "2022-07-20",
+        "fecha_raw": "2022-07-20",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 07 JULIO/Comparativa de precios 23-07-18.xlsx",
+        "fecha_row_candidate": "2021-07-23",
+        "fecha_file_hint": "2022-07-23",
+        "fecha_raw": "2022-07-23",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 07 JULIO/Comparativa de precios 24-07-18.xlsx",
+        "fecha_row_candidate": "2021-07-24",
+        "fecha_file_hint": "2022-07-24",
+        "fecha_raw": "2022-07-24",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 07 JULIO/Comparativa de precios 25-07-18.xlsx",
+        "fecha_row_candidate": "2021-07-25",
+        "fecha_file_hint": "2022-07-25",
+        "fecha_raw": "2022-07-25",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 07 JULIO/Comparativa de precios 26-07-18.xlsx",
+        "fecha_row_candidate": "2021-07-26",
+        "fecha_file_hint": "2022-07-26",
+        "fecha_raw": "2022-07-26",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 07 JULIO/Comparativa de precios 27-07-18.xlsx",
+        "fecha_row_candidate": "2021-07-27",
+        "fecha_file_hint": "2022-07-27",
+        "fecha_raw": "2022-07-27",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 07 JULIO/Comparativa de precios 30-07-18.xlsx",
+        "fecha_row_candidate": "2021-07-30",
+        "fecha_file_hint": "2022-07-30",
+        "fecha_raw": "2022-07-30",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018- 07 JULIO/Comparativa de precios 31-07-18.xlsx",
+        "fecha_row_candidate": "2021-07-31",
+        "fecha_file_hint": "2022-07-31",
+        "fecha_raw": "2022-07-31",
+        "path_year_hint": 2018,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2021 COMPARATIVA DE PRECIOS/2021-01 COMPARATIVA/Comparativa de precios 04-01-21.xlsx",
+        "fecha_row_candidate": "2024-01-04",
+        "fecha_file_hint": "2025-01-04",
+        "fecha_raw": "2025-01-04",
+        "path_year_hint": 2021,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2021 COMPARATIVA DE PRECIOS/2021-01 COMPARATIVA/Comparativa de precios 05-01-21.xlsx",
+        "fecha_row_candidate": "2024-01-05",
+        "fecha_file_hint": "2025-01-05",
+        "fecha_raw": "2025-01-05",
+        "path_year_hint": 2021,
+        "date_resolution_status": "auto_correct_year_from_file_name"
+      }
+    ],
+    "unresolved_conflicts": [
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2015 COMPARATIVA DE PRECIOS/2015 -11 NOVIEMBRE/Comparativa de precios 13-11-2015.xlsx",
+        "fecha_row_candidate": "2019-11-12",
+        "fecha_file_hint": "2019-11-13",
+        "fecha_raw": "2019-11-12",
+        "path_year_hint": 2015,
+        "date_resolution_status": "row_date_kept_day_month_conflict"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -01 ENERO/Comparativa de precios 28-01-2016.xlsx",
+        "fecha_row_candidate": "2020-01-27",
+        "fecha_file_hint": "2020-01-28",
+        "fecha_raw": "2020-01-27",
+        "path_year_hint": 2016,
+        "date_resolution_status": "row_date_kept_day_month_conflict"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -01 ENERO/Comparativa de precios 29-01-2016.xlsx",
+        "fecha_row_candidate": "2020-01-27",
+        "fecha_file_hint": "2020-01-29",
+        "fecha_raw": "2020-01-27",
+        "path_year_hint": 2016,
+        "date_resolution_status": "row_date_kept_day_month_conflict"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -02 FEBRERO/Comparativa de precios 03-02-2016.xlsx",
+        "fecha_row_candidate": "2020-02-02",
+        "fecha_file_hint": "2020-02-03",
+        "fecha_raw": "2020-02-02",
+        "path_year_hint": 2016,
+        "date_resolution_status": "row_date_kept_day_month_conflict"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -02 FEBRERO/Comparativa de precios 24-02-2016.xlsx",
+        "fecha_row_candidate": "2020-02-23",
+        "fecha_file_hint": "2020-02-24",
+        "fecha_raw": "2020-02-23",
+        "path_year_hint": 2016,
+        "date_resolution_status": "row_date_kept_day_month_conflict"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -04 ABRIL/Comparativa de precios 21-04-2016.xlsx",
+        "fecha_row_candidate": "2020-04-20",
+        "fecha_file_hint": "2020-04-21",
+        "fecha_raw": "2020-04-20",
+        "path_year_hint": 2016,
+        "date_resolution_status": "row_date_kept_day_month_conflict"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -05 MAYO/Comparativa de precios 11-05-2016.xlsx",
+        "fecha_row_candidate": "2020-05-10",
+        "fecha_file_hint": "2020-05-11",
+        "fecha_raw": "2020-05-10",
+        "path_year_hint": 2016,
+        "date_resolution_status": "row_date_kept_day_month_conflict"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -05 MAYO/Comparativa de precios 25-05-2016.xlsx",
+        "fecha_row_candidate": "2020-05-24",
+        "fecha_file_hint": "2020-05-25",
+        "fecha_raw": "2020-05-24",
+        "path_year_hint": 2016,
+        "date_resolution_status": "row_date_kept_day_month_conflict"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -06 JUNIO/Comparativa de precios 14-06-2016.xlsx",
+        "fecha_row_candidate": "2020-06-10",
+        "fecha_file_hint": "2020-06-14",
+        "fecha_raw": "2020-06-10",
+        "path_year_hint": 2016,
+        "date_resolution_status": "row_date_kept_day_month_conflict"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -06 JUNIO/Comparativa de precios 27-06-2016.xlsx",
+        "fecha_row_candidate": "2020-06-24",
+        "fecha_file_hint": "2020-06-27",
+        "fecha_raw": "2020-06-24",
+        "path_year_hint": 2016,
+        "date_resolution_status": "row_date_kept_day_month_conflict"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -06 JUNIO/Comparativa de precios 28-06-2016.xlsx",
+        "fecha_row_candidate": "2020-06-24",
+        "fecha_file_hint": "2020-06-28",
+        "fecha_raw": "2020-06-24",
+        "path_year_hint": 2016,
+        "date_resolution_status": "row_date_kept_day_month_conflict"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -07 JULIO/Comparativa de precios 01-07-2016.xlsx",
+        "fecha_row_candidate": "2020-06-30",
+        "fecha_file_hint": "2020-07-01",
+        "fecha_raw": "2020-06-30",
+        "path_year_hint": 2016,
+        "date_resolution_status": "row_date_kept_day_month_conflict"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -07 JULIO/Comparativa de precios 04-07-2016.xlsx",
+        "fecha_row_candidate": "2020-06-30",
+        "fecha_file_hint": "2020-07-04",
+        "fecha_raw": "2020-06-30",
+        "path_year_hint": 2016,
+        "date_resolution_status": "row_date_kept_day_month_conflict"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016 -08 AGOSTO/Comparativa de precios 22-08-2016.xlsx",
+        "fecha_row_candidate": "2020-08-19",
+        "fecha_file_hint": "2020-08-22",
+        "fecha_raw": "2020-08-19",
+        "path_year_hint": 2016,
+        "date_resolution_status": "row_date_kept_day_month_conflict"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016- 09 SEPTIEMBRE/Comparativa de precios 06-09-2016.xlsx",
+        "fecha_row_candidate": "2020-09-05",
+        "fecha_file_hint": "2020-09-06",
+        "fecha_raw": "2020-09-05",
+        "path_year_hint": 2016,
+        "date_resolution_status": "row_date_kept_day_month_conflict"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016- 10 OCTUBRE/Comparativa de precios 03-10-2016.xlsx",
+        "fecha_row_candidate": "2020-09-30",
+        "fecha_file_hint": "2020-10-03",
+        "fecha_raw": "2020-09-30",
+        "path_year_hint": 2016,
+        "date_resolution_status": "row_date_kept_day_month_conflict"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016- 10 OCTUBRE/Comparativa de precios 04-10-2016.xlsx",
+        "fecha_row_candidate": "2020-10-03",
+        "fecha_file_hint": "2020-10-04",
+        "fecha_raw": "2020-10-03",
+        "path_year_hint": 2016,
+        "date_resolution_status": "row_date_kept_day_month_conflict"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016- 10 OCTUBRE/Comparativa de precios 14-10-2016.xlsx",
+        "fecha_row_candidate": "2020-10-13",
+        "fecha_file_hint": "2020-10-14",
+        "fecha_raw": "2020-10-13",
+        "path_year_hint": 2016,
+        "date_resolution_status": "row_date_kept_day_month_conflict"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016- 10 OCTUBRE/Comparativa de precios 19-10-2016.xlsx",
+        "fecha_row_candidate": "2020-10-18",
+        "fecha_file_hint": "2020-10-19",
+        "fecha_raw": "2020-10-18",
+        "path_year_hint": 2016,
+        "date_resolution_status": "row_date_kept_day_month_conflict"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016- 11 NOVIEMBRE/Comparativa de precios 03-11-16.xlsx",
+        "fecha_row_candidate": "2020-10-27",
+        "fecha_file_hint": "2020-11-03",
+        "fecha_raw": "2020-10-27",
+        "path_year_hint": 2016,
+        "date_resolution_status": "row_date_kept_day_month_conflict"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016- 11 NOVIEMBRE/Comparativa de precios 17-11-16.xlsx",
+        "fecha_row_candidate": "2020-11-16",
+        "fecha_file_hint": "2020-11-17",
+        "fecha_raw": "2020-11-16",
+        "path_year_hint": 2016,
+        "date_resolution_status": "row_date_kept_day_month_conflict"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016- 11 NOVIEMBRE/Comparativa de precios 18-11-16.xlsx",
+        "fecha_row_candidate": "2020-11-16",
+        "fecha_file_hint": "2020-11-18",
+        "fecha_raw": "2020-11-16",
+        "path_year_hint": 2016,
+        "date_resolution_status": "row_date_kept_day_month_conflict"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2016 COMPARATIVA DE PRECIOS/2016- 12 DICIEMBRE/Comparativa de precios 01-12-16.xlsx",
+        "fecha_row_candidate": "2020-11-30",
+        "fecha_file_hint": "2020-12-01",
+        "fecha_raw": "2020-11-30",
+        "path_year_hint": 2016,
+        "date_resolution_status": "row_date_kept_day_month_conflict"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2017 COMPARATIVA DE PRECIOS/2017 -05 MAYO/Comparativa de precios 19-05-17.xlsx",
+        "fecha_row_candidate": "2021-05-18",
+        "fecha_file_hint": "2021-05-19",
+        "fecha_raw": "2021-05-18",
+        "path_year_hint": 2017,
+        "date_resolution_status": "row_date_kept_day_month_conflict"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2017 COMPARATIVA DE PRECIOS/2017 -05 MAYO/Comparativa de precios 23-05-17.xlsx",
+        "fecha_row_candidate": "2021-05-22",
+        "fecha_file_hint": "2021-05-23",
+        "fecha_raw": "2021-05-22",
+        "path_year_hint": 2017,
+        "date_resolution_status": "row_date_kept_day_month_conflict"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2017 COMPARATIVA DE PRECIOS/2017 -07 JULIO/Comparativa de precios 04-07-17.xlsx",
+        "fecha_row_candidate": "2021-07-03",
+        "fecha_file_hint": "2021-07-04",
+        "fecha_raw": "2021-07-03",
+        "path_year_hint": 2017,
+        "date_resolution_status": "row_date_kept_day_month_conflict"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2017 COMPARATIVA DE PRECIOS/2017 -10 OCTUBRE/Comparativa de precios 11-10-17.xlsx",
+        "fecha_row_candidate": "2021-10-10",
+        "fecha_file_hint": "2021-10-11",
+        "fecha_raw": "2021-10-10",
+        "path_year_hint": 2017,
+        "date_resolution_status": "row_date_kept_day_month_conflict"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2017 COMPARATIVA DE PRECIOS/2017- 01 ENERO/Comparativa de precios 27-01-17.xlsx",
+        "fecha_row_candidate": "2021-01-26",
+        "fecha_file_hint": "2021-01-27",
+        "fecha_raw": "2021-01-26",
+        "path_year_hint": 2017,
+        "date_resolution_status": "row_date_kept_day_month_conflict"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2017 COMPARATIVA DE PRECIOS/2017- 04 ABRIL/Comparativa de precios 19-04-17.xlsx",
+        "fecha_row_candidate": "2021-04-18",
+        "fecha_file_hint": "2021-04-19",
+        "fecha_raw": "2021-04-18",
+        "path_year_hint": 2017,
+        "date_resolution_status": "row_date_kept_day_month_conflict"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2017 COMPARATIVA DE PRECIOS/2017- 04 ABRIL/Comparativa de precios 20-04-17.xlsx",
+        "fecha_row_candidate": "2021-04-18",
+        "fecha_file_hint": "2021-04-20",
+        "fecha_raw": "2021-04-18",
+        "path_year_hint": 2017,
+        "date_resolution_status": "row_date_kept_day_month_conflict"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018-08 AGOSTO/Comparativa de precios 08-08-18.xlsx",
+        "fecha_row_candidate": "2022-08-07",
+        "fecha_file_hint": "2022-08-08",
+        "fecha_raw": "2022-08-07",
+        "path_year_hint": 2018,
+        "date_resolution_status": "row_date_kept_day_month_conflict"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018-10 OCTUBRE/Comparativa de precios 09-10-18.xlsx",
+        "fecha_row_candidate": "2022-10-10",
+        "fecha_file_hint": "2022-10-09",
+        "fecha_raw": "2022-10-10",
+        "path_year_hint": 2018,
+        "date_resolution_status": "row_date_kept_day_month_conflict"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2018 COMPARATIVA DE PRECIOS/2018-10 OCTUBRE/Comparativa de precios 30-10-18.xlsx",
+        "fecha_row_candidate": "2022-10-29",
+        "fecha_file_hint": "2022-10-30",
+        "fecha_raw": "2022-10-29",
+        "path_year_hint": 2018,
+        "date_resolution_status": "row_date_kept_day_month_conflict"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2020 COMPARATIVA DE PRECIOS/2020-02 COMPARATIVA/Comparativa de precios 26-02-20.xlsx",
+        "fecha_row_candidate": "2024-02-25",
+        "fecha_file_hint": "2024-02-26",
+        "fecha_raw": "2024-02-25",
+        "path_year_hint": 2020,
+        "date_resolution_status": "row_date_kept_day_month_conflict"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2022 COMPARATIVA DE PRECIOS/2022-07 COMPARATIVA/Comparativa de precios 25-07-22.xlsx",
+        "fecha_row_candidate": "2026-07-22",
+        "fecha_file_hint": "2026-07-25",
+        "fecha_raw": "2026-07-22",
+        "path_year_hint": 2022,
+        "date_resolution_status": "row_date_kept_day_month_conflict"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2022 COMPARATIVA DE PRECIOS/2022-12 COMPARATIVA/Comparativa de precios 07-12-22.xlsx",
+        "fecha_row_candidate": "2026-12-02",
+        "fecha_file_hint": "2026-12-07",
+        "fecha_raw": "2026-12-02",
+        "path_year_hint": 2022,
+        "date_resolution_status": "row_date_kept_day_month_conflict"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2023 COMPARATIVA DE PRECIOS/2023-02 COMPARATIVA/Comparativa de precios 06-02-23.xlsx",
+        "fecha_row_candidate": "2027-02-07",
+        "fecha_file_hint": "2027-02-06",
+        "fecha_raw": "2027-02-07",
+        "path_year_hint": 2023,
+        "date_resolution_status": "row_date_kept_day_month_conflict"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2023 COMPARATIVA DE PRECIOS/2023-03 COMPARATIVA/Comparativa de precios 31-03-23.xlsx",
+        "fecha_row_candidate": "2027-03-30",
+        "fecha_file_hint": "2027-03-31",
+        "fecha_raw": "2027-03-30",
+        "path_year_hint": 2023,
+        "date_resolution_status": "row_date_kept_day_month_conflict"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2023 COMPARATIVA DE PRECIOS/2023-10 COMPARATIVA/Comparativa de precios 03-10-23.xlsx",
+        "fecha_row_candidate": "2027-10-02",
+        "fecha_file_hint": "2027-10-03",
+        "fecha_raw": "2027-10-02",
+        "path_year_hint": 2023,
+        "date_resolution_status": "row_date_kept_day_month_conflict"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2023 COMPARATIVA DE PRECIOS/2023-12 COMPARATIVA/Comparativa de precios 26-12-23.xlsx",
+        "fecha_row_candidate": "2027-12-21",
+        "fecha_file_hint": "2027-12-26",
+        "fecha_raw": "2027-12-21",
+        "path_year_hint": 2023,
+        "date_resolution_status": "row_date_kept_day_month_conflict"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2024 COMPARATIVA DE PRECIOS/2024-08 COMPARATIVA/Comparativa de precios 21-08-2024.xlsx",
+        "fecha_row_candidate": "2028-08-20",
+        "fecha_file_hint": "2028-08-21",
+        "fecha_raw": "2028-08-20",
+        "path_year_hint": 2024,
+        "date_resolution_status": "row_date_kept_day_month_conflict"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2025 COMPARATIVA DE PRECIOS/2025-07 COMPARATIVA DE PRECIOS/Comparativa de precios 18-07-2025.xlsx",
+        "fecha_row_candidate": "2029-07-17",
+        "fecha_file_hint": "2029-07-18",
+        "fecha_raw": "2029-07-17",
+        "path_year_hint": 2025,
+        "date_resolution_status": "row_date_kept_day_month_conflict"
+      },
+      {
+        "source_file": "./data/raw/SUPPLIER_DAILY_COMPARISON/2026 COMPARATIVA DE PRECIOS/2026-01 COMPAATIVA DE PRECIOS/Comparativa de precios 02-01-2026.xlsx",
+        "fecha_row_candidate": "2029-12-29",
+        "fecha_file_hint": "2030-01-02",
+        "fecha_raw": "2029-12-29",
+        "path_year_hint": 2026,
+        "date_resolution_status": "row_date_kept_day_month_conflict"
+      }
+    ]
+  }
+}

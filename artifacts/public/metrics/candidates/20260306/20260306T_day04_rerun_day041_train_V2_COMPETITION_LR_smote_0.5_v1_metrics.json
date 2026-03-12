@@ -1,0 +1,55 @@
+{
+  "run_id": "20260306T_day04_rerun_day041_train",
+  "ts_utc": "2026-03-06T12:25:36.041914+00:00",
+  "day_id": "Day 04.1",
+  "scope": "model_retrain",
+  "eval_scope": "day02_test_like",
+  "cutoff_applied": "2028-02-21",
+  "model_variant": "V2_COMPETITION_LR_smote_0.5_v1",
+  "metrics": {
+    "accuracy": 0.896077114905045,
+    "balanced_accuracy": 0.8674250078073817,
+    "f1_pos": 0.6682994030307668,
+    "top1_hit": 0.7641473604253703,
+    "top2_hit": 0.8522597797189517,
+    "coverage": 1.0,
+    "test_events": 2633
+  },
+  "feature_contract": {
+    "feature_columns_num": [
+      "coste_min_dia_proveedor",
+      "rank_coste_dia_producto",
+      "terminales_cubiertos",
+      "observaciones_oferta",
+      "candidatos_evento_count",
+      "coste_min_evento",
+      "coste_max_evento",
+      "spread_coste_evento",
+      "delta_vs_min_evento",
+      "ratio_vs_min_evento",
+      "litros_evento",
+      "dia_semana",
+      "mes",
+      "fin_mes",
+      "v3_coste_segundo_evento",
+      "v3_gap_min_vs_second_evento",
+      "v3_delta_vs_second_evento",
+      "v3_ratio_vs_second_evento",
+      "v3_rank_pct_evento",
+      "v3_coste_mean_evento",
+      "v3_delta_vs_mean_evento",
+      "v3_candidatos_min_coste_count",
+      "v3_is_unique_min_coste_evento"
+    ],
+    "feature_columns_cat": [
+      "proveedor_candidato",
+      "producto_canonico",
+      "terminal_compra"
+    ]
+  },
+  "sources": {
+    "dataset_csv": "data/public/day041/dataset_modelo_v2_competition.csv",
+    "model_path": "./models/candidates/day041_ablation/v2_competition_lr_smote_0_5_v1/20260306T_day04_rerun_day041_train/model.pkl",
+    "metadata_path": "./models/candidates/day041_ablation/v2_competition_lr_smote_0_5_v1/20260306T_day04_rerun_day041_train/metadata.json"
+  }
+}

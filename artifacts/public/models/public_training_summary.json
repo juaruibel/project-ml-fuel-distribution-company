@@ -1,0 +1,154 @@
+{
+  "status": "PASS",
+  "generated_utc": "2026-03-12T18:35:04.369298+00:00",
+  "models": [
+    {
+      "role": "baseline",
+      "model_variant": "LR_smote_0.5",
+      "public_model_name": "LR_smote_0.5_public",
+      "dataset_path": "data/public/dataset_modelo_proveedor_v2_candidates.csv",
+      "cutoff_date": "2028-02-21",
+      "metrics": {
+        "accuracy": 0.8874448494149242,
+        "balanced_accuracy": 0.8650843671482551,
+        "f1_pos": 0.6520385470719051,
+        "top1_hit": 0.7645271553361185,
+        "top2_hit": 0.858336498290923,
+        "coverage": 1.0,
+        "test_events": 2633
+      },
+      "expected_metrics": {
+        "accuracy": 0.8874448494149242,
+        "balanced_accuracy": 0.8650843671482551,
+        "f1_pos": 0.6520385470719051,
+        "top1_hit": 0.7645271553361185,
+        "top2_hit": 0.858336498290923,
+        "coverage": 1.0,
+        "test_events": 2633
+      },
+      "parity": {
+        "status": "PASS",
+        "checks": [
+          {
+            "metric": "accuracy",
+            "actual": 0.8874448494149242,
+            "expected": 0.8874448494149242,
+            "matches": true
+          },
+          {
+            "metric": "balanced_accuracy",
+            "actual": 0.8650843671482551,
+            "expected": 0.8650843671482551,
+            "matches": true
+          },
+          {
+            "metric": "f1_pos",
+            "actual": 0.6520385470719051,
+            "expected": 0.6520385470719051,
+            "matches": true
+          },
+          {
+            "metric": "top1_hit",
+            "actual": 0.7645271553361185,
+            "expected": 0.7645271553361185,
+            "matches": true
+          },
+          {
+            "metric": "top2_hit",
+            "actual": 0.858336498290923,
+            "expected": 0.858336498290923,
+            "matches": true
+          },
+          {
+            "metric": "coverage",
+            "actual": 1.0,
+            "expected": 1.0,
+            "matches": true
+          },
+          {
+            "metric": "test_events",
+            "actual": 2633.0,
+            "expected": 2633.0,
+            "matches": true
+          }
+        ]
+      },
+      "model_path": "models/public/baseline/model.pkl",
+      "metadata_path": "models/public/baseline/metadata.json"
+    },
+    {
+      "role": "champion_pure",
+      "model_variant": "V2_TRANSPORT_ONLY_LIGHTGBM_CLASS_WEIGHT_BALANCED_v1",
+      "public_model_name": "V2_TRANSPORT_ONLY_LIGHTGBM_CLASS_WEIGHT_BALANCED_v1_public",
+      "dataset_path": "data/public/day041/dataset_modelo_v2_transport_only.csv",
+      "cutoff_date": "2028-02-21",
+      "metrics": {
+        "accuracy": 0.9006809898331095,
+        "balanced_accuracy": 0.8814313704926142,
+        "f1_pos": 0.6851147939790178,
+        "top1_hit": 0.7725028484618306,
+        "top2_hit": 0.8826433725788074,
+        "coverage": 1.0,
+        "test_events": 2633
+      },
+      "expected_metrics": {
+        "accuracy": 0.9006809898331095,
+        "balanced_accuracy": 0.8814313704926142,
+        "f1_pos": 0.6851147939790178,
+        "top1_hit": 0.7725028484618306,
+        "top2_hit": 0.8826433725788074,
+        "coverage": 1.0,
+        "test_events": 2633
+      },
+      "parity": {
+        "status": "PASS",
+        "checks": [
+          {
+            "metric": "accuracy",
+            "actual": 0.9006809898331095,
+            "expected": 0.9006809898331095,
+            "matches": true
+          },
+          {
+            "metric": "balanced_accuracy",
+            "actual": 0.8814313704926142,
+            "expected": 0.8814313704926142,
+            "matches": true
+          },
+          {
+            "metric": "f1_pos",
+            "actual": 0.6851147939790178,
+            "expected": 0.6851147939790178,
+            "matches": true
+          },
+          {
+            "metric": "top1_hit",
+            "actual": 0.7725028484618306,
+            "expected": 0.7725028484618306,
+            "matches": true
+          },
+          {
+            "metric": "top2_hit",
+            "actual": 0.8826433725788074,
+            "expected": 0.8826433725788074,
+            "matches": true
+          },
+          {
+            "metric": "coverage",
+            "actual": 1.0,
+            "expected": 1.0,
+            "matches": true
+          },
+          {
+            "metric": "test_events",
+            "actual": 2633.0,
+            "expected": 2633.0,
+            "matches": true
+          }
+        ]
+      },
+      "model_path": "models/public/champion_pure/model.pkl",
+      "metadata_path": "models/public/champion_pure/metadata.json"
+    }
+  ]
+}

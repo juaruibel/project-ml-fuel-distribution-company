@@ -1,0 +1,25 @@
+{
+  "status": "gated_no_train",
+  "run_id": "20260306T_day043_train",
+  "ts_utc": "2026-03-06T11:35:48.052456+00:00",
+  "day_id": "Day 04.3",
+  "gate": {
+    "coverage_gate_pass": false,
+    "leakage_gate_pass": true,
+    "structural_gate_pass": true,
+    "training_allowed": false,
+    "coverage_train_final": 0.7829778100158394,
+    "coverage_test_final": 0.9936217149434107,
+    "failure_reasons": [
+      "coverage_below_min_threshold"
+    ]
+  },
+  "baseline_metrics": {
+    "top2_hit": 0.862894,
+    "balanced_accuracy": 0.861463,
+    "top1_hit": 0.772123
+  },
+  "trained_variants": [],
+  "policy_variant": "",
+  "message": "Day 04.3 no entrena porque el artefacto carry-forward 30d no supera el gate tecnico."
+}

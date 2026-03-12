@@ -1,0 +1,9 @@
+{
+  "accuracy": 0.0,
+  "balanced_accuracy": 0.0,
+  "f1_pos": 0.0,
+  "top1_hit": 0.0,
+  "top2_hit": 0.0,
+  "coverage": 0.0,
+  "test_events": 0
+}

@@ -1,0 +1,155 @@
+{
+  "status": "PASS",
+  "generated_utc": "2026-03-12T18:57:40.785316+00:00",
+  "notebook_count": 21,
+  "failures": [],
+  "records": [
+    {
+      "notebook": "notebooks/01_ml_knn.ipynb",
+      "started_utc": "2026-03-12T18:57:09.829555+00:00",
+      "duration_seconds": null,
+      "status": "SKIP",
+      "error": ""
+    },
+    {
+      "notebook": "notebooks/02_ml_feature_eng.ipynb",
+      "started_utc": "2026-03-12T18:57:09.893783+00:00",
+      "duration_seconds": null,
+      "status": "SKIP",
+      "error": ""
+    },
+    {
+      "notebook": "notebooks/03_ml_ensemble.ipynb",
+      "started_utc": "2026-03-12T18:57:09.906361+00:00",
+      "duration_seconds": null,
+      "status": "SKIP",
+      "error": ""
+    },
+    {
+      "notebook": "notebooks/04_ml_hyperparameter_tunning.ipynb",
+      "started_utc": "2026-03-12T18:57:09.915132+00:00",
+      "duration_seconds": null,
+      "status": "SKIP",
+      "error": ""
+    },
+    {
+      "notebook": "notebooks/05_ml_postinferencia.ipynb",
+      "started_utc": "2026-03-12T18:57:09.926100+00:00",
+      "duration_seconds": null,
+      "status": "SKIP",
+      "error": ""
+    },
+    {
+      "notebook": "notebooks/06_final_baseline_vs_candidates_sql.ipynb",
+      "started_utc": "2026-03-12T18:57:09.932051+00:00",
+      "duration_seconds": null,
+      "status": "SKIP",
+      "error": ""
+    },
+    {
+      "notebook": "notebooks/07_sql_serving.ipynb",
+      "started_utc": "2026-03-12T18:57:09.935883+00:00",
+      "duration_seconds": null,
+      "status": "SKIP",
+      "error": ""
+    },
+    {
+      "notebook": "notebooks/08_patrones.ipynb",
+      "started_utc": "2026-03-12T18:57:09.941025+00:00",
+      "duration_seconds": null,
+      "status": "SKIP",
+      "error": ""
+    },
+    {
+      "notebook": "notebooks/09_validacion_posinferencia_albaran.ipynb",
+      "started_utc": "2026-03-12T18:57:09.947656+00:00",
+      "duration_seconds": null,
+      "status": "SKIP",
+      "error": ""
+    },
+    {
+      "notebook": "notebooks/10_day03_postinferencia_albaran_backtest.ipynb",
+      "started_utc": "2026-03-12T18:57:09.950406+00:00",
+      "duration_seconds": 4.06,
+      "status": "PASS",
+      "error": ""
+    },
+    {
+      "notebook": "notebooks/11_day04_v3a_raw_contract_and_eval.ipynb",
+      "started_utc": "2026-03-12T18:57:14.010489+00:00",
+      "duration_seconds": null,
+      "status": "SKIP",
+      "error": ""
+    },
+    {
+      "notebook": "notebooks/12_day04_1_transport_parser_and_ablation.ipynb",
+      "started_utc": "2026-03-12T18:57:14.020421+00:00",
+      "duration_seconds": null,
+      "status": "SKIP",
+      "error": ""
+    },
+    {
+      "notebook": "notebooks/13_day04_2_transport_rebuild_and_retrain.ipynb",
+      "started_utc": "2026-03-12T18:57:14.028977+00:00",
+      "duration_seconds": null,
+      "status": "SKIP",
+      "error": ""
+    },
+    {
+      "notebook": "notebooks/14_day04_3_transport_carry30d_and_retrain.ipynb",
+      "started_utc": "2026-03-12T18:57:14.042653+00:00",
+      "duration_seconds": null,
+      "status": "SKIP",
+      "error": ""
+    },
+    {
+      "notebook": "notebooks/15_day04_rerun_after_date_fix.ipynb",
+      "started_utc": "2026-03-12T18:57:14.054225+00:00",
+      "duration_seconds": null,
+      "status": "SKIP",
+      "error": ""
+    },
+    {
+      "notebook": "notebooks/16_day05_tabular_models_only.ipynb",
+      "started_utc": "2026-03-12T18:57:14.064940+00:00",
+      "duration_seconds": null,
+      "status": "SKIP",
+      "error": ""
+    },
+    {
+      "notebook": "notebooks/17_day05_1_balanced_tree_baselines.ipynb",
+      "started_utc": "2026-03-12T18:57:14.072018+00:00",
+      "duration_seconds": null,
+      "status": "SKIP",
+      "error": ""
+    },
+    {
+      "notebook": "notebooks/18_day05_2_short_tuning_new_champion_pure.ipynb",
+      "started_utc": "2026-03-12T18:57:14.077988+00:00",
+      "duration_seconds": null,
+      "status": "SKIP",
+      "error": ""
+    },
+    {
+      "notebook": "notebooks/19_day05_3_error_analysis_and_shap_explainer.ipynb",
+      "started_utc": "2026-03-12T18:57:14.082135+00:00",
+      "duration_seconds": 26.69,
+      "status": "PASS",
+      "error": ""
+    },
+    {
+      "notebook": "notebooks/20_day05_4_fallback_flags_and_local_policies.ipynb",
+      "started_utc": "2026-03-12T18:57:40.773487+00:00",
+      "duration_seconds": null,
+      "status": "SKIP",
+      "error": ""
+    },
+    {
+      "notebook": "notebooks/21_day05_4_operational_closure_and_presentation_summary.ipynb",
+      "started_utc": "2026-03-12T18:57:40.779059+00:00",
+      "duration_seconds": null,
+      "status": "SKIP",
+      "error": ""
+    }
+  ]
+}

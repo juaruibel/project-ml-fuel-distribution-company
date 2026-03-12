@@ -1,7 +1,7 @@
-manifest_version: "2.0.0"
-project: project-ml-fuel-distribution-company
-repository: project-ml-fuel-distribution-company
-last_updated_at: "2026-03-02"
+manifest_version: "1.0.0"
+project: recommend_supplier
+repository: proyecto-ml-source
+last_updated_at: "2030-03-12"
 owner: Project Author
 llm_reference:
   provider: OpenAI
@@ -9,51 +9,391 @@ llm_reference:
 
 documents:
   - file: src/prompts/1_prompt.md
-    scope: "contexto inicial, viabilidad y gobernanza"
+    scope: "bootstrap and governance"
     prompt_ids:
-      - P01_CONTEXT_SETUP
-      - P02_FEASIBILITY
-      - P03_PRIVACY_RELEASE
-      - P04_DAY01_ROADMAP
+      - P01_CONTEXT_U07
+      - P02_FEASIBILITY_ML
+      - P03_EDA_RAW
+      - P04_ETL_STRATEGY
+      - P05_PRIVACY_POLICY
+      - P06_DAY01_ROADMAP
+      - P07_REPO_DEVOPS
 
   - file: src/prompts/2_prompt_etl_execution.md
-    scope: "decisiones ETL y datasets públicos"
+    scope: "etl implementation"
     prompt_ids:
-      - P05_ETL_ARCHITECTURE
-      - P06_ETL_DATASETS
-      - P07_ETL_PUBLICATION_POLICY
+      - P08_ETL_V0_HYBRID
+      - P09_ETL_V1_DUAL
+      - P10_ETL_TRAIN_READY_V1
+      - P11_ETL_V2_CANDIDATES
+      - P12_ETL_GOVERNANCE
 
   - file: src/prompts/3_prompt_ml_execution.md
-    scope: "modelado, evaluación y producto"
+    scope: "ml execution and closure"
     prompt_ids:
-      - P08_DAY01_BASELINE
-      - P09_DAY02_FEATURE_ENG
-      - P10_DAY03_MODEL_SELECTION
-      - P11_DAY04_TUNING
-      - P12_INFERENCE_APP
+      - P13_DAY01_BASELINE
+      - P14_DAY02_FEATURE_ENG
+      - P15_DAY03_MODEL_SELECTION
+      - P16_DAY04_TUNING_IMB
+      - P17_INFERENCE_MVP
+      - P18_DOC_ALIGNMENT
 
-public_artifacts:
-  source_code:
-    - app.py
-    - scripts/train_public_model.py
-    - src/ml/functions.py
-    - src/ml/recommend_supplier.py
-  notebooks:
+  - file: src/prompts/4_prompt_session_protocol.md
+    scope: "session bootstrap and daily refresh protocol"
+    prompt_ids:
+      - P19_SESSION_BOOTSTRAP_BASE
+      - P20_DAILY_PROMPT_REFRESH
+
+  - file: src/prompts/daily/20260304_day02_run01_prompt.md
+    scope: "day-level session prompt"
+    prompt_ids:
+      - P20_DAILY_PROMPT_REFRESH
+
+  - file: src/prompts/daily/20260305_day03_run01_prompt.md
+    scope: "day-level session prompt"
+    prompt_ids:
+      - P20_DAILY_PROMPT_REFRESH
+
+  - file: src/prompts/daily/20260306_day04_run01_prompt.md
+    scope: "day-level session prompt"
+    prompt_ids:
+      - P20_DAILY_PROMPT_REFRESH
+
+  - file: src/prompts/daily/20260306_day04_run02_prompt.md
+    scope: "day-level session prompt"
+    prompt_ids:
+      - P20_DAILY_PROMPT_REFRESH
+
+  - file: src/prompts/daily/20260306_day04_run03_prompt.md
+    scope: "day-level session prompt"
+    prompt_ids:
+      - P20_DAILY_PROMPT_REFRESH
+
+  - file: src/prompts/daily/20260306_day04_run04_prompt.md
+    scope: "day-level session prompt"
+    prompt_ids:
+      - P20_DAILY_PROMPT_REFRESH
+
+  - file: src/prompts/daily/20260306_day04_run05_prompt.md
+    scope: "day-level session prompt"
+    prompt_ids:
+      - P20_DAILY_PROMPT_REFRESH
+
+  - file: src/prompts/daily/20260306_day05_run01_prompt.md
+    scope: "day-level session prompt"
+    prompt_ids:
+      - P20_DAILY_PROMPT_REFRESH
+
+  - file: src/prompts/daily/20260306_day05_run02_prompt.md
+    scope: "day-level session prompt"
+    prompt_ids:
+      - P20_DAILY_PROMPT_REFRESH
+
+  - file: src/prompts/daily/20260306_day05_run03_prompt.md
+    scope: "day-level session prompt"
+    prompt_ids:
+      - P20_DAILY_PROMPT_REFRESH
+
+  - file: src/prompts/daily/20260309_day05_3_run01_prompt.md
+    scope: "day-level session prompt"
+    prompt_ids:
+      - P20_DAILY_PROMPT_REFRESH
+
+  - file: src/prompts/daily/20260309_day05_3_run02_prompt.md
+    scope: "day-level session prompt"
+    prompt_ids:
+      - P20_DAILY_PROMPT_REFRESH
+
+  - file: src/prompts/daily/20260310_day05_4_run01_prompt.md
+    scope: "day-level session prompt"
+    prompt_ids:
+      - P20_DAILY_PROMPT_REFRESH
+
+  - file: src/prompts/daily/20260310_day05_4_run02_prompt.md
+    scope: "day-level session prompt"
+    prompt_ids:
+      - P20_DAILY_PROMPT_REFRESH
+
+  - file: src/prompts/daily/20260310_day05_4_run03_prompt.md
+    scope: "day-level session prompt"
+    prompt_ids:
+      - P20_DAILY_PROMPT_REFRESH
+
+  - file: src/prompts/daily/20260310_day05_4_run04_prompt.md
+    scope: "day-level session prompt"
+    prompt_ids:
+      - P20_DAILY_PROMPT_REFRESH
+
+  - file: src/prompts/daily/20260310_day05_4_run05_prompt.md
+    scope: "day-level session prompt"
+    prompt_ids:
+      - P20_DAILY_PROMPT_REFRESH
+
+  - file: src/prompts/daily/20260311_day06_run01_prompt.md
+    scope: "day-level session prompt"
+    prompt_ids:
+      - P20_DAILY_PROMPT_REFRESH
+
+  - file: src/prompts/daily/20260311_day06_fix01_run01_prompt.md
+    scope: "day-level session prompt"
+    prompt_ids:
+      - P20_DAILY_PROMPT_REFRESH
+
+  - file: src/prompts/daily/20260311_day06_fix01_run02_prompt.md
+    scope: "day-level session prompt"
+    prompt_ids:
+      - P20_DAILY_PROMPT_REFRESH
+
+  - file: src/prompts/daily/20260311_day06_fix01_run03_prompt.md
+    scope: "day-level session prompt"
+    prompt_ids:
+      - P20_DAILY_PROMPT_REFRESH
+
+  - file: src/prompts/daily/20260311_day06_fix01_run04_prompt.md
+    scope: "day-level session prompt"
+    prompt_ids:
+      - P20_DAILY_PROMPT_REFRESH
+
+  - file: src/prompts/daily/20260311_day06_fix01_run05_prompt.md
+    scope: "day-level session prompt"
+    prompt_ids:
+      - P20_DAILY_PROMPT_REFRESH
+
+  - file: src/prompts/daily/20260311_day06_fix01_run06_prompt.md
+    scope: "day-level session prompt"
+    prompt_ids:
+      - P20_DAILY_PROMPT_REFRESH
+
+  - file: src/prompts/daily/20260311_day06_fix01_run07_prompt.md
+    scope: "day-level session prompt"
+    prompt_ids:
+      - P20_DAILY_PROMPT_REFRESH
+
+  - file: src/prompts/daily/20260311_day06_fix01_run08_prompt.md
+    scope: "day-level session prompt"
+    prompt_ids:
+      - P20_DAILY_PROMPT_REFRESH
+
+  - file: src/prompts/daily/20260311_day06_fix03_run01_prompt.md
+    scope: "day-level session prompt"
+    prompt_ids:
+      - P20_DAILY_PROMPT_REFRESH
+
+  - file: src/prompts/daily/20260312_day06_fix03_run01_prompt.md
+    scope: "day-level session prompt"
+    prompt_ids:
+      - P20_DAILY_PROMPT_REFRESH
+
+  - file: src/prompts/daily/20260312_day06_fix03_run02_prompt.md
+    scope: "day-level session prompt"
+    prompt_ids:
+      - P20_DAILY_PROMPT_REFRESH
+
+  - file: src/prompts/daily/20260312_day06_fix04_fix05_prompt.md
+    scope: "day-level session prompt"
+    prompt_ids:
+      - P20_DAILY_PROMPT_REFRESH
+
+  - file: src/prompts/daily/20260312_day06_fix05_render_deploy_prompt.md
+    scope: "day-level session prompt"
+    prompt_ids:
+      - P20_DAILY_PROMPT_REFRESH
+
+  - file: src/prompts/daily/20260311_day06_fix02_run01_prompt.md
+    scope: "day-level session prompt"
+    prompt_ids:
+      - P20_DAILY_PROMPT_REFRESH
+
+artifacts:
+  etl:
+    - src/etl/extract/discover_sources.py
+    - src/etl/extract/extract_compras_xls.py
+    - src/etl/extract/extract_ofertas_raw.py
+    - src/etl/extract/extract_ofertas_calculos_raw.py
+    - src/etl/transform/transform_compras_typed.py
+    - src/etl/transform/transform_ofertas_typed.py
+    - src/etl/integrate/reconcile_ofertas_sources.py
+    - src/etl/integrate/build_join_diagnostico.py
+    - src/etl/curated/build_fact_ofertas_diarias.py
+    - src/etl/marts/build_dataset_modelo_v1.py
+    - src/etl/marts/build_dataset_modelo_v2_candidates.py
+    - src/etl/quality/report_join_gaps.py
+    - src/etl/quality/report_terminal_bridge_diagnostic.py
+  ml:
+    - src/ml/shared/functions.py
+    - src/ml/product/recommend_supplier.py
+    - src/ml/metrics/registry.py
+    - src/ml/rules/engine.py
+    - src/ml/rules/albaran_coherence.py
+    - src/ml/scripts/day04_train_v3a_candidate.py
     - notebooks/01_ml_knn.ipynb
     - notebooks/02_ml_feature_eng.ipynb
     - notebooks/03_ml_ensemble.ipynb
     - notebooks/04_ml_hyperparameter_tunning.ipynb
-  data:
-    - data/synthetic/dataset_modelo_proveedor_v1_synthetic.csv
-    - data/synthetic/dataset_modelo_proveedor_v2_candidates_synthetic.csv
-    - data/synthetic/inference_input_example_synthetic.csv
-  docs:
+    - notebooks/11_day04_v3a_raw_contract_and_eval.ipynb
+    - models/public/baseline/model.pkl
+    - models/public/baseline/metadata.json
+  etl_day04:
+    - src/etl/marts/build_dataset_modelo_v3_context.py
+    - data/public/dataset_modelo_proveedor_v3_context.csv
+    - artifacts/public/data_quality_v3_context.json
+    - artifacts/public/data_dictionary_v3_context.md
+  etl_day041:
+    - src/etl/transform/build_ofertas_transport_signals.py
+    - src/etl/marts/build_dataset_modelo_day041_ablation.py
+    - data/public/support/ofertas_transport_signals.csv
+    - artifacts/public/transport_parser_day041.json
+    - data/public/day041/dataset_modelo_v2_source_quality.csv
+    - data/public/day041/dataset_modelo_v2_dispersion.csv
+    - data/public/day041/dataset_modelo_v2_competition.csv
+    - artifacts/public/data_quality_day041_ablation_matrix.json
+  ml_day041:
+    - src/ml/scripts/day041_train_ablation_candidates.py
+    - notebooks/12_day04_1_transport_parser_and_ablation.ipynb
+  etl_day042:
+    - src/etl/transform/rebuild_ofertas_transport_signals_day042.py
+    - src/etl/marts/build_dataset_modelo_day042_transport.py
+    - data/public/support/ofertas_transport_signals_day042.csv
+    - artifacts/public/transport_missingness_day042.json
+    - artifacts/public/transport_missingness_day042.csv
+    - data/public/day042/dataset_modelo_v2_transport_rebuilt_only.csv
+    - data/public/day042/dataset_modelo_v2_dispersion_plus_transport_rebuilt.csv
+    - artifacts/public/data_quality_day042_transport_matrix.json
+  ml_day042:
+    - src/ml/scripts/day042_train_transport_candidates.py
+    - notebooks/13_day04_2_transport_rebuild_and_retrain.ipynb
+  etl_day043:
+    - src/etl/transform/rebuild_ofertas_transport_signals_day043.py
+    - data/public/support/ofertas_transport_signals_day043.csv
+    - artifacts/public/transport_imputation_day043.json
+    - artifacts/public/transport_imputation_day043.csv
+    - src/etl/marts/build_dataset_modelo_day043_transport.py
+    - data/public/day043/dataset_modelo_v2_transport_carry30d_only.csv
+    - data/public/day043/dataset_modelo_v2_dispersion_plus_transport_carry30d.csv
+    - artifacts/public/data_quality_day043_transport_matrix.json
+  ml_day043:
+    - src/ml/scripts/day043_train_transport_candidates.py
+    - notebooks/14_day04_3_transport_carry30d_and_retrain.ipynb
+  etl_day04_rerun:
+    - src/etl/extract/extract_ofertas_raw.py
+    - data/public/support/ofertas_raw_mincost.csv
+    - data/public/support/ofertas_raw_matrix_cells.csv
+    - artifacts/public/etl_dq_ofertas_tabla_extract.json
+  ml_day04_rerun:
+    - src/ml/scripts/rebuild_day04_baseline.py
+    - notebooks/15_day04_rerun_after_date_fix.ipynb
+  ml_day05:
+    - src/ml/shared/day05_tabular.py
+    - src/ml/scripts/day05_train_tabular_candidates.py
+    - notebooks/16_day05_tabular_models_only.ipynb
+  ml_day051:
+    - src/ml/scripts/day051_train_balanced_tree_baselines.py
+    - notebooks/17_day05_1_balanced_tree_baselines.ipynb
+    - models/public/champion_pure/model.pkl
+    - models/public/champion_pure/metadata.json
+  ml_day052:
+    - src/ml/scripts/day052_train_short_tuning_champion_pure.py
+    - notebooks/18_day05_2_short_tuning_new_champion_pure.ipynb
+  ml_day053:
+    - notebooks/19_day05_3_error_analysis_and_shap_explainer.ipynb
+  ml_day054:
+    - src/ml/shared/day054_policy_helpers.py
+    - src/ml/rules/day054_local_policies.py
+    - src/ml/rules/day054_policy_catalog.py
+    - src/ml/rules/day054_policy_strategies.py
+    - src/ml/metrics/day054_policy_evaluation.py
+    - src/ml/rules/scripts/day054_evaluate_local_policies.py
+    - notebooks/20_day05_4_fallback_flags_and_local_policies.ipynb
+    - artifacts/public/day05_4_artifact_inventory.md
+  product_day06_fix01:
+    - app.py
+    - src/ml/ui/product.py
+    - src/ml/product/day06_runtime.py
+    - src/ml/product/day06_excel_raw.py
+    - src/ml/product/day06_scoring_contracts.py
+    - src/ml/scripts/day06_fix01_smoke.py
+    - artifacts/public/validations/day06_fix01/20260311_day06_fix01_smoke_report.json
+    - artifacts/public/validations/day06_fix01/20260311_day06_fix01_mode_availability_smoke_report.json
+  product_day06_fix03:
+    - app.py
+    - src/ml/ui/product.py
+    - src/ml/ui/product_user.py
+    - src/ml/ui/product_user_frames.py
+    - src/ml/ui/settings.py
+    - src/ml/ui/state.py
+    - src/ml/ui/progress.py
+    - src/ml/ui/display.py
+    - src/ml/ui/excel_flow.py
+    - src/ml/ui/results.py
+    - src/ml/ui/feedback.py
+    - src/ml/product/day06_runtime.py
+    - src/ml/product/day06_normalization.py
+    - src/ml/product/day06_modes.py
+    - src/ml/product/day06_feedback.py
+    - src/ml/product/day06_warnings.py
+    - src/ml/scripts/day06_fix01_smoke.py
+    - src/ml/scripts/day06_fix02_sql_smoke.py
+    - artifacts/public/validations/day06_fix03/20260311_day06_fix03_hygiene_smoke_report.json
+    - output/playwright/day06_fix03_run01_user_mode/
+    - artifacts/public/validations/day06_fix03/20260312_day06_fix03_run02_purchase_proposal_report.json
+    - output/playwright/day06_fix03_run02_purchase_proposal/
+  product_day06_fix02:
+    - src/ml/product/day06_sql_store.py
+    - src/ml/product/day06_sql_mirror.py
+    - src/ml/product/day06_runtime.py
+    - src/ml/product/day06_feedback.py
+    - src/ml/ui/results.py
+    - src/ml/ui/feedback.py
+    - src/ml/ui/product.py
+    - src/ml/scripts/day06_fix02_sql_smoke.py
+    - artifacts/public/validations/day06_fix02/20260312T082135Z_day06_fix02_sql_smoke_report.json
+  product_day06_fix04_fix05:
+    - app.py
+    - src/ml/ui/demo.py
+    - src/ml/ui/demo_story.py
+    - src/ml/ui/product_user.py
+    - src/ml/ui/settings.py
+    - src/ml/shared/project_paths.py
+    - requirements-cloud.txt
+    - scripts/build_day06_cloud_demo_bundle.py
+    - assets/day06_demo_comparativa.xlsx
+    - assets/slides/day06/.gitkeep
+    - docs/context/proyecto_final.md
+    - docs/context/RESUME.md
     - README.md
-    - docs/privacy_checklist.md
-    - docs/public_publish_manifest.json
+  product_day06_fix05_render_deploy:
+    - app.py
+    - src/ml/ui/settings.py
+    - src/ml/ui/product_user.py
+    - src/ml/shared/project_paths.py
+    - src/ml/shared/day06_demo_examples.py
+    - scripts/day06_deploy_common.py
+    - scripts/build_day06_cloud_demo_bundle.py
+    - scripts/build_day06_render_private_repo.py
+    - assets/day06_demo_comparativa.xlsx
+    - assets/day06_demo_comparativa_2.xlsx
+    - docs/context/proyecto_final.md
+    - docs/context/RESUME.md
+    - docs/context/BACKLOG.md
+    - README.md
+    - src/prompts/daily/20260312_day06_fix05_render_deploy_prompt.md
+  governance_and_docs:
+    - README.md
+    - scripts/publish_to_bootcamp.py
+    - config/publish_manifest.json
+    - artifacts/public/day04_artifact_inventory_postfix.md
+    - artifacts/public/day05_artifact_inventory_postfix.md
+    - artifacts/public/ml_validation_protocol.md
+    - artifacts/public/ml_day04_tuning_results.csv
+    - artifacts/public/ml_day04_runbook.md
+    - artifacts/public/data_dictionary_v2_candidates.md
+    - artifacts/public/data_quality_v2_candidates.json
+    - artifacts/public/data_terminal_bridge_diagnostic.md
 
 traceability_policy:
   include_only_executed_prompts: true
-  include_only_public_artifacts: true
-  exclude_private_paths: true
-  remove_unused_variants: true
+  include_only_verified_outputs: true
+  remove_unused_or_duplicate_prompts: true
+  daily_prompt_history_enabled: true
+  daily_prompt_history_path: "src/prompts/daily/"
+  daily_prompt_naming: "<YYYYMMDD>_dayNN[_X]_runNN_prompt.md"

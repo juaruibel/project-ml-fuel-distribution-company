@@ -1,0 +1,27 @@
+{
+  "run_id": "20260306T_day05_run03",
+  "ts_utc": "2026-03-06T16:41:53.751124+00:00",
+  "day_id": "Day 05.2",
+  "scope": "model_retrain",
+  "eval_scope": "day02_test_like",
+  "cutoff_applied": "2028-02-21",
+  "model_variant": "V2_TRANSPORT_ONLY_LIGHTGBM_CLASS_WEIGHT_BALANCED_TUNED_v1",
+  "dataset_alias": "V2_TRANSPORT_ONLY",
+  "model_family": "LIGHTGBM",
+  "variant_stage": "phase2_short_tuning",
+  "metrics": {
+    "accuracy": 0.9092173412622291,
+    "balanced_accuracy": 0.8699085692584339,
+    "f1_pos": 0.6945296111021462,
+    "top1_hit": 0.7470565894417015,
+    "top2_hit": 0.8822635776680593,
+    "coverage": 1.0,
+    "test_events": 2633
+  },
+  "sources": {
+    "dataset_csv": "./data/public/day041/dataset_modelo_v2_transport_only.csv",
+    "model_path": "./models/candidates/day05_2_short_tuning/v2_transport_only_lightgbm_class_weight_balanced_tuned_v1/20260306T_day05_run03/model.pkl",
+    "metadata_path": "./models/candidates/day05_2_short_tuning/v2_transport_only_lightgbm_class_weight_balanced_tuned_v1/20260306T_day05_run03/metadata.json",
+    "search_log_path": "./artifacts/public/metrics/day05_2/20260306T_day05_run03_phase2_trials.csv"
+  }
+}

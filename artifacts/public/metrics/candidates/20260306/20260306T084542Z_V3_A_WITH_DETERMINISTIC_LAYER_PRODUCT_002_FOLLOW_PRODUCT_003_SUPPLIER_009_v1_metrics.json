@@ -1,0 +1,43 @@
+{
+  "run_id": "20260306T084542Z",
+  "ts_utc": "2026-03-06T08:46:59.485968+00:00",
+  "day_id": "Day 04",
+  "scope": "after_policy",
+  "eval_scope": "day02_test_like",
+  "cutoff_applied": "2028-02-21",
+  "policy": "PRODUCT_002_follow_PRODUCT_003_SUPPLIER_009",
+  "model_variant": "V3_A_WITH_DETERMINISTIC_LAYER_PRODUCT_002_FOLLOW_PRODUCT_003_SUPPLIER_009_v1",
+  "metrics": {
+    "accuracy": 0.8867254939574142,
+    "balanced_accuracy": 0.8526511442095597,
+    "f1_pos": 0.6427707199032063,
+    "top1_hit": 0.7660463349791112,
+    "top2_hit": 0.8568173186479301,
+    "coverage": 1.0,
+    "test_events": 2633,
+    "top1_hit_before": 0.7424990505127231,
+    "top2_hit_before": 0.8526395746297,
+    "top1_hit_after": 0.7660463349791112,
+    "top2_hit_after": 0.8568173186479301,
+    "pair_groups_PRODUCT_002_PRODUCT_003": 365,
+    "coherence_before": 0.8273972602739726,
+    "coherence_after": 0.9726027397260274,
+    "coherence_delta": 0.14520547945205475,
+    "overrides_count": 70,
+    "overrides_improved": 66,
+    "overrides_harmed": 4,
+    "overrides_neutral": 2563,
+    "coverage_before": 1.0,
+    "coverage_after": 1.0
+  },
+  "sources": {
+    "dataset_csv": "./data/public/dataset_modelo_proveedor_v3_context.csv",
+    "model_path": "./models/candidates/day04_v3_a_lr_smote_0_5_v1/20260306T084542Z/model.pkl",
+    "metadata_path": "./models/candidates/day04_v3_a_lr_smote_0_5_v1/20260306T084542Z/metadata.json",
+    "scored_input_csv": "./artifacts/public/postinferencia/audits/20260306/day04_v3a_scored_input_20260306T084542Z.csv",
+    "detail_csv": "./artifacts/public/postinferencia/audits/20260306/day04_v3a_scored_input_20260306T084542Z_detalle_assist_PRODUCT_002_follow_PRODUCT_003_SUPPLIER_009_20260306T084542Z.csv",
+    "resumen_evento_csv": "./artifacts/public/postinferencia/audits/20260306/day04_v3a_scored_input_20260306T084542Z_resumen_evento_assist_PRODUCT_002_follow_PRODUCT_003_SUPPLIER_009_20260306T084542Z.csv",
+    "resumen_albaran_csv": "./artifacts/public/postinferencia/audits/20260306/day04_v3a_scored_input_20260306T084542Z_resumen_albaran_assist_PRODUCT_002_follow_PRODUCT_003_SUPPLIER_009_20260306T084542Z.csv",
+    "summary_json": "./artifacts/public/postinferencia/audits/20260306/day04_v3a_scored_input_20260306T084542Z_summary_assist_PRODUCT_002_follow_PRODUCT_003_SUPPLIER_009_20260306T084542Z.json"
+  }
+}
